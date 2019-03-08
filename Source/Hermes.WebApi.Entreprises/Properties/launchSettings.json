@@ -1,0 +1,24 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "https://entreprises-api.lvh.me",
+      "sslPort": 0
+    },
+    "iisExpress": {
+      "applicationUrl": "https://entreprises-api.lvh.me",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "Local dev": {
+      "commandName": "Project",
+      "launchUrl": "https://entreprises-api.lvh.me/backoffice/1.0/ping",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://entreprises-api.lvh.me"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+[{
+        "name": "bailleurs.lvh.me",
+        "port": 443
+    },
+    {
+        "name": "entreprises.lvh.me",
+        "port": 443
+    },
+    {
+        "name": "salaries.lvh.me",
+        "port": 443
+    },
+    {
+        "name": "bailleurs-api.lvh.me",
+        "port": 443
+    },
+    {
+        "name": "entreprises-api.lvh.me",
+        "port": 443
+    },
+    {
+        "name": "salaries-api.lvh.me",
+        "port": 443
+    }
+]

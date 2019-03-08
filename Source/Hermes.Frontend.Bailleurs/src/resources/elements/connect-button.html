@@ -1,0 +1,15 @@
+﻿<template>
+    <require from="./connect-button.css"></require>
+
+    <span show.bind="!isLoggedIn">
+        <a id="btn-connecter" click.trigger="login()">
+            CONNECTEZ-VOUS
+        </a>
+    </span>    
+    <span show.bind="isLoggedIn">
+        <a id="btn-deconnecter" click.trigger="logout()">
+            DÉCONNECTER ${user.profile.given_name} ${user.profile.family_name}
+        </a>
+    </span>
+
+</template>

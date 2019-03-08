@@ -1,0 +1,25 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "https://bailleurs.lvh.me",
+      "sslPort": 0
+    },
+    "iisExpress": {
+      "applicationUrl": "https://bailleurs.lvh.me",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "Local dev": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "https://bailleurs.lvh.me",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://bailleurs.lvh.me"
+    }
+  }
+}
