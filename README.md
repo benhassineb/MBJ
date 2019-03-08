@@ -6,14 +6,15 @@ Avant d'ouvrir la solution, procéder à [l'initialisation du poste de développ
 
 ### Remarques
 
-- L'utilisation d'IIS n'est pas recommandée sur le poste développeur car elle requiert des privilèges "administrateur". La présente solution repose sur __IIS Express__ pour le développement et le débogage de l'application Web + Web API.
 - Afin d'affronter dès le développement d'éventuels problèmes de sécurité lié au *cross-scripting* ou à l'utilisation de SSL, le site Web et le site de la Web API sont configurés avec des *hostnames* correspondant à deux noms de machines distincts d'un même domaine avec le port par défaut, plutôt que _localhost:port_dynamique_. Pour éviter la modification du fichier *hosts* du poste de développeur pour résoudre ces noms en 127.0.0.1, le domaine __lvh.me__ est utilisé :
-  - __web.lvh.me__ ou __web.lvh.me:44443__ pour le site Web exposant l'application aurelia
-  - __api.lvh.me__ pour la Web API
+  - __bailleurs.lvh.me__, __salaries.lvh.me__, __entreprises.lvh.me__ pour les sites Web exposant les applications aurelia,
+  - __bailleurs-api.lvh.me__, __salaries-api.lvh.me__, __entreprises-api.lvh.me__ pour les Web API associées.
+- Il est nécessaire d'effectuer les étapes ci-dessous avant d'ouvrir la solution Visual Studio.
+
 
 ### Etapes
 
-Ces étapes ne sont à effectuer qu'une seule fois. Elle permettent l'installation d'aurelia, et la configuration complète d'IIS Express pour SSL.
+Ces étapes ne sont à effectuer qu'une seule fois. Elle permettent l'installation d'aurelia, et la configuration complète pour SSL et les hostnames *.lvh.me.
 
 1. Installer la version LTS de [node.js](https://nodejs.org/en/) pour le développement avec Aurelia.
 1. Installer un client [GIT](https://git-scm.com/).
@@ -29,7 +30,6 @@ Ces étapes ne sont à effectuer qu'une seule fois. Elle permettent l'installati
    - pkief.material-icon-theme,
    - ms-vscode.vs-keybindings
 1. Lancer Visual Studio, aller dans le menu Tools/Options/Projects and Solutions/Web Package Management/External Web Tools : décocher __$(VSINSTALLDIR)\Web\External__
-1. Créer un projet _Visual C#/Web/ASP.NET Web Application (.NET Framework)_ puis le fermer, pour s'assurer de la création d'un fichier `applicationhost.config` dans `$home/documents/iisexpress/config`.
 1. Cloner le repos git __Hermes__ dans le dossier `c:\etude\source\repos\Hermes`
 1. Ouvrir un prompt *powershell* __administrateur__
 
@@ -41,7 +41,7 @@ Ces étapes ne sont à effectuer qu'une seule fois. Elle permettent l'installati
 1. Avant de démarrer la solution sous Visual Studio la première fois, il est recommandé de mettre à jour les dépendances node.js du projet Web aurelia : ouvrir un prompt *powershell*
 
     ```powershell
-    cd c:\etude\source\repos\Hermes\Source\Front
+    cd c:\etude\source\repos\Hermes\Source\Hermes.Frontend.Bailleurs
     npm install
     ```
 
@@ -85,6 +85,12 @@ Ces étapes ne sont à effectuer qu'une seule fois. Elle permettent l'installati
   Puis choisir le template Empty et cocher Web API.
 - Les projets de type __Tests__ doivent être créés à partir du modèle _Visual C#/Test/Unit Test Project (.NET Framework)_.
 - Les autres projets sont créés à partir de _Visual C#/Class Library (.NET Framework)_
+- Un fichier GlobalSuppression.cs doit être ajouté à chaque projet.
+- Un __lien__ vers le fichier __`Shared\Hermes.Projects.ruleset`__ doit être rajouté.
+- Les packages .Nuget suivants doivent être installés pour ce projet :
+  - __`Microsoft.CodeAnalysis.FxCopAnalyzers`__
+  - __`Microsoft.Net.Compilers`__
+  - __`Microsoft.CodeAnalysis.FxCopAnalyzers`__
 
 ## Modes d'exécution du projet
 
