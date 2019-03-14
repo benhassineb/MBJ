@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.AzureADB2C.UI;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Marvin.Cache.Headers.Interfaces;
 
 namespace Common.WebApi
 {
@@ -83,6 +84,29 @@ namespace Common.WebApi
             // Interception de l'ensemble des exceptions 
             tracer.SetExceptionHandling(options.LogFirstChanceExceptions);
             return tracer;
+        }
+
+        private static IServiceCollection AddAndConfigureResponseCaching(this IServiceCollection services)
+        {
+            services
+                .AddMemoryCache()
+                .AddHttpCacheHeaders(
+                    expirationModelOptions =>
+                    {
+                        expirationModelOptions.NoStore = false;
+                        expirationModelOptions.MaxAge = 10;
+                    },
+                validationModelOptions =>
+                {
+                    validationModelOptions.MustRevalidate = true;
+                    validationModelOptions.ProxyRevalidate = true;
+                })
+
+             .AddSingleton<CustomValidatorValueStore>()
+             .AddSingleton<IValidatorValueStore>(x => x.GetRequiredService<CustomValidatorValueStore>())
+             .AddSingleton<ICacheResponseService>(x => x.GetRequiredService<CustomValidatorValueStore>());
+
+            return services;
         }
 
     }

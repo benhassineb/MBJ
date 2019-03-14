@@ -8,6 +8,6 @@
     "b2cPolicy": "b2c_1_autoprovisioning"
   },
   "api": {
-    "sample": "https://salaries-api.lvh.me:443"
+    "sample": "https://bailleurs-api.lvh.me:443"
   }
 }
