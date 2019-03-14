@@ -10,11 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "aurelia-animator-css": "^1.0.4",
+    "aurelia-bootstrap": "^0.1.20",
     "aurelia-bootstrapper": "^2.3.0",
     "aurelia-configuration": "^2.0.0",
     "aurelia-fetch-client": "^1.8.0",
     "aurelia-open-id-connect": "^2.0.1",
     "bluebird": "^3.5.2",
+    "bootstrap": "^4.3.1",
     "requirejs": "^2.3.6",
     "text": "github:requirejs/text#latest"
   },

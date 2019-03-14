@@ -1,9 +1,18 @@
 <template>
+    <require from="bootstrap/dist/css/bootstrap.min.css"></require>
     <require from="./header.css"></require>
-    <header class="my-header">
-        <img class="logo" src="/images/als-logo-inverse-128.png">
-        <nav class="menu-items">
-            <connect-button></connect-button>
-        </nav>
+    <header class="row my-header">
+        <div class="col-md-6 right"></div>
+        <div class="col-md-2 right">
+            Besoin d'aide
+        </div>
+        <div class="col-md-2 right">
+            Bonjour test test
+        </div>
+        <div class="col-md-2 right">
+            <nav class="menu-items">
+                <connect-button></connect-button>
+            </nav>
+        </div>
     </header>
 </template>
