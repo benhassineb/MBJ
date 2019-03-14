@@ -13,8 +13,11 @@
     "aurelia-bootstrapper": "^2.3.0",
     "aurelia-configuration": "^2.0.0",
     "aurelia-fetch-client": "^1.8.0",
-    "aurelia-open-id-connect": "^2.0.1",
+    "aurelia-i18n": "^3.0.0-beta.5",
+    "aurelia-open-id-connect": "github:rmja/aurelia-open-id-connect",
     "bluebird": "^3.5.2",
+    "i18next-xhr-backend": "^2.0.1",
+    "leaflet": "^1.4.0",
     "requirejs": "^2.3.6",
     "text": "github:requirejs/text#latest"
   },

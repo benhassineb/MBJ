@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "properties": {
+      "code": "CODE1",
+      "name": "2 Rue Palouzié",
+      "type": 1
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.326777, 48.904732]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "code": "CODE2",
+      "name": "2 Rue Mumia Abu-Jamal",
+      "type": 2,
+      "rank": 1
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.3626386, 48.9168993]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "code": "CODE3",
+      "name": "16 Rue de l'Hippodrome",
+      "type": 2,
+      "rank": 2
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.329724, 48.912863 ]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "code": "CODE4",
+      "name": "48 Rue du Dr Léonce Basset",
+      "type": 2,
+      "rank": 3
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [2.335312,48.915068]
+    }
+  }]
+}

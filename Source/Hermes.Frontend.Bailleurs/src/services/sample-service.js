@@ -1,16 +1,19 @@
-import { inject } from 'aurelia-framework';
+import { inject, NewInstance } from 'aurelia-framework';
 import { ConfiguredHttpClient } from 'core/configured-http-client';
+import { HttpClient } from 'aurelia-fetch-client';
 import { handleApiError } from 'core/common';
 
-@inject(ConfiguredHttpClient)
+@inject(ConfiguredHttpClient, NewInstance.of(HttpClient))
 export class SampleService {
 
   /**
    * Create an instance of the class.
-   * @param {ConfiguredHttpClient} configuredhttpclient - le client http
+   * @param {ConfiguredHttpClient} configuredhttpclient - le client http configuré pour la Web API.
+   * @param {HttpClient} httpclient - le client http fetch standard.
    */
-  constructor(configuredhttpclient) {
+  constructor(configuredhttpclient, httpclient) {
     this._client = configuredhttpclient.httpClient;
+    this._localClient = httpclient;
   }
 
   /**
@@ -20,7 +23,28 @@ export class SampleService {
   effacerCacheAutorisations() {
     const url = '/backoffice/1.0/cache/autorisations';
     return this._client
-      .fetch(url, {method: 'DELETE'})
+      .fetch(url, { method: 'DELETE' })
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getLogements() {
+    return this._localClient
+      .fetch('/mock/logements.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getCommunes() {
+    return this._localClient
+      .fetch('/mock/communes.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getReseauFerre() {
+    return this._localClient
+      .fetch('/mock/reseau-ferre.json')
       .then(response => response.json())
       .catch(error => handleApiError(error));
   }

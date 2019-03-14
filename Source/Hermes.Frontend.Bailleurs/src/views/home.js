@@ -6,6 +6,12 @@ export class Main {
 
   constructor(service) {
     this._service = service;
+    this._service.getLogements()
+      .then(result => this.logements = result);
+    this._service.getCommunes()
+      .then(result => this.communes = result);
+    this._service.getReseauFerre()
+      .then(result => this.reseauferre = result);
   }
 
   effacerCacheAutorisations() {
