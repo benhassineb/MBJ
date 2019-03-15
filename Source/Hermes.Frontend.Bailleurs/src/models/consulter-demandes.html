@@ -1,0 +1,112 @@
+<template>
+    <div class="card">
+        <div class="card-header">
+            Filtre de demandes
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Status des demandes</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Sélectionner...</option>
+                            <option repeat.for="s of statuts" model.bind="s">
+                                ${s}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputNbrCandidature">Nombre de candidatures</label>
+                        <input type="text" class="form-control" placeholder="Nombre de candidatures" value.bind="nbrCandidature">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputNbreRefusEnCal">Nombre de refus en CAL</label>
+                        <input type="text" class="form-control" placeholder="Nombre de refus en CAL" value.bind="nbreRefusEnCal">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputNbreRefusParClientEnCal">Nombre de refus par client suite à une CAL</label>
+                        <input type="text" class="form-control" placeholder="Nombre de refus par client suite à une CAL" value.bind="nbreRefusParClientEnCal">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputNom">Nom</label>
+                        <input type="text" class="form-control" placeholder="Nom" value.bind="nom">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputPrenom">Prénom</label>
+                        <input type="text" class="form-control" placeholder="Prénom" value.bind="prenom">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputDateNaissance">Date de naissance</label>
+                        <input type="date" class="form-control" placeholder="Date de naissance" value.bind="dateNaissance">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputMatricule">Matricule</label>
+                        <input type="text" class="form-control" placeholder="Matricule" value.bind="matricule">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <label class="form-check-label" for="gridCheckDmdPrioritaire">
+                                <input class="form-check-input" type="checkbox" value.bind="dmdPrioritaire">
+                                Demande prioritaire
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check">
+                            <label class="form-check-label" for="gridCheckSalarieCoache">
+                                <input class="form-check-input" type="checkbox" value.bind="salarieCoache">
+                                Salarié coaché
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="colFormLabelSm" class="col-sm-4 col-form-label col-form-label-sm">Voir les demandes uniquement entre </label>
+                            <div class="col-sm-4">
+                                <input type="date" class="form-control form-control-sm" placeholder="date de départ" value.bind="fromDate">
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="date" class="form-control form-control-sm" placeholder="date fin" value.bind="toDate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+            <div class="row justify-content-between">
+                <div class="col-auto mr-auto"></div>
+                <div class="col-auto"><a href="#" class="btn btn-primary text-right">Editer mes résultats</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            Résultats
+        </div>
+        <div class="card-body">
+            <table class="table table-hover table-striped table-responsive">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Date de naissance</th>
+                        <th>Nbr. candidature</th>
+                        <th>Refus en CAL</th>
+                        <th>Refus salairé</th>
+                        <th>Jeton</th>
+                        <th>Dmd Prio</th>
+                        <th>Matricule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr repeat.for="item of resultats">
+                        <!-- <td>${cp.codePostal}</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>

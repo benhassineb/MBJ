@@ -28,8 +28,14 @@ export class App {
     configuration.title = APPLICATIONTITLE;
     configuration.options.pushState = true;
     configuration.options.root = '/';
-    configuration.map(toRoutes(SITEMAP));
-    configuration.fallbackRoute(SITEMAP.home.title);
+    configuration.map([
+      { route: ['', 'portail'], name: 'portail', moduleId: 'views/portail', nav: false, title: 'Portail' },
+      { route: 'bailleur', name: 'bailleur', moduleId: 'views/bailleur/bailleur-router', nav: true, title: 'Bailleur' },
+      { route: 'entreprise', name: 'entreprise', moduleId: 'views/entreprise/entreprise-router', nav: true, title: 'Entreprise' },
+      { route: 'salarie', name: 'salarie', moduleId: 'views/salarie/salarie-router', nav: true, title: 'Salarie' }
+
+    ]);
+    // configuration.fallbackRoute(SITEMAP.home.title);
     this._openIdConnect.configure(configuration);
     this.router = router;
   }
