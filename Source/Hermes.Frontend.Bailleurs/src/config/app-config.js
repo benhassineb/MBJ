@@ -11,5 +11,10 @@ export const SITEMAP = {
     title: 'Home',
     isDefault: true,
     isAnonymous: true
+  },
+  pE2_1: {
+    title: 'Gestion des demandes',
+    isDefault: false,
+    isAnonymous: true
   }
 };
