@@ -1,6 +1,6 @@
 import L from 'leaflet';
 
-const LOGEMENTICONS = {
+export const LOGEMENT_ICONS = {
   1: L.icon({
     iconUrl: 'images/marker-icon.png',
     shadowUrl: 'images/marker-shadow.png',
@@ -17,33 +17,19 @@ const LOGEMENTICONS = {
   })
 };
 
-const LIGNESTYLES = {
-  RER: {
-    opacity: 1.0,
-    weight: 8,
-    dashArray: ''
-  },
-  Train: {
-    opacity: 1.0,
-    weight: 5,
-    dashArray: '10 10'
-  },
-  Tramway: {
-    opacity: 1.0,
-    weight: 3,
-    dashArray: '8 6'
-  },
-  Metro: {
-    opacity: 1.0,
-    weight: 5,
-    dashArray: ''
-  }
+const TYPE_RESEAU_STYLES = {
+  'TER': { opacity: 0, weight: 3, dashArray: '' },
+  'Train': { opacity: 0.7, weight: 7, dashArray: '4 2' },
+  'Metro': { opacity: 1, weight: 4, dashArray: '' },
+  'RER': { opacity: 0.9, weight: 7, dashArray: '' },
+  'Navette': { opacity: 1, weight: 3, dashArray: '' },
+  'Tramway': { opacity: 1, weight: 3, dashArray: '6 10' }
 };
 
-const DEFAULTLIGNESTYLE = {
-  opacity: 1.0,
+const TYPE_RESEAU_DEFAULT_STYLE = {
+  opacity: 0.9,
   weight: 3,
   dashArray: ''
 };
 
-export { LOGEMENTICONS, LIGNESTYLES, DEFAULTLIGNESTYLE };
+export const applyLigneStyle = feature => ({ color: feature.properties.couleur, ...(TYPE_RESEAU_STYLES[feature.properties.mode] || TYPE_RESEAU_DEFAULT_STYLE) });

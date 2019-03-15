@@ -44,7 +44,7 @@ export class SampleService {
 
   getReseauFerre() {
     return this._localClient
-      .fetch('/mock/reseau-ferre.json')
+      .fetch('/mock/reseau.json')
       .then(response => response.json())
       .catch(error => handleApiError(error));
   }

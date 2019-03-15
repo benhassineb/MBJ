@@ -2,8 +2,7 @@ import { inject, DOM, bindable, bindingMode, BindingEngine } from 'aurelia-frame
 import { HttpClient } from 'aurelia-fetch-client';
 import L from 'leaflet';
 
-import { LOGEMENTICONS, LIGNESTYLES, DEFAULTLIGNESTYLE } from 'config/map-config';
-
+import { LOGEMENT_ICONS, applyLigneStyle } from 'config/map-config';
 @inject(DOM.Element, HttpClient, BindingEngine)
 export class MapCustomElement {
 
@@ -29,20 +28,20 @@ export class MapCustomElement {
 
   attached() {
     this._map = L.map('map', {
-      center: [48.922859, 2.324408],
-      zoom: 13,
+      center: [48.912863, 2.329724],
+      zoom: 15,
       maxZoom: 18,
       minZoom: 10,
       zoomSnap: 0,
       zoomDelta: 0.2,
       wheelPxPerZoomLevel: 250
     });
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this._map);
-    this._logementsLayer.addTo(this._map);
-    this._communesLayer.addTo(this._map);
-    this._reseauferreLayer.addTo(this._map);
+    if (this._logementsLayer) this._logementsLayer.addTo(this._map);
+    if (this._communesLayer) this._communesLayer.addTo(this._map);
+    if (this._reseauferreLayer) this._reseauferreLayer.addTo(this._map);
   }
 
   logementsChanged(newValue, oldValue) {
@@ -50,7 +49,7 @@ export class MapCustomElement {
       pointToLayer: (feature, latlng) => {
         let logementProperties = feature.properties;
         let logementType = logementProperties.type;
-        let logementIcon = LOGEMENTICONS[logementType];
+        let logementIcon = LOGEMENT_ICONS[logementType];
         let rank = logementProperties.rank || '';
         return L.marker(latlng, { icon: logementIcon })
           .bindPopup(logementProperties.name)
@@ -68,19 +67,8 @@ export class MapCustomElement {
   }
 
   reseauferreChanged(newValue, oldValue) {
-    const defineStyle = (feature) => {
-      let prop = feature.properties;
-      let style = LIGNESTYLES[prop.mode] || DEFAULTLIGNESTYLE;
-      let color = prop.couleur || '#00C4B3';
-      return ({
-        color: color,
-        opacity: style.opacity,
-        weight: style.weight,
-        dashArray: style.dashArray
-      });
-    };
     this._reseauferreLayer = L.geoJson(newValue, {
-      style: (feature) => defineStyle(feature)
+      style: (feature) => applyLigneStyle(feature)
     });
   }
 
