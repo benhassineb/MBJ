@@ -18,6 +18,7 @@
     "aurelia-open-id-connect": "github:rmja/aurelia-open-id-connect",
     "bluebird": "^3.5.2",
     "bootstrap": "^4.3.1",
+    "fontawesome": "^5.6.3",
     "i18next-xhr-backend": "^2.0.1",
     "leaflet": "^1.4.0",
     "requirejs": "^2.3.6",
