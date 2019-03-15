@@ -1,0 +1,16 @@
+<template>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="mx-auto bg-light" repeat.for="row of router.navigation">
+
+            <a href.bind="row.href">
+                <h1 data-toggle="collapse" data-target="#skeleton-navigation-navbar-collapse.in" h1>${row.title}</h1>
+            </a>
+        </div>
+    </div>
+
+</template>
