@@ -1,0 +1,14 @@
+<template>
+    <require from="./acceuil-salarie.css"></require>
+    <require from="../../resources/elements/map"></require>
+
+    <div class="container">
+        <h1 i18n="[html]title"> </h1>
+        <!-- <ul>
+          <li repeat.for="log of logements.features">${log.properties.name}</li>
+        </ul> -->
+        <map logements.bind="logements" communes.bind="communes" reseauferre.bind="reseauferre"></map>
+        <button click.trigger="effacerCacheAutorisations()">EFFACER CACHE</button>
+    </div>
+
+</template>
