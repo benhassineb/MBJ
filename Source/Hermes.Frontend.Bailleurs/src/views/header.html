@@ -5,8 +5,9 @@
         <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
             <i class="fab fa-discourse mr-2"></i>Besoin d'aide
         </div>
-        <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
-            Bonjour André LEROUX
+        <div show.bind="!isLoggedIn" class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1"></div>
+        <div show.bind="isLoggedIn" class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
+            Bonjour, ${user.profile.given_name} ${user.profile.family_name}
         </div>
         <div class="col-md-2 text-center text-nowrap pr-3 pl-3">
             <nav class="border pr-3 pl-3 pt-1 pb-1 rounded-1">

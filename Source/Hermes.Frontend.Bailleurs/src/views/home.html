@@ -1,12 +1,11 @@
 <template>
     <require from="./home.css"></require>
     <require from="../resources/elements/map"></require>
+    <require from="../resources/elements/contact-privilegie"></require>
 
     <div class="container">
         <h1 i18n="[html]title"> </h1>
-        <!-- <ul>
-          <li repeat.for="log of logements.features">${log.properties.name}</li>
-        </ul> -->
+        <contact-privilegie></contact-privilegie>
         <map logements.bind="logements" communes.bind="communes" reseauferre.bind="reseauferre"></map>
         <button click.trigger="effacerCacheAutorisations()">EFFACER CACHE</button>
     </div>
