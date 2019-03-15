@@ -7,29 +7,6 @@
             <p class="card-text">
                 <div class="form-row">
                     <div class="form-group col-md-3">
-                        <label for="inputState">Status des demandes</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Sélectionner...</option>
-                            <option repeat.for="s of statuts" model.bind="s">
-                                ${s}
-                            </option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputNbrCandidature">Nombre de candidatures</label>
-                        <input type="text" class="form-control" placeholder="Nombre de candidatures" value.bind="nbrCandidature">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputNbreRefusEnCal">Nombre de refus en CAL</label>
-                        <input type="text" class="form-control" placeholder="Nombre de refus en CAL" value.bind="nbreRefusEnCal">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputNbreRefusParClientEnCal">Nombre de refus par client suite à une CAL</label>
-                        <input type="text" class="form-control" placeholder="Nombre de refus par client suite à une CAL" value.bind="nbreRefusParClientEnCal">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-3">
                         <label for="inputNom">Nom</label>
                         <input type="text" class="form-control" placeholder="Nom" value.bind="nom">
                     </div>
@@ -47,22 +24,6 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-md-3">
-                        <div class="form-check">
-                            <label class="form-check-label" for="gridCheckDmdPrioritaire">
-                                <input class="form-check-input" type="checkbox" value.bind="dmdPrioritaire">
-                                Demande prioritaire
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-check">
-                            <label class="form-check-label" for="gridCheckSalarieCoache">
-                                <input class="form-check-input" type="checkbox" value.bind="salarieCoache">
-                                Salarié coaché
-                            </label>
-                        </div>
-                    </div>
                     <div class="col-md-6">
                         <div class="form-group row">
                             <label for="colFormLabelSm" class="col-sm-4 col-form-label col-form-label-sm">Voir les demandes uniquement entre </label>
@@ -74,6 +35,30 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-2">
+                        <div class="form-check">
+                            <label class="form-check-label" for="gridCheckAvecJetons">
+                                <input class="form-check-input" type="checkbox" value.bind="avecJetons">
+                                Personnes avec Jetons
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-check">
+                            <label class="form-check-label" for="gridCheckEnMobilites">
+                                <input class="form-check-input" type="checkbox" value.bind="enMobilites">
+                                Personnes en mobilités
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-check">
+                            <label class="form-check-label" for="gridCheckEnAlternance">
+                                <input class="form-check-input" type="checkbox" value.bind="enAlternance">
+                                Personnes en alternance
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </p>
             <div class="row justify-content-between">
@@ -82,23 +67,21 @@
             </div>
         </div>
     </div>
+    <br>
     <div class="card">
         <div class="card-header">
             Résultats
         </div>
-        <div class="card-body">
-            <table class="table table-hover table-striped table-responsive">
-                <thead>
+        <div class="card-body table-responsive">
+            <table class="table table-sm table-hover table-striped">
+                <thead class="thead-dark">
                     <tr>
                         <th>Nom</th>
                         <th>Prénom</th>
                         <th>Date de naissance</th>
-                        <th>Nbr. candidature</th>
-                        <th>Refus en CAL</th>
-                        <th>Refus salairé</th>
-                        <th>Jeton</th>
-                        <th>Dmd Prio</th>
                         <th>Matricule</th>
+                        <th>Date</th>
+                        <th>Situation</th>
                     </tr>
                 </thead>
                 <tbody>
