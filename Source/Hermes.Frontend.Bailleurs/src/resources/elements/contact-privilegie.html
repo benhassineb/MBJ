@@ -1,0 +1,16 @@
+<template class="row">
+    <require from="./contact-privilegie.css"></require>
+    <div class="card" style="background: #eee;">
+        <div class="card-body">
+            <h5 class="card-title text-left text-rose ml-0">Contacts privilegiés</h5>
+            <div class="card-text row ml-0">
+                <div repeat.for="contact of listContacts" class="card-text text-blue text-left ml-2">
+                    <div >${contact.prenom} ${contact.nom} </span>
+                    <div >${contact.role}</span>
+                    <div >${contact.tel}</span>
+                    <div >${contact.email}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

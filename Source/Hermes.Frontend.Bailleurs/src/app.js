@@ -7,6 +7,7 @@ import { OpenIdConnect } from 'aurelia-open-id-connect';
 @inject(OpenIdConnect, ConfiguredHttpClient)
 export class App {
 
+  user;
   /**
    * Crée un instance de l'application aurelia.
    * @param {OpenIdConnect} openIdConnect - la couche de connexion OpenID Connect
@@ -33,4 +34,13 @@ export class App {
     this.router = router;
   }
 
+  activate(){
+    this._openIdConnect.getUser().then(user => {
+      this.user = user;
+    });
+  }
+
+  get isLoggedIn() {
+    return this.user !== null && this.user !== undefined;
+  }
 }
