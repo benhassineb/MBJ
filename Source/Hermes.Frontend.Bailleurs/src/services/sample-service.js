@@ -55,4 +55,16 @@ export class SampleService {
       .then(response => response.json())
       .catch(error => handleApiError(error));
   }
+
+  getDetailsDemandeAvecCERFA() {
+    return this._localClient.fetch('/mock/details-demande-avec-CERFA.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getDetailsDemandeSansCERFA() {
+    return this._localClient.fetch('/mock/details-demande-sans-CERFA.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
 }
