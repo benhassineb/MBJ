@@ -16,21 +16,12 @@
                     <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                    <a class="dropdown-item" href="#">Normandie</a>
-                    <a class="dropdown-item" href="#">Orne</a>
-                    <a class="dropdown-item" href="#">Eure</a>
-                    <a class="dropdown-item" href="#">Haut de france</a>
+                    <a repeat.for="item of listFiltreEntreprise" class="dropdown-item" href="#">${item.label}</a>
                 </div>
                 <ul class="list-group list-group-horizontal">
-                        <li class="list-group-item">Normandie <button type="button" class="close" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button></li>
-                        <li class="list-group-item">Orne <button type="button" class="close" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button></li>
-                        <li class="list-group-item">Eure <button type="button" class="close" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button></li>
+                    <li repeat.for="item of listFiltreEntrepriseSelected" class="list-group-item">${item.label}<button type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button></li>
                 </ul>
                 <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
             </div>
