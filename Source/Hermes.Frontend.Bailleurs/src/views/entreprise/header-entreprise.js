@@ -18,4 +18,8 @@ export class headerentreprise {
     removeFiltreEntreprise(filtre) {
       this.listFiltreEntrepriseSelected = this.listFiltreEntrepriseSelected.filter(item => item.code !== filtre.code);
     }
+    
+    addFiltreEntreprise(filtre) {
+      this.listFiltreEntrepriseSelected.push(filtre);
+    }
 }

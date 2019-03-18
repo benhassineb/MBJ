@@ -39,7 +39,7 @@
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                            <a repeat.for="item of listFiltreEntreprise" class="dropdown-item" href="#">${item.label}</a>
+                            <a repeat.for="item of listFiltreEntreprise" click.trigger="addFiltreEntreprise(item)" class="dropdown-item" href="#">${item.label}</a>
                         </div>
                         <ul class="list-group list-group-horizontal">
                             <li repeat.for="item of listFiltreEntrepriseSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
