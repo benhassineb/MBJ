@@ -19,7 +19,6 @@ export class GestionDemandes {
   }
 
   activate(params) {
-    this.selectedFilter = this.filtres[1];
     if (params && params.filterType) {
       this.selectedFilter = this.filtres.find(f => f.id === params.filterType).obj;
     }
