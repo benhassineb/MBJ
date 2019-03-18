@@ -1,6 +1,6 @@
-
 <template>
     <require from="./header.css"></require>
+    <require from="resources/elements/contact-privilegie"></require>
     <header class="my-header center pt-2 pb-2">
             <div class="col-md-2 text-right pr-3 pl-3 pt-1 pb-1"></div>
             <div class="col-md-4">Bienvenue sur votre espace</div>
@@ -17,4 +17,40 @@
             </nav>
         </div>
     </header>
+    <div class="row bandeau-top">
+            <div class="col-md-2"></div>
+            <div class="col-md-10 pt-5 pb-5">
+                <span>Bienvenue</span><span>sur votre espace</span>
+            </div>
+        </div>
+    <div class="container-fluid mt-1 mb-1">
+            <div class="row">
+                <div class="col-md-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Fil d'ariane</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Fil d'ariane</li>
+                        </ol>
+                    </nav>
+                    <div class="input-group-prepend">
+                        <button type="button" class="btn btn-dropdown">Filtre entreprise</button>
+                        <button type="button" class="btn btn-dropdown dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                            <a repeat.for="item of listFiltreEntreprise" class="dropdown-item" href="#">${item.label}</a>
+                        </div>
+                        <ul class="list-group list-group-horizontal">
+                            <li repeat.for="item of listFiltreEntrepriseSelected" class="list-group-item">${item.label}<button type="button" class="close" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button></li>
+                        </ul>
+                        <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <contact-privilegie ></contact-privilegie>
+                </div>
+            </div>
+        </div>
 </template>
