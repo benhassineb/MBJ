@@ -1,10 +1,110 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿<template>
+        <require from="./accueil-entreprise.css"></require>
+        <require from="resources/elements/contact-privilegie"></require>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                          <div class="card-header">
+                                <h5 class="card-title"><a href="">Je consulte l'offre</a> ou <b><a href="">j'édite mon reporting</a></b></h5>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title"> Filtre de recherche : </h5>
+                                <div class="row">
+                                    <label>
+                                            &nbsp;Statut du logement&nbsp;
+                                            <select>
+                                                    <option>Placé</option>
+                                                    <option>En cours de placement</option>
+                                            </select>
+                                    </label>
+                                    <label>
+                                            &nbsp;Typologie&nbsp;
+                                            <select>
+                                                    <option>Tous types</option>
+                                                    <option>F1</option>
+                                                    <option>F2</option>
+                                                    <option>F3</option>
+                                                    <option>F4 ou +</option>
+                                            </select>
+                                    </label>
+                                    <label>
+                                            &nbsp;XXXX&nbsp;<input type="Text" placeholder="XXXX">
+                                    </label>             
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="col-md-12 text-right">
+                                    <button type="button" class="btn btn-primary">Editer mes résultats</button>
+                                </div>
+                                <br>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                                <thead>
+                                                        <tr>
+                                                            <th>
+                                                                Placé
+                                                            </th>
+                                                            <th>
+                                                                Typologie
+                                                            </th>
+                                                            <th>
+                                                                XXXX
+                                                            </th>                                   
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <small class="text-info right small">XXXXXXXXXX</small>
+                                                            </td>
+                                                            <td>
+                                                                <small class="text-info right small">F1</small>
+                                                            </td>
+                                                            <td>
+                                                                <small class="text-info right small">XXXXXXXXXX</small>
+                                                            </td>                               
+                                                        </tr>
+                                                        <tr>
+                                                                <td>
+                                                                    <small class="text-info right small">XXXXXXXXXX</small>
+                                                                </td>
+                                                                <td>
+                                                                    <small class="text-info right small">F3</small>
+                                                                </td>
+                                                                <td>
+                                                                    <small class="text-info right small">XXXXXXXXXX</small>
+                                                                </td>                               
+                                                            </tr>
+                                                            <tr>
+                                                                    <td>
+                                                                        <small class="text-info right small">XXXXXXXXXX</small>
+                                                                    </td>
+                                                                    <td>
+                                                                        <small class="text-info right small">F4 ou plus</small>
+                                                                    </td>
+                                                                    <td>
+                                                                        <small class="text-info right small">XXXXXXXXXX</small>
+                                                                    </td>                               
+                                                                </tr>
+                                                    </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <compose view="../footer.html" containerless></compose>
+</template>

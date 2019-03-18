@@ -3,6 +3,7 @@ import { SampleService } from 'services/sample-service';
 
 @inject(SampleService)
 export class header {
+
     listFiltreEntreprise;
     listFiltreEntrepriseSelected = [];
     

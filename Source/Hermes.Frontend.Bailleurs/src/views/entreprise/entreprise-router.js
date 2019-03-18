@@ -7,7 +7,8 @@ export class EntrepriseRouter {
       { route: 'details-demande-avec-CERFA',  name: 'details-demande-avec-CERFA', moduleId: './details-demande-avec-CERFA', nav: true, title: 'Details demande avec CERFA' },
       { route: 'Entreprise', name: 'Entreprise', moduleId: 'entreprise-router', nav: true, title: 'entreprise Router' },
       { route: 'gestion-demandes/:filterType?', name: 'gestion-demandes', moduleId: './gestion-demandes', nav: true, title: 'Gestion des demandes', href: '#gestion-demandes' },
-      { route: 'offres-privilege-consulte', name: 'offres-privilege-consulte', moduleId: './offres-privilege-consulte', nav: true, title: 'Offres Privilège' }
+      { route: 'offres-privilege-consulte', name: 'offres-privilege-consulte', moduleId: './offres-privilege-consulte', nav: true, title: 'Offres Privilège' },
+      { route: 'offres-privilege-edite', name: 'offres-privilege-edite', moduleId: './offres-privilege-edite', nav: true, title: 'Offres Privilège' }
 
     ]);
 
