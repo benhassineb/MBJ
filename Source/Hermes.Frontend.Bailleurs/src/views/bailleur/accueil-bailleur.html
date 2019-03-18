@@ -1,26 +1,8 @@
 <template>
-    <header>
-        <div class="bg-dark collapse show">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">Logo bailleur</h4>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Etat connection</h4>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <require from="./accueil-bailleur.css"></require>
+    <require from="resources/elements/contact-privilegie"></require>
+    <compose view="../header.html" containerless></compose>
+    <div class="bandeau-top"></div>
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -28,7 +10,14 @@
             <li class="breadcrumb-item active" aria-current="page">Fil d'ariane</li>
         </ol>
     </nav>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <contact-privilegie ></contact-privilegie>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
