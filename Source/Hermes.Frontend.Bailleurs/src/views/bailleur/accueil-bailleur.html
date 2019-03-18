@@ -4,16 +4,35 @@
     <compose view="../header.html" containerless></compose>
     <div class="bandeau-top"></div>
 
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Fil d'ariane</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Fil d'ariane</li>
-        </ol>
-    </nav>
-    <div class="container-fluid">
+    
+    <div class="container-fluid mt-1 mb-1">
         <div class="row">
             <div class="col-md-8">
-
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Fil d'ariane</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Fil d'ariane</li>
+                    </ol>
+                </nav>
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-dropdown">Reference</button>
+                    <button type="button" class="btn btn-dropdown dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                    </ul>
+                    <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
+                </div>
             </div>
             <div class="col-md-4">
                 <contact-privilegie ></contact-privilegie>
