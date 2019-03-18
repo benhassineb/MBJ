@@ -8,7 +8,12 @@ export class ValiderDemande {
 
   resultats = [];
 
-  constructor() {
-
+  constructor(service) {
+    this._service = service;
   }
+
+  activate() {
+    this._service.getDemandesAValider().then(res => this.resultats = res);
+  }
+
 }

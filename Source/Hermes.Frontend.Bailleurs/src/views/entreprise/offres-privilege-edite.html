@@ -1,0 +1,142 @@
+﻿<template>
+        <require from="./accueil-entreprise.css"></require>
+        <require from="resources/elements/contact-privilegie"></require>
+        <div class="container-fluid mt-1 mb-1">
+            <div class="row">
+                <div class="col-md-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Fil d'ariane</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Fil d'ariane</li>
+                        </ol>
+                    </nav>
+                    <div class="input-group-prepend">
+                        <button type="button" class="btn btn-dropdown">Filtre entreprise</button>
+                        <button type="button" class="btn btn-dropdown dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                            <a class="dropdown-item" href="#">Normandie</a>
+                            <a class="dropdown-item" href="#">Orne</a>
+                            <a class="dropdown-item" href="#">Eure</a>
+                            <a class="dropdown-item" href="#">Haut de france</a>
+                        </div>
+                        <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item">Normandie</li>
+                                <li class="list-group-item">Orne</li>
+                                <li class="list-group-item">Eure</li>
+                        </ul>
+                        <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <contact-privilegie ></contact-privilegie>
+                </div>
+            </div>
+        </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                          <div class="card-header">
+                                <h5 class="card-title"><a href="">Je consulte l'offre</a> ou <b><a href="">j'édite mon reporting</a></b></h5>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title"> Filtre de recherche : </h5>
+                                <div class="row">
+                                    <label>
+                                            &nbsp;Statut du logement&nbsp;
+                                            <select>
+                                                    <option>Placé</option>
+                                                    <option>En cours de placement</option>
+                                            </select>
+                                    </label>
+                                    <label>
+                                            &nbsp;Typologie&nbsp;
+                                            <select>
+                                                    <option>Tous types</option>
+                                                    <option>F1</option>
+                                                    <option>F2</option>
+                                                    <option>F3</option>
+                                                    <option>F4 ou +</option>
+                                            </select>
+                                    </label>
+                                    <label>
+                                            &nbsp;XXXX&nbsp;<input type="Text" placeholder="XXXX">
+                                    </label>             
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <button type="button" class="btn btn-primary">Editer mes résultats</button>
+                                </div>
+                                <div class="row">
+                                    <div class="table-responsive">
+                                        <table class="table table-condensed table-striped table-twoLines">
+                                                <thead>
+                                                        <tr class="table-info">
+                                                            <th class="col-md-4">
+                                                                Placé
+                                                            </th>
+                                                            <th class="col-md-4">
+                                                                typologie
+                                                            </th>
+                                                            <th class="col-md-4">
+                                                                XXXX
+                                                            </th>                                   
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr>
+                                                            <td class="col-md-4">
+                                                                <small class="text-info right small">XXXXXXXXXX</small>
+                                                            </td>
+                                                            <td class="col-md-4">
+                                                                <small class="text-info right small">F1</small>
+                                                            </td>
+                                                            <td class="col-md-4">
+                                                                <small class="text-info right small">XXXXXXXXXX</small>
+                                                            </td>                               
+                                                        </tr>
+                                                        <tr>
+                                                                <td class="col-md-4">
+                                                                    <small class="text-info right small">XXXXXXXXXX</small>
+                                                                </td>
+                                                                <td class="col-md-4">
+                                                                    <small class="text-info right small">F3</small>
+                                                                </td>
+                                                                <td class="col-md-4">
+                                                                    <small class="text-info right small">XXXXXXXXXX</small>
+                                                                </td>                               
+                                                            </tr>
+                                                            <tr>
+                                                                    <td class="col-md-4">
+                                                                        <small class="text-info right small">XXXXXXXXXX</small>
+                                                                    </td>
+                                                                    <td class="col-md-4">
+                                                                        <small class="text-info right small">F4 ou plus</small>
+                                                                    </td>
+                                                                    <td class="col-md-4">
+                                                                        <small class="text-info right small">XXXXXXXXXX</small>
+                                                                    </td>                               
+                                                                </tr>
+                                                    </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <compose view="../footer.html" containerless></compose>
+</template>

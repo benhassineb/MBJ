@@ -14,7 +14,12 @@ export class ConsulterDemandes {
 
   resultats = [];
 
-  constructor() {
-
+  constructor(service) {
+    this._service = service;
   }
+
+  activate() {
+    this._service.getDemandesAConsulter().then(res => this.resultats = res);
+  }
+
 }

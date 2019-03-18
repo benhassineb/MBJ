@@ -1,0 +1,205 @@
+﻿<template>
+<require from="./accueil-entreprise.css"></require>
+<require from="resources/elements/contact-privilegie"></require>
+<div class="container-fluid mt-1 mb-1">
+    <div class="row">
+        <div class="col-md-8">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Fil d'ariane</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Fil d'ariane</li>
+                </ol>
+            </nav>
+            <div class="input-group-prepend">
+                <button type="button" class="btn btn-dropdown">Filtre entreprise</button>
+                <button type="button" class="btn btn-dropdown dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                    <a class="dropdown-item" href="#">Normandie</a>
+                    <a class="dropdown-item" href="#">Orne</a>
+                    <a class="dropdown-item" href="#">Eure</a>
+                    <a class="dropdown-item" href="#">Haut de france</a>
+                </div>
+                <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">Normandie</li>
+                        <li class="list-group-item">Orne</li>
+                        <li class="list-group-item">Eure</li>
+                </ul>
+                <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <contact-privilegie ></contact-privilegie>
+        </div>
+    </div>
+</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                        <h5 class="card-title"><a href=""><b>Je consulte l'offre</b></a> ou <a href="">j'édite mon reporting</a></h5>
+                    </div>
+                </div>
+              </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title"> Filtre de recherche : </h5>
+                        <div class="row">
+                            <label>
+                                    &nbsp;Localisation&nbsp;<input type="Text" placeholder="Localisation...">
+                            </label>
+
+                            <!-- <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tous type
+                                    <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="#">F1</a></li>
+                                      <li><a href="#">F2</a></li>
+                                      <li><a href="#">F3</a></li>
+                                      <li><a href="#">F4 ou +</a></li>
+                                    </ul>
+                            </div> -->
+                            <label>
+                                    &nbsp;Typologie&nbsp;
+                                    <select>
+                                            <option>Tous types</option>
+                                            <option>F1</option>
+                                            <option>F2</option>
+                                            <option>F3</option>
+                                            <option>F4 ou +</option>
+                                    </select>
+                            </label>
+                            <label>
+                                    &nbsp;Date de fin de publication&nbsp;<input type="Text" placeholder="JJ/MM/AAAA">
+                            </label>
+                            <label>
+                                    &nbsp;Date de parution&nbsp;<input type="Text" placeholder="JJ/MM/AAAA">
+                            </label>
+                            <label>
+                                    <input class="" type="checkbox" >&nbsp;logement en cours de placement&nbsp;
+                            </label>
+                            <label>
+                                    <input class="" type="checkbox" >&nbsp;logement placé&nbsp;
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3" style="border-style: solid;margin-right: 5px;">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">Logement 1</div>
+                                    <div class="panel-body">
+                                        <row>
+                                            <div class="col-md-12">
+                                                <p>67 salariés éligibles à cette offre</p>   
+                                            </div>
+                                        </row>
+                                        <row>
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary">
+                                                    envoyer l'offre 6 ALERTES Logement
+                                                </button> 
+                                            </div>
+                                        </row>
+                                        <row>
+                                                <div class="col-md-12">
+                                                <button type="button" class="btn btn-primary">
+                                                    CTA Détails
+                                                </button>  
+                                            </div>
+                                        </row>
+                                        <row></row>
+                                        <row>
+                                            <div class="col-md-12">
+                                                    <p>Date de publication depuis quand et combien de temps</p>
+                                            </div>
+                                        </row>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3" style="border-style: solid;margin-right: 5px;">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">Logement 2</div>
+                                        <div class="panel-body">
+                                            <row>
+                                                <div class="col-md-12">
+                                                    <p>0 salariés éligibles à cette offre</p>
+                                                </div>
+                                            </row>
+                                            <row>
+                                                <div class="col-md-12">
+                                                </div> 
+                                            </row>
+                                            <row>
+                                                <div class="col-md-12">
+                                                    <button type="button" class="btn btn-primary">
+                                                        CTA Détails
+                                                    </button>
+                                                </div>   
+                                            </row>
+                                            <row>
+                                                <div class="col-md-12">
+                                                    <button type="button" class="btn btn-primary">
+                                                        Je n'ai pas de salarié éligible je rends ce logement
+                                                    </button> 
+                                                </div> 
+                                            </row>
+                                            <row>
+                                                    <div class="col-md-12">
+                                                            <p>Date de publication depuis quand et combien de temps</p>
+                                                    </div>
+                                                </row>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-3" style="border-style: solid;margin-right: 5px;">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">Logement 3</div>
+                                        <div class="panel-body">
+                                            <row>
+                                                <div class="col-md-12">
+                                                <p>10 salariés éligibles à cette offre</p>
+                                                </div>
+                                            </row>
+                                            <row>
+                                                <div class="col-md-12">
+                                                <button type="button" class="btn-primary">
+                                                    envoyer l'offre 6 ALERTES Logement
+                                                </button>
+                                                </div>
+                                            </row>
+                                            <row>
+                                                    <div class="col-md-12">
+                                                    <button type="button" class="btn btn-primary">
+                                                        CTA Détails
+                                                    </button>
+                                                </div>  
+                                            </row>
+                                            <row>
+                                                    <div class="col-md-12">
+                                                    </div> 
+                                            </row>
+                                            <row>
+                                                    <div class="col-md-12">
+                                                            <p>Date de publication depuis quand et combien de temps</p>
+                                                    </div>
+                                                </row>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <compose view="../footer.html" containerless></compose>
+</template>

@@ -4,6 +4,7 @@ import { SampleService } from 'services/sample-service';
 @inject(SampleService)
 export class AcceuilEntreprise {
 
+
   constructor(service) {
     this._service = service;
     this._service.getLogements()
@@ -18,5 +19,5 @@ export class AcceuilEntreprise {
     return this._service.effacerCacheAutorisations('test')
       .then(result => this.result = result);
   }
-
 }
+
