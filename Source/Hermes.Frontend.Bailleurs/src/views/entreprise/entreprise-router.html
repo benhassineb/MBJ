@@ -1,11 +1,13 @@
 <template>
     <compose view="views/salarie/header.html" containerless></compose>
     <div class="row bandeau-top">
-            <div class="col-md-2"></div>
-            <div class="col-md-10 pt-5 pb-5">
-                <span>Bienvenue</span><span>sur votre espace</span>
-            </div>
+        <div class="col-md-2 pt-5 pb-5 pl-5 pr-5">
+            <img src="/images/logo-al.png">
         </div>
+        <div class="col-md-10 pt-5 pb-5">
+            <span class="text-rose ">Bienvenue</span><span class="text-blue"> sur votre espace Hermès</span>
+        </div>
+    </div>
     <router-view></router-view>
     <compose view="views/salarie/footer.html" containerless></compose>
 </template>

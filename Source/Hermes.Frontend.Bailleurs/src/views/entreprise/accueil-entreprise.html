@@ -1,7 +1,7 @@
 <template>
     <require from="./accueil-entreprise.css"></require>
     <require from="resources/elements/contact-privilegie"></require>
-    <div class="container-fluid">
+    <div class="container-fluid mt-1 mb-1">
     <div class="row">
         <div class="col-md-8">
             <nav aria-label="breadcrumb">
@@ -22,9 +22,15 @@
                     <a class="dropdown-item" href="#">Haut de france</a>
                 </div>
                 <ul class="list-group list-group-horizontal">
-                        <li class="list-group-item">Normandie</li>
-                        <li class="list-group-item">Orne</li>
-                        <li class="list-group-item">Eure</li>
+                        <li class="list-group-item">Normandie <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button></li>
+                        <li class="list-group-item">Orne <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button></li>
+                        <li class="list-group-item">Eure <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button></li>
                 </ul>
                 <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
             </div>
@@ -70,7 +76,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title"> GESTION DES DEMANDES DE LOGEMENTS</h5>
+                        <h5 class="card-title"> Gestion des demandes de logements</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -132,11 +138,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">LES OFFRES DE LOGEMENT PRIVILIGES</h5>
+                        <h5 class="card-title">Offres de logement privilèges</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="mx-auto">
+                            <div class="col-md-2">
                                 <div class="text-center">
                                     <h3>
                                         XX
@@ -146,35 +152,82 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="mx-auto bg-light">
+                            <div class="col-md-2 bg-light">
                                 <div class="text-center">
-                                    <h3>
-                                        Vignette offre
-                                    </h3>
+                                        <img src="./images/vignette.png">
+                                        <h5 class="text-blue">
+                                            Lorem ipsum
+                                        </h5>
                                 </div>
                             </div>
-                            <div class="mx-auto bg-light">
+                            <div class="col-md-2 bg-light">
                                 <div class="text-center">
-                                    <h4>
-                                        Vignette offre
-                                    </h4>
+                                    <img src="./images/vignette.png">
+                                    <h5 class="text-blue">
+                                        Lorem ipsum
+                                    </h5>
                                 </div>
                             </div>
-                            <div class="mx-auto bg-light">
+                            <div class="col-md-2 bg-light">
                                 <div class="text-center">
-                                    <h4>
-                                        Vignette offre
-                                    </h4>
+                                    <img src="./images/vignette.png">
+                                    <h5 class="text-blue">
+                                        Lorem ipsum
+                                    </h5>
                                 </div>
                             </div>
-                            <div class="mx-auto bg-light">
+                            <div class="col-md-2 bg-light">
                                 <div class="text-center">
-                                    <h4>
-                                        Vignette offre
-                                    </h4>
+                                    <img src="./images/vignette.png">
+                                    <h5 class="text-blue">
+                                        Lorem ipsum
+                                    </h5>
                                 </div>
                             </div>
 
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="text-center">
+                                    <h3>
+                                    </h3>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-2 bg-light">
+                                <div class="text-center">
+                                    <img src="./images/vignette.png">
+                                    <h5 class="text-blue">
+                                        Lorem ipsum
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 bg-light">
+                                <div class="text-center">
+                                    <img src="./images/vignette.png">
+                                    <h5 class="text-blue">
+                                        Lorem ipsum
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 bg-light">
+                                <div class="text-center">
+                                    <img src="./images/vignette.png">
+                                    <h5 class="text-blue">
+                                        Lorem ipsum
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-2 bg-light">
+                                <div class="text-center">
+                                    <img src="./images/vignette.png">
+                                    <h5 class="text-blue">
+                                        Lorem ipsum
+                                    </h5>
+                                </div>
+                            </div>
+    
                         </div>
                     </div>
                     <div class="card-footer">
@@ -182,7 +235,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <br>
