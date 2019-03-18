@@ -96,7 +96,7 @@
                         <th>Date de naissance</th>
                         <th>Nbr. candidature</th>
                         <th>Refus en CAL</th>
-                        <th>Refus salairé</th>
+                        <th>Refus salarié</th>
                         <th>Jeton</th>
                         <th>Dmd Prio</th>
                         <th>Matricule</th>
@@ -104,7 +104,15 @@
                 </thead>
                 <tbody>
                     <tr repeat.for="item of resultats">
-                        <!-- <td>${cp.codePostal}</td> -->
+                        <td>${item.nom}</td>
+                        <td>${item.prenom}</td>
+                        <td>${item.dateNaissance}</td>
+                        <td>${item.nbrCandidature}</td>
+                        <td>${item.refusCal}</td>
+                        <td>${item.refusSalaire}</td>
+                        <td>${item.jeton}</td>
+                        <td>${item.dmdPrio}</td>
+                        <td>${item.matricule}</td>
                     </tr>
                 </tbody>
             </table>

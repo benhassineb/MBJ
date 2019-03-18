@@ -2,6 +2,9 @@ import { inject, NewInstance } from 'aurelia-framework';
 import { ConfiguredHttpClient } from 'core/configured-http-client';
 import { HttpClient } from 'aurelia-fetch-client';
 import { handleApiError } from 'core/common';
+import { DemandeAConsulterItem } from '../models/demande-a-consulter-item';
+import { DemandeAValiderItem } from '../models/demande-a-valider-item';
+import { PrioriteAGererItem } from '../models/priorite-a-gerer-item';
 
 @inject(ConfiguredHttpClient, NewInstance.of(HttpClient))
 export class SampleService {
@@ -53,6 +56,36 @@ export class SampleService {
     return this._localClient
       .fetch('/mock/contactprivilegie.json')
       .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getDemandesAConsulter() {
+    return this._localClient
+      .fetch('/mock/demandes-a-consulter.json')
+      .then(response => response.json())
+      .then(results => {
+        return results.map(v => DemandeAConsulterItem.fromObject(v));
+      })
+      .catch(error => handleApiError(error));
+  }
+
+  getDemandesAValider() {
+    return this._localClient
+      .fetch('/mock/demandes-a-valider.json')
+      .then(response => response.json())
+      .then(results => {
+        return results.map(v => DemandeAValiderItem.fromObject(v));
+      })
+      .catch(error => handleApiError(error));
+  }
+
+  getPrioritesAGerer() {
+    return this._localClient
+      .fetch('/mock/priorites-a-gerer.json')
+      .then(response => response.json())
+      .then(results => {
+        return results.map(v => PrioriteAGererItem.fromObject(v));
+      })
       .catch(error => handleApiError(error));
   }
 }

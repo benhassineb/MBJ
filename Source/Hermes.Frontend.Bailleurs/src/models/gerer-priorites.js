@@ -1,4 +1,5 @@
 export class GererPriorites {
+
   nom;
   prenom;
   dateNaissance;
@@ -11,7 +12,12 @@ export class GererPriorites {
 
   resultats = [];
 
-  constructor() {
-
+  constructor(service) {
+    this._service = service;
   }
+
+  activate() {
+    this._service.getPrioritesAGerer().then(res => this.resultats = res);
+  }
+
 }
