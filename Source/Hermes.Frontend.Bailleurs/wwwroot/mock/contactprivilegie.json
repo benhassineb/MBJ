@@ -1,0 +1,16 @@
+[
+    {
+        "nom" : "DUPONT",
+        "prenom" : "Pierre",
+        "role" : "Conseiller entreprise",
+        "tel" : "01 12 12 12 12",
+        "email" : "dupont.pierre@actionlogement.Fr"  
+    },
+    {
+        "nom" : "MAURA",
+        "prenom" : "Elise",
+        "role" : "Conseiller entreprise",
+        "tel" : "01 13 13 13 13",
+        "email" : "maura.elise@actionlogement.Fr"  
+    }
+]

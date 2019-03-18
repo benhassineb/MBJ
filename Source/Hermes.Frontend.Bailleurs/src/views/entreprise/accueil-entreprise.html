@@ -1,15 +1,162 @@
-
 <template>
-    <require from="./acceuil-entreprise.css"></require>
-    <require from="../../resources/elements/map"></require>
-
-    <div class="container">
-        <h1 i18n="[html]title"> </h1>
-        <!-- <ul>
-          <li repeat.for="log of logements.features">${log.properties.name}</li>
-        </ul> -->
-        <map logements.bind="logements" communes.bind="communes" reseauferre.bind="reseauferre"></map>
-        <button click.trigger="effacerCacheAutorisations()">EFFACER CACHE</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control">
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control">
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">Gérer mon scoring entreprises</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">Editer mes chiffres</button>
+            </div>
+        </div>
     </div>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title"> GESTION DES DEMANDES DE LOGEMENTS</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="mx-auto">
+                                <div class="text-center">
+                                    <h3>
+                                        40
+                                    </h3>
+                                    <p>
+                                        Demandes en attente de validation
+                                    </p>
+                                    <ul>
+                                        <li> Demande en attente de validation</li>
+                                        <li> Demande en attente de validation</li>
+                                        <li> Demande en attente de validation</li>
+                                        <li> Demande en attente de validation</li>
+                                        <li> Demande en attente de validation</li>
+                                        <li> Demande en attente de validation</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="mx-auto">
+                                <div class="text-center">
+                                    <h3>
+                                        60
+                                    </h3>
+                                    <p>
+                                        Demandes de logement en cours
+                                    </p>
+                                    <ul>
+                                        <li> Demande de logement en cours</li>
+                                        <li> Demande de logement en cours</li>
+                                        <li> Demande de logement en cours</li>
+                                        <li> Demande de logement en cours</li>
+                                        <li> Demande de logement en cours</li>
+                                        <li> Demande de logement en cours</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <div class="text-center">
+                                    <h3>
+                                        60
+                                    </h3>
+                                    <p>
+                                        Priorité entreprise
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">LES OFFRES DE LOGEMENT PRIVILIGES</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="mx-auto">
+                                <div class="text-center">
+                                    <h3>
+                                        XX
+                                    </h3>
+                                    <p>
+                                        Publications
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mx-auto bg-light">
+                                <div class="text-center">
+                                    <h3>
+                                        Vignette offre
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="mx-auto bg-light">
+                                <div class="text-center">
+                                    <h4>
+                                        Vignette offre
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="mx-auto bg-light">
+                                <div class="text-center">
+                                    <h4>
+                                        Vignette offre
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="mx-auto bg-light">
+                                <div class="text-center">
+                                    <h4>
+                                        Vignette offre
+                                    </h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary float-right" href="#" role="button">Bouton accès</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <footer class="bd-footer bg-light">
+        <div class="footer-copyright text-center py-3">Footer:
+            <a href="#">Mentions légales</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
 
 </template>

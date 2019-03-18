@@ -49,4 +49,10 @@ export class SampleService {
       .catch(error => handleApiError(error));
   }
 
+  getContactPriviligies() {
+    return this._localClient
+      .fetch('/mock/contactprivilegie.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
 }
