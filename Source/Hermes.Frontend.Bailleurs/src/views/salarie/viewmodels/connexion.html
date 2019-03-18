@@ -1,0 +1,31 @@
+<template>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <form role="form" submit.delegate="submit()">
+            <h1 class="text-center">Connexion</h1>
+            <div class="form-group">
+              <label for="am">Adresse Mail</label>
+              <input type="email" value.bind="mail" class="form-control" id="am" placeholder="adresse@mail.com">
+            </div>
+            <div class="form-group">
+              <label for="am">Mot de passe</label>
+              <input type="password" value.bind="password" class="form-control" id="am" placeholder="*****">
+            </div>
+            <div class="form-group">
+              <a href="#">Mot de passe oublié</a>
+              <div class="pull-right">
+                <button class="btn btn-default w-120" role="submit">Se connecter</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label >Vous n'avez pas de compte ?</label>
+              <div class="pull-right">
+                <a href="salarie/inscription"><button class="btn btn-default w-120">Inscription</button></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</template>

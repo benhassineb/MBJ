@@ -1,0 +1,35 @@
+<template>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <form role="form" submit.delegate="submit()">
+          <h3 class="">Vos Coordonnées</h3>
+          <div class="form-group">
+            <label for="cp">Civilité</label>
+            <select value.bind="civilite" class="form-control" id="cp" >
+              <option value="M">M.</option>
+              <option value="Mme">Mme</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="np">Nom</label>
+            <input type="text" value.bind="nom" class="form-control" id="np" placeholder="Votre nom">
+          </div>
+          <div class="form-group">
+            <label for="pp">Prénom</label>
+            <input type="text" value.bind="prenom" class="form-control" id="pp" placeholder="Votre prénom">
+          </div>
+          <div class="form-group">
+            <label for="tp">Date de naissance</label>
+            <input type="text" value.bind="portable" class="form-control" id="tp" placeholder="Numéro de téléphone">
+          </div>
+          <h3 >Situation</h3>
+          <div class="form-group">
+              <label for="sp">Situation</label>
+              <input type="text" value.bind="situation" class="form-control" id="sp" placeholder="Situation">
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
