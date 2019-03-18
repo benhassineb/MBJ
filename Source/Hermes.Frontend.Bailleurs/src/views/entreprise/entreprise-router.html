@@ -1,6 +1,13 @@
 <template>
     <compose view="views/salarie/header.html" containerless></compose>
-    <div class="bandeau-top"></div>
+    <require from="resources/elements/contact-privilegie"></require>
+
+    <div class="row bandeau-top">
+        <div class="col-md-2"></div>
+        <div class="col-md-10 pt-5 pb-5">
+            <span>Bienvenue</span><span>sur votre espace</span>
+        </div>
+    </div>
     <router-view></router-view>
     <compose view="views/salarie/footer.html" containerless></compose>
 </template>

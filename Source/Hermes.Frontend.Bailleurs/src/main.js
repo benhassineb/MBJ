@@ -35,7 +35,6 @@ export function configure(aurelia) {
 
   if (environment.testing) {
     aurelia.use.plugin('aurelia-testing');
-    aurelia.use.plugin('aurelia-bootstrapper');
   }
 
   aurelia.start().then(() => aurelia.setRoot());

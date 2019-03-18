@@ -2,38 +2,35 @@
     <require from="./accueil-entreprise.css"></require>
     <require from="resources/elements/contact-privilegie"></require>
     <div class="container-fluid mt-1 mb-1">
-    <div class="row">
-        <div class="col-md-8">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Fil d'ariane</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Fil d'ariane</li>
-                </ol>
-            </nav>
-            <div class="input-group-prepend">
-                <button type="button" class="btn btn-dropdown">Filtre entreprise</button>
-                <button type="button" class="btn btn-dropdown dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                    <a class="dropdown-item" href="#">Normandie</a>
-                    <a class="dropdown-item" href="#">Orne</a>
-                    <a class="dropdown-item" href="#">Eure</a>
-                    <a class="dropdown-item" href="#">Haut de france</a>
+        <div class="row">
+            <div class="col-md-8">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Fil d'ariane</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Fil d'ariane</li>
+                    </ol>
+                </nav>
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-dropdown">Filtre entreprise</button>
+                    <button type="button" class="btn btn-dropdown dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                        <a repeat.for="item of listFiltreEntreprise" class="dropdown-item" href="#">${item.label}</a>
+                    </div>
+                    <ul class="list-group list-group-horizontal">
+                        <li repeat.for="item of listFiltreEntrepriseSelected" class="list-group-item">${item.label}<button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button></li>
+                    </ul>
+                    <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
                 </div>
-                <ul class="list-group list-group-horizontal">
-                        <li class="list-group-item">Normandie</li>
-                        <li class="list-group-item">Orne</li>
-                        <li class="list-group-item">Eure</li>
-                </ul>
-                <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
+            </div>
+            <div class="col-md-4">
+                <contact-privilegie ></contact-privilegie>
             </div>
         </div>
-        <div class="col-md-4">
-            <contact-privilegie ></contact-privilegie>
-        </div>
     </div>
-</div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
@@ -76,50 +73,82 @@
                         <div class="row">
                             <div class="mx-auto">
                                 <div class="text-center">
-                                    <h3>
-                                        40
-                                    </h3>
+                                    <h2>
+                                        <i class="fas fa-home"></i>40
+                                    </h2>
                                     <p>
                                         Demandes en attente de validation
                                     </p>
-                                    <ul>
-                                        <li> Demande en attente de validation</li>
-                                        <li> Demande en attente de validation</li>
-                                        <li> Demande en attente de validation</li>
-                                        <li> Demande en attente de validation</li>
-                                        <li> Demande en attente de validation</li>
-                                        <li> Demande en attente de validation</li>
+                                    <ul style="list-style-type:none;">
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
                                     </ul>
+                                    <p>
+                                        <button type="button" class="btn btn-primary">Gérér les demandeurs</button>
+                                    </p>
                                 </div>
 
                             </div>
                             <div class="mx-auto">
                                 <div class="text-center">
-                                    <h3>
-                                        60
-                                    </h3>
+                                    <h2>
+                                        <i class="fas fa-home"></i>60
+                                    </h2>
                                     <p>
                                         Demandes de logement en cours
                                     </p>
-                                    <ul>
-                                        <li> Demande de logement en cours</li>
-                                        <li> Demande de logement en cours</li>
-                                        <li> Demande de logement en cours</li>
-                                        <li> Demande de logement en cours</li>
-                                        <li> Demande de logement en cours</li>
-                                        <li> Demande de logement en cours</li>
+                                    <ul style="list-style-type:none;">
+                                        <li> (p) DOE John</li>
+                                        <li> (p) DOE John</li>
+                                        <li> (p) DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
+                                        <li> DOE John</li>
                                     </ul>
+                                    <p>
+                                        <button type="button" class="btn btn-primary">Gérér les demandes</button>
+                                    </p>
                                 </div>
                             </div>
                             <div class="mx-auto">
+                                <br>
+                                <br>
                                 <div class="text-center">
                                     <h3>
-                                        60
+                                        Scoring entreprise
                                     </h3>
                                     <p>
-                                        Priorité entreprise
+                                        <button type="button" class="btn btn-primary">Gérér mon scoring</button>
                                     </p>
                                 </div>
+                                <br>
+                                <br>
+                                <div class="text-center">
+                                    <h3>
+                                        Priorité entreprise
+
+                                    </h3>
+                                    <h3>
+                                        14/800
+                                    </h3>
+                                    <p>
+                                        <button type="button" class="btn btn-primary">Gérér mes priorité</button>
+                                    </p>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -132,59 +161,128 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">LES OFFRES DE LOGEMENT PRIVILIGES</h5>
+                        <h5 class="card-title">Salariés logés</h5>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="mx-auto">
                                 <div class="text-center">
                                     <h3>
-                                        XX
+                                        46
                                     </h3>
                                     <p>
-                                        Publications
+                                        Présenté en CAL
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-primary">Voir le détail</button>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mx-auto">
+                                <div class="text-center">
+                                    <h3>
+                                        28
+                                    </h3>
+                                    <p>
+                                        Accepté en CAL
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-primary">Voir le détail</button>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mx-auto">
+                                <div class="text-center">
+                                    <h3>
+                                        76
+                                    </h3>
+                                    <p>
+                                        Salarié logés
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-primary">Voir le détail</button>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">LES OFFRES DE LOGEMENT PRIVILIGES</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="mx-auto">
+                                <div class="text-center">
+                                    <h2>
+                                        <i class="fas fa-home"></i> 35
+                                    </h2>
+                                    <p>
+                                        Publiées <br>
+                                        pour votre salariés
                                     </p>
                                 </div>
                             </div>
                             <div class="mx-auto bg-light">
                                 <div class="text-center">
+                                    <img src="/images/apt123.jpg" />
                                     <h3>
-                                        Vignette offre
+                                        Paris-75015
                                     </h3>
                                 </div>
                             </div>
                             <div class="mx-auto bg-light">
                                 <div class="text-center">
+                                    <img src="/images/apt123.jpg" />
                                     <h4>
-                                        Vignette offre
+                                        Paris-75015
                                     </h4>
                                 </div>
                             </div>
                             <div class="mx-auto bg-light">
                                 <div class="text-center">
+                                    <img src="/images/apt123.jpg" />
                                     <h4>
-                                        Vignette offre
+                                        Paris-75015
                                     </h4>
                                 </div>
                             </div>
                             <div class="mx-auto bg-light">
                                 <div class="text-center">
+                                    <img src="/images/apt123.jpg" />
                                     <h4>
-                                        Vignette offre
+                                        Paris-75015
                                     </h4>
                                 </div>
                             </div>
 
                         </div>
+                        <br>
+                        <div class="row">
+                            <div class="mx-auto">
+
+                                <a class="btn btn-primary float-right" href="#" role="button">Voir tout les logements</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <a class="btn btn-primary float-right" href="#" role="button">Bouton accès</a>
-                    </div>
+
+
                 </div>
             </div>
 
         </div>
     </div>
     <br>
-    <compose view="../footer.html" containerless></compose>
 </template>

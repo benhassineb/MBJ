@@ -1,0 +1,100 @@
+[
+  { "nom": "COULON", "prenom": "MICHAEL", "dateNaissance": "1966-07-05", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0322296200" }
+  ,{ "nom": "SUSZKA", "prenom": "BRIGITTE", "dateNaissance": "1964-06-20", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0557511666" }
+  ,{ "nom": "BERTHET", "prenom": "CELINE", "dateNaissance": "1989-10-23", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0784175166" }
+  ,{ "nom": "DEHER", "prenom": "Martine", "dateNaissance": "1963-12-12", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0493905513" }
+  ,{ "nom": "REVERCHON", "prenom": "CARINNE", "dateNaissance": "1986-03-08", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0477664100" }
+  ,{ "nom": "LAFFONT", "prenom": "SYLVIE", "dateNaissance": "1960-02-21", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0422050020" }
+  ,{ "nom": "LINARES", "prenom": "Isabelle", "dateNaissance": "1988-04-25", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0174591017" }
+  ,{ "nom": "GABÉ", "prenom": "Christian", "dateNaissance": "1987-09-06", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0233905000" }
+  ,{ "nom": "EMERAUD", "prenom": "MYRTILLE", "dateNaissance": "1965-05-23", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0671386071" }
+  ,{ "nom": "AUVE", "prenom": "STEPHANE", "dateNaissance": "1968-06-22", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0475408279" }
+  ,{ "nom": "QUEANT", "prenom": "Sandrine", "dateNaissance": "1984-03-16", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0546417925" }
+  ,{ "nom": "LANDES", "prenom": "FRANCIS", "dateNaissance": "1977-06-25", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0146114200" }
+  ,{ "nom": "BARIL", "prenom": "EDOUARD", "dateNaissance": "1960-08-30", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0240365115" }
+  ,{ "nom": "FERRIER", "prenom": "Nathalie", "dateNaissance": "1964-12-23", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0555929090" }
+  ,{ "nom": "MANELLI", "prenom": "EMMANUELLE", "dateNaissance": "1965-06-13", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0468685043" }
+  ,{ "nom": "LAMY", "prenom": "VERONIQUE", "dateNaissance": "1966-12-11", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0380730777" }
+  ,{ "nom": "LE GUEN", "prenom": "NELLY", "dateNaissance": "1991-06-25", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0240636665" }
+  ,{ "nom": "GALFI", "prenom": "Laureline", "dateNaissance": "1961-09-29", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0563735013" }
+  ,{ "nom": "GLISSANT", "prenom": "ESTHER", "dateNaissance": "1961-05-14", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0140386430" }
+  ,{ "nom": "ALBEROLA", "prenom": "Valérie", "dateNaissance": "1981-02-08", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0549374989" }
+  ,{ "nom": "BRIZAY", "prenom": "PHILIPPE", "dateNaissance": "1994-12-14", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0240093131" }
+  ,{ "nom": "DA CRUZ", "prenom": "MARIE JOSE", "dateNaissance": "1993-03-20", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0624354686" }
+  ,{ "nom": "CHAUSSON", "prenom": "STEPHANE", "dateNaissance": "1982-08-22", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0326683711" }
+  ,{ "nom": "LEONARD", "prenom": "Gilles", "dateNaissance": "1983-12-16", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0479086986" }
+  ,{ "nom": "DURET", "prenom": "Philippe", "dateNaissance": "1981-06-08", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0251639958" }
+  ,{ "nom": "COMPTABLILITE", "prenom": "", "dateNaissance": "1968-12-12", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0143451800" }
+  ,{ "nom": "VICENTE", "prenom": "Francisco", "dateNaissance": "1969-09-27", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0437202120" }
+  ,{ "nom": "VOLIVERT", "prenom": "JEAN JACQUES", "dateNaissance": "1965-12-26", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0557980838" }
+  ,{ "nom": "VERNIER", "prenom": "ERIC", "dateNaissance": "1971-09-01", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0381924109" }
+  ,{ "nom": "THIBAULT", "prenom": "ANNICK", "dateNaissance": "1978-10-03", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0546485752" }
+  ,{ "nom": "MERCERON", "prenom": "ISABELLE", "dateNaissance": "1960-10-12", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0549253117" }
+  ,{ "nom": "GREULICH", "prenom": "MARC", "dateNaissance": "1976-01-06", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0329783111" }
+  ,{ "nom": "AUVE", "prenom": "STEPHANE", "dateNaissance": "1987-06-09", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0475408279" }
+  ,{ "nom": "LAVAL", "prenom": "Florence", "dateNaissance": "1962-06-17", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0298028181" }
+  ,{ "nom": "Fillon - Service Comptabilité", "prenom": "Elodie", "dateNaissance": "1966-05-17", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0562517521" }
+  ,{ "nom": "GLISSANT", "prenom": "ESTHER", "dateNaissance": "1992-02-12", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0140386430" }
+  ,{ "nom": "BERNARD", "prenom": "Virginie", "dateNaissance": "1983-04-24", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0561435003" }
+  ,{ "nom": "MERIAN", "prenom": "MURIELLE", "dateNaissance": "1970-10-19", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0596514617" }
+  ,{ "nom": "LEROY", "prenom": "PIERRE-YVES", "dateNaissance": "1982-01-13", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0240569132" }
+  ,{ "nom": "Bentz", "prenom": "Patricia", "dateNaissance": "1975-05-22", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0389206904" }
+  ,{ "nom": "CHAUSSON", "prenom": "STEPHANE", "dateNaissance": "1974-01-24", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0326683711" }
+  ,{ "nom": "TAUREAU", "prenom": "Frédéric", "dateNaissance": "1974-08-08", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0247428991" }
+  ,{ "nom": "PETITFOUR", "prenom": "Caroline", "dateNaissance": "1980-09-04", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0491543427" }
+  ,{ "nom": "LAMONGIE", "prenom": "MARIE LOUISE", "dateNaissance": "1989-05-05", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0160118262" }
+  ,{ "nom": "FISCAL", "prenom": "Guylène", "dateNaissance": "1973-06-21", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0590202648" }
+  ,{ "nom": "VIANNAY", "prenom": "DOMINIQUE", "dateNaissance": "1971-03-29", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0241951101" }
+  ,{ "nom": "Lecoq", "prenom": "Cedric ", "dateNaissance": "1989-12-27", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0235197060" }
+  ,{ "nom": "MALLORCA SPAGNOLO", "prenom": "VALERIE", "dateNaissance": "1975-10-24", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0490978877" }
+  ,{ "nom": "SENNOAJ", "prenom": "Françoise", "dateNaissance": "1965-11-26", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0590202648" }
+  ,{ "nom": "RIVIEREZ", "prenom": "Rosella", "dateNaissance": "1984-11-08", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0596513490" }
+  ,{ "nom": "BECLARD", "prenom": "Mendy", "dateNaissance": "1969-10-23", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0590269745" }
+  ,{ "nom": "Pulley", "prenom": "Melissa", "dateNaissance": "1982-05-31", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0670063129" }
+  ,{ "nom": "GUILLAUMA", "prenom": "Jean Claude", "dateNaissance": "1961-02-24", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0298798760" }
+  ,{ "nom": "LEBRUN", "prenom": "BRIGITTE", "dateNaissance": "1990-12-12", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0450742436" }
+  ,{ "nom": "FELIXINE", "prenom": "Marie-Laure ", "dateNaissance": "1990-12-19", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0596427405" }
+  ,{ "nom": "MAILLOT", "prenom": "Daniel", "dateNaissance": "1972-02-18", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0262555451" }
+  ,{ "nom": "devaux pelier", "prenom": "alexandre", "dateNaissance": "1990-06-27", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0475810034" }
+  ,{ "nom": "DASSY", "prenom": "THIERRY", "dateNaissance": "1969-07-01", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0262455459" }
+  ,{ "nom": "BRIZAY", "prenom": "PHILIPPE", "dateNaissance": "1962-08-01", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0240093131" }
+  ,{ "nom": "BERTHERAT", "prenom": "SOPHIE", "dateNaissance": "1971-05-14", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0558268042" }
+  ,{ "nom": "TONCOU", "prenom": "VALERIE", "dateNaissance": "1960-08-13", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0147434509" }
+  ,{ "nom": "Garrigou", "prenom": "Marie-José", "dateNaissance": "1983-08-18", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0565417251" }
+  ,{ "nom": "GHEZAIEL", "prenom": "TAREK", "dateNaissance": "1987-11-25", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0493482121" }
+  ,{ "nom": "bourgain", "prenom": "beatrice", "dateNaissance": "1977-08-02", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0164498898" }
+  ,{ "nom": "PAYOT PERTIN", "prenom": "HENRI", "dateNaissance": "1986-10-10", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0450531250" }
+  ,{ "nom": "BARTHAZON", "prenom": "ALAIN", "dateNaissance": "1962-11-01", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0470078073" }
+  ,{ "nom": "GULKASCHIAN", "prenom": "MARIE HELENE", "dateNaissance": "1971-06-07", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0561303132" }
+  ,{ "nom": "VIVIFIAN", "prenom": "CHRISTINE", "dateNaissance": "1976-02-11", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0478721638" }
+  ,{ "nom": "FELLICE", "prenom": "MURIEL", "dateNaissance": "1989-01-26", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0477410571" }
+  ,{ "nom": "GIRAUD", "prenom": "Didier", "dateNaissance": "1984-08-22", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0549374497" }
+  ,{ "nom": "ROHR", "prenom": "Philippe", "dateNaissance": "1968-12-06", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0383290705" }
+  ,{ "nom": "DOVAL", "prenom": "José", "dateNaissance": "1971-02-14", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0622864301" }
+  ,{ "nom": "IRION", "prenom": "LAURENT", "dateNaissance": "1967-12-09", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0388001200" }
+  ,{ "nom": "VENDANGE", "prenom": "PAOLA", "dateNaissance": "1982-11-17", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0232131973" }
+  ,{ "nom": "RIBOULON", "prenom": "PATRICK", "dateNaissance": "1990-07-18", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0477266472" }
+  ,{ "nom": "Roux", "prenom": "Lydia", "dateNaissance": "1974-03-11", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0622835465" }
+  ,{ "nom": "RUHIN", "prenom": "Edwige", "dateNaissance": "1992-12-30", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0450397537" }
+  ,{ "nom": "ANDRE", "prenom": "Geneviève", "dateNaissance": "1975-08-08", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0262488825" }
+  ,{ "nom": "PAPILLON", "prenom": "CECILE", "dateNaissance": "1988-05-27", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0607310446" }
+  ,{ "nom": "DEHAIS", "prenom": "PASCAL", "dateNaissance": "1980-08-21", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0389644505" }
+  ,{ "nom": "RIBOULON", "prenom": "PATRICK", "dateNaissance": "1973-01-06", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0477266472" }
+  ,{ "nom": "GENTILHOMME", "prenom": "VERONIQUE", "dateNaissance": "1980-06-04", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0296259931" }
+  ,{ "nom": "DOUX", "prenom": "Christian", "dateNaissance": "1984-09-20", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0450105410" }
+  ,{ "nom": "GIBONI", "prenom": "DANIELLE", "dateNaissance": "1979-11-10", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0450692632" }
+  ,{ "nom": "ECK", "prenom": "MAGALI", "dateNaissance": "1991-12-16", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0389206387" }
+  ,{ "nom": "MOLLIEX", "prenom": "MARC", "dateNaissance": "1986-10-02", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0381625395" }
+  ,{ "nom": "COMPTABILITE", "prenom": "", "dateNaissance": "1971-08-30", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0467631435" }
+  ,{ "nom": "AUBERT", "prenom": "BRIGITTE", "dateNaissance": "1992-07-05", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0561494958" }
+  ,{ "nom": "VALENTI", "prenom": "ISABELLE", "dateNaissance": "1986-12-02", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0493482121" }
+  ,{ "nom": "ESTEVE", "prenom": "KARINE", "dateNaissance": "1964-08-25", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0559135050" }
+  ,{ "nom": "GODIN", "prenom": "THIERRY", "dateNaissance": "1971-12-22", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0618216158" }
+  ,{ "nom": "VISSIAN INART", "prenom": "ANNIE", "dateNaissance": "1992-02-15", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0493011460" }
+  ,{ "nom": "COMPTA", "prenom": "SOPHIE", "dateNaissance": "1981-02-15", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0164343132" }
+  ,{ "nom": "EL MAHJOUBI", "prenom": "LEILA", "dateNaissance": "1962-10-11", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0450397538" }
+  ,{ "nom": "VELASCO", "prenom": "SANDRINE", "dateNaissance": "1975-05-25", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0468114325" }
+  ,{ "nom": "GOSSELIN POIDEVIN", "prenom": "GUILLAUME", "dateNaissance": "1969-11-26", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0558796920" }
+  ,{ "nom": "PHINERA", "prenom": "Amandine", "dateNaissance": "1965-07-20", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0493481222" }
+  ,{ "nom": "FaurBouchete", "prenom": "Magaly", "dateNaissance": "1985-04-16", "nbrCandidature": "2", "refusCal": "0", "refusSalaire": "0", "jeton": "1", "dmdPrio": "0", "matricule": "XXAC0475078173" }
+]

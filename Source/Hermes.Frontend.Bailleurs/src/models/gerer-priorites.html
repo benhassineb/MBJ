@@ -82,11 +82,18 @@
                         <th>Matricule</th>
                         <th>Date</th>
                         <th>Situation</th>
+                        <th>Priorité</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr repeat.for="item of resultats">
-                        <!-- <td>${cp.codePostal}</td> -->
+                        <td>${item.nom}</td>
+                        <td>${item.prenom}</td>
+                        <td>${item.dateNaissance}</td>
+                        <td>${item.matricule}</td>
+                        <td>${item.dateDemande}</td>
+                        <td>${item.situation}</td>
+                        <td><input type="checkbox" value.bind="prioritaire" data-toggle="toggle" data-onstyle="success"></td><!-- checked-->
                     </tr>
                 </tbody>
             </table>

@@ -1,0 +1,51 @@
+<template>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form role="form" submit.delegate="submit()">
+              <h1 class="text-center">Inscription</h1>
+              <div class="form-group">
+                <label for="am">Adresse Mail</label>
+                <input type="email" value.bind="mail" class="form-control" id="am" placeholder="adresse@mail.com">
+              </div>
+              <div class="form-group">
+                <label for="mp">Mot de passe</label>
+                <input type="password" value.bind="password" class="form-control" id="mp" placeholder="*****">
+              </div>
+              <div class="form-group">
+                <label for="cp">Civilité</label>
+                <select value.bind="civilite" class="form-control" id="cp" >
+                  <option value="M">M.</option>
+                  <option value="Mme">Mme</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="np">Nom</label>
+                <input type="text" value.bind="nom" class="form-control" id="np" placeholder="Votre nom">
+              </div>
+              <div class="form-group">
+                <label for="pp">Prénom</label>
+                <input type="text" value.bind="prenom" class="form-control" id="pp" placeholder="Votre prénom">
+              </div>
+              <div class="form-group">
+                <label for="tp">Portable</label>
+                <input type="text" value.bind="portable" class="form-control" id="tp" placeholder="Numéro de téléphone">
+              </div>
+              <div class="form-group">
+                <input type="checkbox" value.bind="politique" class="" id="pt" >
+                <label for="pt">Politique ...</label>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" value.bind="contrat" class="" id="ct" >
+                <label for="ct">J'accepte ...</label>
+              </div>
+              <div class="form-group">
+                <div class="pull-right">
+                  <button class="btn btn-default w-120" role="submit">Inscription</button>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+</template>
