@@ -88,4 +88,11 @@ export class SampleService {
       })
       .catch(error => handleApiError(error));
   }
+
+  getFiltreEntreprise() {
+    return this._localClient
+    .fetch('/mock/filtreEntreprise.json')
+    .then(response => response.json())
+    .catch(error => handleApiError(error));
+  }
 }
