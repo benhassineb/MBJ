@@ -1,0 +1,31 @@
+<template>
+  <section class="au-animate">
+    <img class="front-img" />
+    <div class="container">
+      <div class="row">
+        <h2 class="text-center">${heading}</h2>
+        <form class="form-inline text-center" role="form" submit.delegate="submit()">
+          <div class="form-group">
+            <label for="lo">Où</label>
+            <input type="text" value.bind="locateWhere" class="form-control" id="lo" placeholder="Où">
+          </div>
+          <div class="form-group">
+            <label for="lq">Quoi</label>
+            <input type="text" value.bind="locateWhat" class="form-control" id="lq" placeholder="Quoi">
+          </div>
+          <div class="form-group">
+            <label for="lc">Combier</label>
+            <input type="text" value.bind="locatePrice" class="form-control" id="lc" placeholder="Combier">
+          </div>
+        </form>
+        <br />
+        <div class="text-center" style="margin: 15px"> 
+          <a href="/salarie/rechercher"><button type="submit" class="btn btn-lg">Rechercher</button></a>
+        </div>
+        <div class="col-sm-12">
+          Post emensos insuperabilis expeditionis eventus languentibus partium animis, quas periculorum varietas fregerat et laborum, nondum tubarum cessante clangore vel milite locato per stationes hibernas, fortunae saevientis procellae tempestates alias rebus infudere communibus per multa illa et dira facinora Caesaris Galli, qui ex squalore imo miseriarum in aetatis adultae primitiis ad principale culmen insperato saltu provectus ultra terminos potestatis delatae procurrens asperitate nimia cuncta foedabat. propinquitate enim regiae stirpis gentilitateque etiam tum Constantini nominis efferebatur in fastus, si plus valuisset, ausurus hostilia in auctorem suae felicitatis, ut videbatur.
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

@@ -1,6 +1,9 @@
 <template>
-    <compose view="views/salarie/header.html" containerless></compose>
-    <div class="bandeau-top"></div>
+    <require from="./nav-bar.html"></require>
+    <require from="./styles-hermes.css"></require>
+    <require from="./styles.css"></require>
+
+    <nav-bar router.bind="router"></nav-bar>
     <router-view></router-view>
-    <compose view="views/salarie/footer.html" containerless></compose>
+
 </template>
