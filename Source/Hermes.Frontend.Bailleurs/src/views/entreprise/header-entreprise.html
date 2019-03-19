@@ -37,7 +37,7 @@
                             <option></option>
                             <option model.bind="item" repeat.for="item of listFiltreEntreprise" >${item.label}</option>
                         </select>
-                        <ul class="list-group list-group-horizontal">
+                        <ul class="list-group list-group-horizontal mr-2">
                             <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button></li>
