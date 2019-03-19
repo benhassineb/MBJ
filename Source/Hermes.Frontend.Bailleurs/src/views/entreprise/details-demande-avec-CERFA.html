@@ -26,36 +26,73 @@
     
 </header> -->
 <h3 class="card-header">Entreprise:XXXXX</h3>
-<main role="main" class="row" >
+<div class="row" >
 
-<section class="col-md-8" >
-    <article class="card">
-    <p>Détail de la demande du client : </p>
-        <h3>Demande de Jean Dupont</h3>
-        <p>Date: 16 janvier 2019</p>
-        <p>RAS<p>
-    </article>
-    
-    </section>
-    
-    <aside class="col-md-4"> 
-    <div class="row">
-    <div class="col-md-6" style="border: 1px solid black; padding:10px;margin-bottom:10px;">
-    <h3>Info importante</h3>
-    <h4>Gestion de la demande</h4>
-    <p>toutes les infos présentes sur la page de recherche de la demande</p>
-    <input type="button" value="Proposer au salarié d'être accompagné par l'entreprise"   class="btn-primary"/>
+    <div class="col-md-8" >
+        <div class="card">
+            <p class="card-header">Détail de la demande du client : </p>
+            <div class="card-body"> 
+                <form >
+                    <fieldset disabled>
+                    <div class="card">
+                        <div class="card-header">Demande</div>
+                            <div class="card-body">
+                                <div class="form-inline">
+                                    <label for="disabledTextInput">Civilité</label>
+                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" value=${demande.demandeur.civilite}>
+                                </div>  
+                                <div class="form-inline">
+                                        <label for="disabledTextInput">Nom</label>
+                                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" value=${demande.demandeur.nom}>
+                                    </div>
+                                    <div class="form-inline">
+                                            <label for="disabledTextInput">Prenom</label>
+                                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" value=${demande.demandeur.prenom}>
+                                        </div>
+                                        <div class="form-inline">
+                                                <label for="disabledTextInput">Date de naissance</label>
+                                                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" value=${demande.demandeur.dateNai}>
+                                            </div>
+                                            <div class="form-inline">
+                                                    <label for="disabledTextInput">Siuation familiale</label>
+                                                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" value=${demande.demandeur.situFam}>
+                                                </div>
+                                                <div class="form-inline">
+                                                        <label for="disabledTextInput">Nationalité</label>
+                                                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" value=${demande.demandeur.nationalite}>
+                                                    </div>  
+                                                    <div class="form-inline">
+                                                            <label for="disabledTextInput">Numéro de sécurité sociale</label>
+                                                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" value=${demande.demandeur.numSecu}>
+                                                        </div>
+                                                        <div class="form-inline">
+                                                                <label for="disabledTextInput">Numéro unique</label>
+                                                                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" value=${demande.demandeur.numUnique}>
+                                                            </div>                        
+                            </div>
+                           
+                        </div>
+                    </fieldset>
+                    </div>     
+                </form>
+            </div>
+        </div> 
+       
+    <div class="col-md-2 card" >
+        <h3>Info importante</h3>
+        <h4>Gestion de la demande</h4>
+        <p>toutes les infos présentes sur la page de recherche de la demande</p>
+        <input type="button" value="Proposer au salarié d'être accompagné par l'entreprise"   class="btn-primary"/>
     </div>
-    <div class="col-md-6" >
-   <p> <input type="button" value="Donner un jeton" class="btn-primary" /></p>
-    <p><input type="button" value="Metttre en suspend" class="btn-primary"/></p>
-    <p><input type="button" value="Refuser/Valider" class="btn-primary"/></p>
+    <div class="col-md-2" >
+        <p> <input type="button" value="Donner un jeton" class="btn-primary" /></p>
+        <p><input type="button" value="Metttre en suspend" class="btn-primary"/></p>
+        <p><input type="button" value="Refuser/Valider" class="btn-primary"/></p>
+        <p><input type="button" value="Ne fait plus partie de l'entreprise" class="btn-primary"/></p>
     </div>
-    </div> 
-</aside>
-</main>
+    
 
-  <footer>
-    
-</footer>
+</div>
+
+  
 </template>

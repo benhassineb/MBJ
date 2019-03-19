@@ -1,6 +1,17 @@
-{   "logo": 3, 
-    "name": "Headphones", 
-    "price": "80$",
-    "category": "Audio Video",
-    "brand": "SoundAround"
+{   "demandeur": {
+
+"civilite": "Monsieur",
+"nom" : "Magenta",
+"prenom" : "Paul",
+"dateNai" : "05/07/1977",
+"situFam" : "célibataire",
+"nationalite" : "Français",
+"numUnique": "0131216253063AL020",
+"numSecu": "1 770 575 106 019"
+
+}, 
+    "adresse": "", 
+    "revenu": "80$",
+    "profession": "Audio Video",
+    "souhait": "SoundAround"
   }
