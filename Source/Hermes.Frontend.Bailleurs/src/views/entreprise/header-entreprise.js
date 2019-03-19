@@ -2,7 +2,7 @@ import { inject } from 'aurelia-framework';
 import { SampleService } from 'services/sample-service';
 import {customElement, bindable, bindingMode } from 'aurelia-framework';
 import {Router} from 'aurelia-router';
-
+import { OpenIdConnect } from 'aurelia-open-id-connect';
 
 @inject(SampleService, Router, OpenIdConnect)
 @customElement('header-entreprise')
