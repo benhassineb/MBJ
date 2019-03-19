@@ -2,7 +2,7 @@ import { inject } from 'aurelia-framework';
 import { SampleService } from 'services/sample-service';
 import {customElement, bindable, bindingMode } from 'aurelia-framework';
 import {Router} from 'aurelia-router';
-import {AutoCompleteController} from 'aurelia-autocomplete';
+// import {AutoCompleteController} from 'aurelia-autocomplete';
 
 @inject(SampleService, Router)
 @customElement('header-entreprise')
