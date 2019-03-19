@@ -1,11 +1,12 @@
 import { inject } from 'aurelia-framework';
 import { SampleService } from 'services/sample-service';
-
-@inject(SampleService)
+import { Router } from 'aurelia-router';
+@inject(SampleService, Router)
 export class Main {
 
-  constructor(service) {
+  constructor(service, router) {
     this._service = service;
+    this.router = router;
     this._service.getLogements()
       .then(result => this.logements = result);
     this._service.getCommunes()
