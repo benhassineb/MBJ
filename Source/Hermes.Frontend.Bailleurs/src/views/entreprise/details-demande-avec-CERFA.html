@@ -1,5 +1,6 @@
 <template>
-<header class="row" style="margin-bottom:60px;">
+        <require from="./details-demande.css"></require>
+<!-- <header class="row" style="margin-bottom:60px;">
     <div class="col-md-9" >
     <img src="" alt=${demande.logo} width="100" height="48" longdesc="desc.txt" style="border: 1px solid black; padding:10px;"/>
     <nav aria-label="breadcrumb">
@@ -23,12 +24,12 @@
     </div>
     </div>
     
-</header>
-<h3 class="row" style="border: 1px solid black; padding:10px;margin:10px;">Entreprise:XXXXX</h3>
-<main role="main" class="row" style="padding:10px;">
+</header> -->
+<h3 class="card-header">Entreprise:XXXXX</h3>
+<main role="main" class="row" >
 
 <section class="col-md-8" >
-    <article style="border: 1px solid black; padding:10px;margin-bottom:10px;">
+    <article class="card">
     <p>Détail de la demande du client : </p>
         <h3>Demande de Jean Dupont</h3>
         <p>Date: 16 janvier 2019</p>
@@ -43,12 +44,12 @@
     <h3>Info importante</h3>
     <h4>Gestion de la demande</h4>
     <p>toutes les infos présentes sur la page de recherche de la demande</p>
-    <input type="button" value="Proposer au salarié d'être accompagné par l'entreprise"  style="white-space:normal"/>
+    <input type="button" value="Proposer au salarié d'être accompagné par l'entreprise"   class="btn-primary"/>
     </div>
     <div class="col-md-6" >
-   <p> <input type="button" value="Donner un jeton" /></p>
-    <p><input type="button" value="Metttre en suspend" /></p>
-    <p><input type="button" value="Refuser/Valider" /></p>
+   <p> <input type="button" value="Donner un jeton" class="btn-primary" /></p>
+    <p><input type="button" value="Metttre en suspend" class="btn-primary"/></p>
+    <p><input type="button" value="Refuser/Valider" class="btn-primary"/></p>
     </div>
     </div> 
 </aside>
