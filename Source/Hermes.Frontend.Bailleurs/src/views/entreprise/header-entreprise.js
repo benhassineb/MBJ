@@ -2,9 +2,9 @@ import { inject } from 'aurelia-framework';
 import { SampleService } from 'services/sample-service';
 import {customElement, bindable, bindingMode } from 'aurelia-framework';
 import {Router} from 'aurelia-router';
-import {AutoCompleteController} from 'aurelia-autocomplete';
+import { OpenIdConnect } from 'aurelia-open-id-connect';
 
-@inject(SampleService, Router)
+@inject(SampleService, Router, OpenIdConnect)
 @customElement('header-entreprise')
 export class headerentreprise {
 
@@ -12,9 +12,12 @@ export class headerentreprise {
     listFiltreEntreprise;
     listFiltreDepartementSelected = [];
     filtreEntrepriseSelected;
-    constructor(service, parentRouter) {
+    _openIdConnect;
+    user;
+    constructor(service, parentRouter, openIdConnect) {
       this._service = service;
       this._parentRouter = parentRouter;
+      this._openIdConnect = openIdConnect
       this._service.getFiltreEntreprise()
         .then(result => { this.listFiltreEntreprise = result; this.filtreEntrepriseSelected = result[1];});
       this._service.getFiltreDepartement()
@@ -23,5 +26,15 @@ export class headerentreprise {
 
     removeFiltreEntreprise(filtre) {
       this.listFiltreDepartementSelected = this.listFiltreDepartementSelected.filter(item => item.label !== filtre.label);
+    }
+
+    activate(){
+      this._openIdConnect.getUser().then(user => {
+        this.user = user;
+      });
+    }
+  
+    get isLoggedIn() {
+      return this.user !== null && this.user !== undefined;
     }
 }
