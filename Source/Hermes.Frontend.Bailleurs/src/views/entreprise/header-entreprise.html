@@ -33,18 +33,16 @@
                             <li class="breadcrumb-item active" aria-current="page">Espace entreprise</li>
                         </ol>
                     </nav>
-                    <div class="input-group-prepend">
-                        <button type="button" class="btn btn-dropdown">Filtre entreprise</button>
-                        <button type="button" class="btn btn-dropdown dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                            <a repeat.for="item of listFiltreEntreprise" click.trigger="addFiltreEntreprise(item)" class="dropdown-item" href="#">${item.label}</a>
-                        </div>
+                    <div class="input-group">
+                        <select class="text-blue" value.bind="filtreEntrepriseSelected">
+                            <option></option>
+                            <option model.bind="item" repeat.for="item of listFiltreEntreprise" >${item.label}</option>
+                        </select>
                         <ul class="list-group list-group-horizontal">
-                            <li repeat.for="item of listFiltreEntrepriseSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button></li>
+                            <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button></li>
+                            <input type="text" style="padding:8px;" change.trigger="searchDepartement(this)" >
                         </ul>
                         <button class="btn btn-primary"><span class="pl-3 pr-3">Filtrer</span></button>
                     </div>

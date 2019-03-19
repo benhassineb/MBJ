@@ -108,4 +108,10 @@ export class SampleService {
       .catch(error => handleApiError(error));
   }
 
+  getFiltreDepartement() {
+    return this._localClient
+      .fetch('/mock/filtreDepartement.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
 }

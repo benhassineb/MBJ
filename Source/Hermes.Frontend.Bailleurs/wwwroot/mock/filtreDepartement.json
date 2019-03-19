@@ -1,0 +1,18 @@
+[
+    {
+        "code" : "1",
+        "label" : "Normandie"
+    },
+    {
+        "code" : "2",
+        "label" : "Orne"
+    },
+    {
+        "code" : "3",
+        "label" : "Eure"
+    },
+    {
+        "code" : "4",
+        "label" : "Haut de France"
+    }
+]

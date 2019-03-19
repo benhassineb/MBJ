@@ -7,21 +7,29 @@ import {Router} from 'aurelia-router';
 @customElement('header-entreprise')
 export class headerentreprise {
 
+    listDepartement;
     listFiltreEntreprise;
-    listFiltreEntrepriseSelected = [];
+    listFiltreDepartementSelected = [];
+    filtreEntrepriseSelected;
     
     constructor(service, parentRouter) {
       this._service = service;
       this._parentRouter = parentRouter;
       this._service.getFiltreEntreprise()
-        .then(result => {this.listFiltreEntreprise = result; this.listFiltreEntrepriseSelected.push(this.listFiltreEntreprise[1]);this.listFiltreEntrepriseSelected.push(this.listFiltreEntreprise[2]);  });
+        .then(result => { this.listFiltreEntreprise = result; this.filtreEntrepriseSelected = result[1];});
+      this._service.getFiltreDepartement()
+        .then(result => {this.listDepartement = result; this.listFiltreDepartementSelected.push(result[1]); this.listFiltreDepartementSelected.push(result[3]);});
     }
 
     removeFiltreEntreprise(filtre) {
-      this.listFiltreEntrepriseSelected = this.listFiltreEntrepriseSelected.filter(item => item.code !== filtre.code);
+      this.listFiltreDepartementSelected = this.listFiltreDepartementSelected.filter(item => item.code !== filtre.code);
     }
     
     addFiltreEntreprise(filtre) {
-      this.listFiltreEntrepriseSelected.push(filtre);
+      this.listFiltreDepartementSelected.push(filtre);
+    }
+
+    searchDepartement(value){
+
     }
 }

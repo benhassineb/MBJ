@@ -1,18 +1,12 @@
 [
     {
-        "code" : "NORMANDIE",
-        "label" : "Normandie"
+        "id" : "1",
+        "siret" : "12364454",
+        "label" : "ORANGE GROUPE"
     },
     {
-        "code" : "ORNE",
-        "label" : "Orne"
-    },
-    {
-        "code" : "EURE",
-        "label" : "Eure"
-    },
-    {
-        "code" : "HAUTDEFRANCE",
-        "label" : "Haut de France"
+        "id" : "2",
+        "siret" : "45621321",
+        "label" : "ORANGE FRANCE SAS"
     }
 ]

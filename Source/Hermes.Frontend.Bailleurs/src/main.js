@@ -8,7 +8,6 @@ export function configure(aurelia) {
     .standardConfiguration()
     .feature('resources')
     .plugin('aurelia-configuration')
-    .plugin('aurelia-crumbs')
     .plugin('aurelia-open-id-connect', () => configureAuth(aurelia))
     .plugin('aurelia-i18n', (instance) => {
       let aliases = ['t', 'i18n'];
