@@ -40,7 +40,7 @@ export class App {
     this.router = router;
   }
 
-  activate(){
+  activate() {
     this._openIdConnect.getUser().then(user => {
       this.user = user;
     });

@@ -7,7 +7,7 @@
             <i class="fab fa-discourse mr-2"></i>Besoin d'aide
         </div>
         <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
-            <span show.bind="isLoggedIn">Bonjour ${user.name}</span>
+          <span show.bind="isLoggedIn">Bonjour ${user.profile.given_name} ${user.profile.family_name}</span>
         </div>
         <div class="col-md-2 text-center text-nowrap pr-3 pl-3">
             <nav class="border pr-3 pl-3 pt-1 pb-1 rounded-1">
