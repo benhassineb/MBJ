@@ -12,13 +12,16 @@ export class GestionDemandes {
 
   constructor(service) {
     this._service = service;
+    this.filtres.push({ title: 'Veuillez sélectionner un type de filtre', obj: null });
+    this.filtres.push({ id: 'consulter-demandes', title: 'Consulter des demandes', obj: new ConsulterDemandes(this._service) });
+    this.filtres.push({ id: 'valider-demandes', title: 'Valider une demande', obj: new ValiderDemande(this._service) });
+    this.filtres.push({ id: 'gerer-priorites', title: 'Gérer mes priorités', obj: new GererPriorites(this._service)});
   }
 
-  activate() {
-    this.filtres.push({ title: 'Veuillez sélectionner un type de filtre', obj: null });
-    this.filtres.push({ title: 'Consulter des demandes', obj: new ConsulterDemandes(this._service) });
-    this.filtres.push({ title: 'Valider une demande', obj: new ValiderDemande(this._service) });
-    this.filtres.push({title: 'Gérer mes priorités', obj: new GererPriorites(this._service)});
+  activate(params) {
+    if (params && params.filterType) {
+      this.selectedFilter = this.filtres.find(f => f.id === params.filterType).obj;
+    }
   }
 
 }

@@ -1,21 +1,21 @@
 <template>
-    <require from="./header.css"></require>
+    <require from="./header-entreprise.css"></require>
     <require from="resources/elements/contact-privilegie"></require>
-    <header class="my-header center pt-2 pb-2">
+    <div class="my-header center pt-2 pb-2">
             <div class="col-md-6"></div>
         <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
             <i class="fab fa-discourse mr-2"></i>Besoin d'aide
         </div>
-        <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
+        <div show.bind="isLoggedIn" class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
             Bonjour André LEROUX
         </div>
-        <div class="col-md-2 text-center text-nowrap pr-3 pl-3">
+        <div show.bind="!isLoggedIn" class="col-md-2 text-center text-nowrap pr-3 pl-3">
             <nav class="border pr-3 pl-3 pt-1 pb-1 rounded-1">
                 <i class="fas fa-user mr-2"></i>
                 <connect-button></connect-button>
             </nav>
         </div>
-    </header>
+    </div>
     <div class="row bandeau-top">
             <div class="col-md-2">
             
@@ -39,10 +39,10 @@
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                            <a repeat.for="item of listFiltreEntreprise" class="dropdown-item" href="#">${item.label}</a>
+                            <a repeat.for="item of listFiltreEntreprise" click.trigger="addFiltreEntreprise(item)" class="dropdown-item" href="#">${item.label}</a>
                         </div>
                         <ul class="list-group list-group-horizontal">
-                            <li repeat.for="item of listFiltreEntrepriseSelected" class="list-group-item">${item.label}<button type="button" class="close" aria-label="Close">
+                            <li repeat.for="item of listFiltreEntrepriseSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button></li>
                         </ul>
