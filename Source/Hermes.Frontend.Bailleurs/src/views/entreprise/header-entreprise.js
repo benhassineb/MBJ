@@ -14,7 +14,7 @@ export class headerentreprise {
       this._service = service;
       this._parentRouter = parentRouter;
       this._service.getFiltreEntreprise()
-        .then(result => {this.listFiltreEntreprise = result; this.listFiltreEntrepriseSelected.push(this.listFiltreEntreprise[1]);  });
+        .then(result => {this.listFiltreEntreprise = result; this.listFiltreEntrepriseSelected.push(this.listFiltreEntreprise[1]);this.listFiltreEntrepriseSelected.push(this.listFiltreEntreprise[2]);  });
     }
 
     removeFiltreEntreprise(filtre) {
