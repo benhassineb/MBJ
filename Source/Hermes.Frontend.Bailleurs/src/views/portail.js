@@ -1,23 +1,25 @@
-/*
- * Filename: c:\Etude\Source\Repos\Hermes.v0\Source\Hermes.Frontend.Bailleurs\src\views\portail.js
- * Path: c:\Etude\Source\Repos\Hermes.v0\Source\Hermes.Frontend.Bailleurs
- * Created Date: Friday, March 15th 2019, 14:03:09
- * Author: b.benha$$ine
- * ------------------------------------------------------------------------
- * Copyright (c) 2019 ALS
- * -----
- * HISTORY:
- * Date      	By	Comments
- * ----------	---	---------------------------------------------------------
- */
+import { SampleService } from 'services/sample-service';
 import { Router } from 'aurelia-router';
 import { inject } from 'aurelia-framework';
 
-@inject(Router)
+@inject(SampleService, Router)
 export class Portail {
 
-  constructor(router) {
+  constructor(service, router) {
+    this._service = service;
     this.router = router;
+
+    this._service.getLogements()
+      .then(result => this.logements = result);
+    this._service.getCommunes()
+      .then(result => this.communes = result);
+    this._service.getReseauFerre()
+      .then(result => this.reseauferre = result);
+  }
+
+  effacerCacheAutorisations() {
+    return this._service.effacerCacheAutorisations('test')
+      .then(result => this.result = result);
   }
 
 }
