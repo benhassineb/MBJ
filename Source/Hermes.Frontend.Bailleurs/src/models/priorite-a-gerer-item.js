@@ -14,6 +14,7 @@ export class PrioriteAGererItem {
 
   static fromObject(...sources) {
     let result = Object.assign(new PrioriteAGererItem(), ...sources);
+    if (result.prioritaire === undefined) result.prioritaire = false;
     return result;
   }
 

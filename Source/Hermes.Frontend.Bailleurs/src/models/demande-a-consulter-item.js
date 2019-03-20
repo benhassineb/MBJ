@@ -1,14 +1,16 @@
 export class DemandeAConsulterItem {
 
+  statuts;
   nom;
   prenom;
   dateNaissance;
   nbrCandidature;
   refusCal;
-  refusSalaire;
+  refusSalarie;
   jeton;
   dmdPrio;
   matricule;
+  dateDemande;
 
   constructor() {
 

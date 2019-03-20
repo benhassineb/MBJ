@@ -9,6 +9,7 @@ export function configure(aurelia) {
     .feature('resources')
     .plugin('aurelia-configuration')
     .plugin('aurelia-open-id-connect', () => configureAuth(aurelia))
+    .plugin('aurelia-table')
     .plugin('aurelia-i18n', (instance) => {
       let aliases = ['t', 'i18n'];
       TCustomAttribute.configureAliases(aliases);
