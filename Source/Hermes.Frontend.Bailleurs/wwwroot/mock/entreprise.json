@@ -2,11 +2,44 @@
     {
         "id" : "1",
         "siret" : "12364454",
-        "label" : "ORANGE GROUPE"
+        "label" : "ORANGE GROUPE",
+        "logo" : { "url" : "./images/logo-orange.jpg", "width" : "128px", "height" : "128px"},
+        "filiales" : [{
+            "id" : "1_1",
+            "siret" : "12364455",
+            "label" : "ORANGE GROUPE"
+        },
+        {
+            "id" : "1_2",
+            "siret" : "12364456",
+            "label" : "ORANGE FRANCE SAS"
+        }]
     },
     {
         "id" : "2",
         "siret" : "45621321",
-        "label" : "ORANGE FRANCE SAS"
+        "label" : "LA POSTE GROUPE",
+        "logo" : { "url" : "./images/logo-laposte.png", "width" : "128px", "height" : "128px"},
+        "filiales" : [{
+            "id" : "2_1",
+            "siret" : "12364455",
+            "label" : "COLLISIMO"
+        },
+        {
+            "id" : "2_2",
+            "siret" : "12364456",
+            "label" : "LA BANQUE POSTAL"
+        }]
+    },
+    {
+        "id" : "3",
+        "siret" : "6665666",
+        "label" : "AIR FRANCE",
+        "logo" : { "url" : "./images/logo-airfrance.png", "width" : "90%"},
+        "filiales" : [{
+            "id" : "3_1",
+            "siret" : "6665666",
+            "label" : "AIR FRANCE"
+        }]
     }
 ]
