@@ -22,7 +22,9 @@
     "i18next-xhr-backend": "^2.0.1",
     "leaflet": "^1.4.0",
     "requirejs": "^2.3.6",
-    "text": "github:requirejs/text#latest"
+    "tether": "^1.4.5",
+    "text": "github:requirejs/text#latest",
+    "velocity-animate": "^1.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
