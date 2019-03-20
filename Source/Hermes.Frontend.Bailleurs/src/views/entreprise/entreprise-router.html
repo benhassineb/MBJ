@@ -1,5 +1,6 @@
 <template>
-    <compose view="views/entreprise/header.html" containerless></compose>
+    <require from="./header-entreprise"></require>
+    <header-entreprise></header-entreprise>
     <router-view></router-view>
-    <compose view="views/entreprise/footer.html" containerless></compose>
+    <compose view="./footer.html" containerless></compose>
 </template>

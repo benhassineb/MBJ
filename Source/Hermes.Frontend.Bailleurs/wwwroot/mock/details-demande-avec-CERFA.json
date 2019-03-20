@@ -1,6 +1,52 @@
-{   "logo": 3, 
-    "name": "Headphones", 
-    "price": "80$",
-    "category": "Audio Video",
-    "brand": "SoundAround"
+{
+  "demandeur": {
+    "civilite": "Monsieur",
+    "nom": "Magenta",
+    "prenom": "Paul",
+    "dateNai": "05/07/1977",
+    "situFam": "célibataire",
+    "nationalite": "Français",
+    "numUnique": "0131216253063AL020",
+    "numSecu": "1 770 575 106 019",
+    "matricule":"502315",
+    "date":"20/03/2019"
+  },
+  "adresseDemandeur": {
+    "batiment": "Alpha",
+    "etage": "6",
+    "appartement": "20",
+    "numRue": "48",
+    "voie": "rue de la paix",
+    "compAdresse": "",
+    "codePostal": "75009",
+    "localite": "Paris",
+    "pays": "France"
+  },
+  "revenu": {
+    "salaire": "1950 euros",
+    "revFiscalAMoins2": "24000 euros",
+    "revFiscalAMoins1": "24100 euros"
+  },
+  "situationProf": {
+    "profession": "maçon",
+    "typeContrat": "CDI",
+    "employeur": "Orange Groupe",
+    "communeTravail": "Paris",
+    "codePostal": "75001",
+    "pays": "France",
+    "siret": "‎70980209401148"
+  },
+  "logemenSouhait": {
+    "categorie": "Appartement",
+    "typologie": "F2",
+    "LoyerMax": "500 euros",
+    "localisation1": "Paris 1",
+    "localisation2": "Paris 2",
+    "localisation3": "Paris 3",
+    "localisation4": "Paris 4",
+    "localisation5": "Paris 5",
+    "localisation6": "Paris 6",
+    "localisation7": "Paris 7",
+    "localisation8": "Paris 8"
   }
+}

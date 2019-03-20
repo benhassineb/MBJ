@@ -1,12 +1,11 @@
 ﻿<template>
 <require from="./accueil-entreprise.css"></require>
-<require from="resources/elements/contact-privilegie"></require>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                   <div class="card-header">
-                        <h5 class="card-title"><a href=""><b>Je consulte l'offre</b></a> ou <a href="">j'édite mon reporting</a></h5>
+                        <h5 class="card-title"><b>Je consulte l'offre</b> ou <a href="#/entreprise/offres-privilege-edite">j'édite mon reporting</a></h5>
                     </div>
                 </div>
               </div>
@@ -18,145 +17,155 @@
                     <div class="card-header">
                         <h5 class="card-title"> Filtre de recherche : </h5>
                         <div class="row">
-                            <label>
-                                    &nbsp;Localisation&nbsp;<input type="Text" placeholder="Localisation...">
-                            </label>
-
-                            <!-- <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Tous type
-                                    <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#">F1</a></li>
-                                      <li><a href="#">F2</a></li>
-                                      <li><a href="#">F3</a></li>
-                                      <li><a href="#">F4 ou +</a></li>
-                                    </ul>
-                            </div> -->
-                            <label>
-                                    &nbsp;Typologie&nbsp;
-                                    <select>
-                                            <option>Tous types</option>
-                                            <option>F1</option>
-                                            <option>F2</option>
-                                            <option>F3</option>
-                                            <option>F4 ou +</option>
-                                    </select>
-                            </label>
-                            <label>
-                                    &nbsp;Date de fin de publication&nbsp;<input type="Text" placeholder="JJ/MM/AAAA">
-                            </label>
-                            <label>
-                                    &nbsp;Date de parution&nbsp;<input type="Text" placeholder="JJ/MM/AAAA">
-                            </label>
-                            <label>
-                                    <input class="" type="checkbox" >&nbsp;logement en cours de placement&nbsp;
-                            </label>
-                            <label>
-                                    <input class="" type="checkbox" >&nbsp;logement placé&nbsp;
-                            </label>
+                            <div class="mx-auto">
+                                    <label>
+                                            &nbsp;Localisation&nbsp;<input type="Text" placeholder="Localisation...">
+                                    </label>
+                            </div>
+                            <div class="mx-auto">
+                                    <label>
+                                            &nbsp;Typologie&nbsp;
+                                            <select>
+                                                    <option>Tous types</option>
+                                                    <option>F1</option>
+                                                    <option>F2</option>
+                                                    <option>F3</option>
+                                                    <option>F4 ou +</option>
+                                            </select>
+                                    </label>
+                            </div>
+                            <div class="mx-auto">
+                                    <label>
+                                            &nbsp;Date de fin de publication&nbsp;<input type="Text" placeholder="JJ/MM/AAAA">
+                                    </label>
+                            </div>
+                            <div class="mx-auto">
+                                    <label>
+                                            &nbsp;Date de parution&nbsp;<input type="Text" placeholder="JJ/MM/AAAA">
+                                    </label>
+                            </div>
+                            <div class="mx-auto">
+                                    <label>
+                                            <input class="" type="checkbox" >&nbsp;logement en cours de placement&nbsp;
+                                    </label>
+                            </div>
+                            <div class="mx-auto">
+                                    <label>
+                                            <input class="" type="checkbox" >&nbsp;logement placé&nbsp;
+                                    </label>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-3" style="border-style: solid;margin-right: 5px;">
+                            <div class="col-md-3" style="background: #eee;margin-right: 10px;">
                                 <div class="panel panel-primary">
                                     <div class="panel-heading">Logement 1</div>
                                     <div class="panel-body">
-                                        <row>
+                                        <div class="row">
                                             <div class="col-md-12">
                                                 <p>67 salariés éligibles à cette offre</p>   
                                             </div>
-                                        </row>
-                                        <row>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-7 bg-light">
+                                                <div class="text-left">
+                                                    <img src="/images/apt123.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="row">
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        CTA Détails
+                                                    </button> 
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        envoyer l'offre 6 ALERTES Logement
+                                                    </button>
+                                                </div>   
+                                            </div>                                            
+                                        </div>
+                                        <div class="row">
                                             <div class="col-md-12">
-                                                <button type="button" class="btn btn-primary">
-                                                    envoyer l'offre 6 ALERTES Logement
-                                                </button> 
+                                                    <p><i>Publié le 19/03/2019 - <b>23 jours restants</b></i></p>
                                             </div>
-                                        </row>
-                                        <row>
-                                                <div class="col-md-12">
-                                                <button type="button" class="btn btn-primary">
-                                                    CTA Détails
-                                                </button>  
-                                            </div>
-                                        </row>
-                                        <row></row>
-                                        <row>
-                                            <div class="col-md-12">
-                                                    <p>Date de publication depuis quand et combien de temps</p>
-                                            </div>
-                                        </row>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3" style="border-style: solid;margin-right: 5px;">
+                            <div class="col-md-3" style="background: #eee;margin-right: 10px;">
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">Logement 2</div>
                                         <div class="panel-body">
-                                            <row>
+                                            <div class="row">
                                                 <div class="col-md-12">
                                                     <p>0 salariés éligibles à cette offre</p>
                                                 </div>
-                                            </row>
-                                            <row>
-                                                <div class="col-md-12">
-                                                </div> 
-                                            </row>
-                                            <row>
-                                                <div class="col-md-12">
-                                                    <button type="button" class="btn btn-primary">
-                                                        CTA Détails
-                                                    </button>
-                                                </div>   
-                                            </row>
-                                            <row>
-                                                <div class="col-md-12">
-                                                    <button type="button" class="btn btn-primary">
-                                                        Je n'ai pas de salarié éligible je rends ce logement
-                                                    </button> 
-                                                </div> 
-                                            </row>
-                                            <row>
-                                                    <div class="col-md-12">
-                                                            <p>Date de publication depuis quand et combien de temps</p>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="col-md-7 bg-light">
+                                                        <div class="text-left">
+                                                            <img src="/images/apt123.jpg" />
+                                                        </div>
                                                     </div>
-                                                </row>
+                                                    <div class="col-md-5">
+                                                        <div class="row">
+                                                            <button type="button" class="btn btn-primary btn-sm">
+                                                                CTA Détails
+                                                            </button>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <button type="button" class="btn btn-primary btn-sm">
+                                                                Je n'ai pas de salarié éligible je rends ce logement
+                                                            </button>
+                                                        </div>   
+                                                    </div>                                            
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p><i>Publié le 15/03/2019 - <b>10 jours restants</b></i></p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             </div>
-                            <div class="col-md-3" style="border-style: solid;margin-right: 5px;">
+                            <div class="col-md-3" style="background: #eee;margin-right: 10px;">
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">Logement 3</div>
                                         <div class="panel-body">
-                                            <row>
+                                            <div class="row">
                                                 <div class="col-md-12">
                                                 <p>10 salariés éligibles à cette offre</p>
                                                 </div>
-                                            </row>
-                                            <row>
-                                                <div class="col-md-12">
-                                                <button type="button" class="btn-primary">
-                                                    envoyer l'offre 6 ALERTES Logement
-                                                </button>
-                                                </div>
-                                            </row>
-                                            <row>
-                                                    <div class="col-md-12">
-                                                    <button type="button" class="btn btn-primary">
-                                                        CTA Détails
-                                                    </button>
-                                                </div>  
-                                            </row>
-                                            <row>
-                                                    <div class="col-md-12">
-                                                    </div> 
-                                            </row>
-                                            <row>
-                                                    <div class="col-md-12">
-                                                            <p>Date de publication depuis quand et combien de temps</p>
+                                            </div>
+                                            <div class="row">
+                                                    <div class="col-md-7 bg-light">
+                                                        <div class="text-left">
+                                                            <img src="/images/apt123.jpg" />
+                                                        </div>
                                                     </div>
-                                                </row>
+                                                    <div class="col-md-5">
+                                                        <div class="row">
+                                                            <button type="button" class="btn btn-primary btn-sm">
+                                                                CTA Détails
+                                                            </button> 
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <button type="button" class="btn btn-primary btn-sm">
+                                                                envoyer l'offre 6 ALERTES Logement
+                                                            </button>
+                                                        </div>   
+                                                    </div>                                            
+                                            </div>
+                                            <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p><i>Publié le 11/03/2019 - <b>4 jours restants</b></i></p>
+                                                    </div>
+                                            </div>
                                         </div>
                                     </div>
                             </div>

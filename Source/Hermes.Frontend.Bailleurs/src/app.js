@@ -29,7 +29,7 @@ export class App {
     configuration.options.pushState = true;
     configuration.options.root = '/';
     configuration.map([
-      { route: ['', 'portail'], name: 'portail', moduleId: 'views/portail', nav: false, title: 'Portail' },
+      { route: ['', 'home'], name: 'home', moduleId: 'views/home', nav: false, title: 'Portail' },
       { route: 'bailleur', name: 'bailleur', moduleId: 'views/bailleur/bailleur-router', nav: true, title: 'Bailleur' },
       { route: 'entreprise', name: 'entreprise', moduleId: 'views/entreprise/entreprise-router', nav: true, title: 'Entreprise' },
       { route: 'salarie', name: 'salarie', moduleId: 'views/salarie/salarie-router', nav: true, title: 'Salarie' }
@@ -40,7 +40,7 @@ export class App {
     this.router = router;
   }
 
-  activate(){
+  activate() {
     this._openIdConnect.getUser().then(user => {
       this.user = user;
     });

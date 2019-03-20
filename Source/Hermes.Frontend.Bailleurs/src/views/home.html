@@ -1,12 +1,18 @@
 <template>
     <require from="./home.css"></require>
     <require from="../resources/elements/map"></require>
-    <require from="../resources/elements/contact-privilegie"></require>
-
+    <div repeat.for="row of router.navigation">
+        <a href.bind="row.href">
+            <h1 h1>${row.title}</h1>
+        </a>
+    </div>
     <div class="container">
         <h1 i18n="[html]title"> </h1>
-        <contact-privilegie></contact-privilegie>
         <map logements.bind="logements" communes.bind="communes" reseauferre.bind="reseauferre"></map>
         <button click.trigger="effacerCacheAutorisations()">EFFACER CACHE</button>
     </div>
+
+
+
+
 </template>

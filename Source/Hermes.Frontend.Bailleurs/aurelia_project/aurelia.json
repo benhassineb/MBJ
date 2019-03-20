@@ -71,6 +71,16 @@
               "au-table-pagination.html"
             ]
           }
+          {
+            "name": "aurelia-bootstrap",
+            "path": "../node_modules/aurelia-bootstrap/dist/amd",
+            "main": "index",
+            "resources": [
+              "**/*.html"
+            ]
+          },
+          "velocity-animate",
+          "tether"
         ]
       }
     ],

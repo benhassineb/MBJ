@@ -1,0 +1,59 @@
+<template>
+    <require from="./header-entreprise.css"></require>
+    <require from="resources/elements/contact-privilegie"></require>
+    <div class="my-header center pt-2 pb-2">
+            <div class="col-md-6"></div>
+        <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
+            <i class="fab fa-discourse mr-2"></i>Besoin d'aide
+        </div>
+        <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
+          <span show.bind="isLoggedIn">Bonjour ${user.profile.given_name} ${user.profile.family_name}</span>
+        </div>
+        <div class="col-md-2 text-center text-nowrap pr-3 pl-3">
+            <nav class="border pr-3 pl-3 pt-1 pb-1 rounded-1">
+                <i class="fas fa-user mr-2"></i>
+                <connect-button></connect-button>
+            </nav>
+        </div>
+    </div>
+    <div class="row bandeau-top">
+        <div class="col-md-2">
+            <img src="./images/logo-orange.jpg"></div>
+        <div class="col-md-10 pt-4 pb-4">
+            <h1><span class="text-rose">Bienvenue</span><span class="text-blue"> sur votre espace Hermès</span></h1>
+        </div>
+    </div>
+    <div class="container-fluid mt-1 mb-1">
+            <div class="row">
+                <div class="col-md-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Hermès</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Espace entreprise</li>
+                        </ol>
+                    </nav>
+                    <div class="filtre input-group">
+                        <select class="text-blue mr-2" value.bind="filtreEntrepriseSelected">
+                            <option></option>
+                            <option model.bind="item" repeat.for="item of listFiltreEntreprise" >${item.label}</option>
+                        </select>
+                        <ul class="list-group list-group-horizontal mr-2">
+                            <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button></li>
+                        </ul>
+                        <span>
+                            <aubs-typeahead open-on-focus.bind="true" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" 
+                            instant-clean-empty="true" data.call="getListeDepartement(filter)" debounce.bind="50" key="label" 
+                            no-results-text="Aucun élément trouvé..." results-limit.bind="10" loading-text="Recherche en cours..." 
+                            placeholder="Filtre département"></aubs-typeahead>
+                        </span>
+                        <button class="btn btn-primary ml-2"><span class="pl-3 pr-3">Filtrer</span></button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <contact-privilegie ></contact-privilegie>
+                </div>
+            </div>
+        </div>
+</template>

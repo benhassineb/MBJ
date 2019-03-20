@@ -8,6 +8,7 @@ export function configure(aurelia) {
     .standardConfiguration()
     .feature('resources')
     .plugin('aurelia-configuration')
+    .plugin('aurelia-bootstrap', config => config.options.version = 4)
     .plugin('aurelia-open-id-connect', () => configureAuth(aurelia))
     .plugin('aurelia-table')
     .plugin('aurelia-i18n', (instance) => {

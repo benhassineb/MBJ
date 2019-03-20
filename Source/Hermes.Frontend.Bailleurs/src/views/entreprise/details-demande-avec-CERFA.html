@@ -1,5 +1,6 @@
 <template>
-<header class="row" style="margin-bottom:60px;">
+    <require from="./details-demande.css"></require>
+    <!-- <header class="row" style="margin-bottom:60px;">
     <div class="col-md-9" >
     <img src="" alt=${demande.logo} width="100" height="48" longdesc="desc.txt" style="border: 1px solid black; padding:10px;"/>
     <nav aria-label="breadcrumb">
@@ -23,38 +24,396 @@
     </div>
     </div>
     
-</header>
-<h3 class="row" style="border: 1px solid black; padding:10px;margin:10px;">Entreprise:XXXXX</h3>
-<main role="main" class="row" style="padding:10px;">
+</header> -->
+    <h3 class="card-header">Entreprise : ${demande.situationProf.employeur} </h3>
 
-<section class="col-md-8" >
-    <article style="border: 1px solid black; padding:10px;margin-bottom:10px;">
-    <p>Détail de la demande du client : </p>
-        <h3>Demande de Jean Dupont</h3>
-        <p>Date: 16 janvier 2019</p>
-        <p>RAS<p>
-    </article>
-    
-    </section>
-    
-    <aside class="col-md-4"> 
-    <div class="row">
-    <div class="col-md-6" style="border: 1px solid black; padding:10px;margin-bottom:10px;">
-    <h3>Info importante</h3>
-    <h4>Gestion de la demande</h4>
-    <p>toutes les infos présentes sur la page de recherche de la demande</p>
-    <input type="button" value="Proposer au salarié d'être accompagné par l'entreprise"  style="white-space:normal"/>
-    </div>
-    <div class="col-md-6" >
-   <p> <input type="button" value="Donner un jeton" /></p>
-    <p><input type="button" value="Metttre en suspend" /></p>
-    <p><input type="button" value="Refuser/Valider" /></p>
-    </div>
-    </div> 
-</aside>
-</main>
+    <div class="row" id="main">
 
-  <footer>
-    
-</footer>
+        <div class="col-md-6">
+
+            <div class="card">
+                <p class="card-header"><span>Détail de la demande du client </span>
+                    <input type="button" value="Modifier" class="btn-primary float-right"
+                        click.trigger="fieldsetDisabled()" />
+                </p>
+                <form>
+                    <fieldset disabled.bind="isDisabled">
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="card-header">Demandeur</div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Civilité</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.demandeur.civilite}>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Nom</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.demandeur.nom}>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Prenom</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.demandeur.prenom}></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Date de
+                                            naissance</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.demandeur.dateNai}></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Situation
+                                            familiale</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.demandeur.situFam}></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput"
+                                            class="col-sm-4 col-form-label">Nationalité</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.demandeur.nationalite}>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Numéro de
+                                            sécurité sociale</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.demandeur.numSecu}></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Numéro
+                                            unique</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.demandeur.numUnique}></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <div class="card-header">Adresse du demandeur</div>
+                                <div clas s="card-body">
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Batiment</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.batiment} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Etage</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.etage} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput"
+                                            class="col-sm-4 col-form-label">Appartement</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.appartement} /></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Numéro de
+                                            rue</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.numRue} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Voie</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.voie} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Complément
+                                            d'adresse</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.compAdresse} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Code
+                                            postal</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.codePostal} /></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localité</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.localite} /></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Pays</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.adresseDemandeur.pays} />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <div class="card-header">Revenus du demandeur</div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Salaire</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.revenu.salaire} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Revenu fiscal de
+                                            l'année A-2</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.revenu.revFiscalAMoins2} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Revenu fiscal de
+                                            l'année A-1</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.revenu.revFiscalAMoins1} /></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <div class="card-header">Situation Professionnelle</div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput"
+                                            class="col-sm-4 col-form-label">Profession</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.situationProf.profession} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Type de
+                                            contrat</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.situationProf.typeContrat} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Employeur</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.situationProf.employeur} /></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Commune de
+                                            travail</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.situationProf.communeTravail} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Code
+                                            postal</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.situationProf.codePostal} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Pays</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.situationProf.pays} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Numéro de
+                                            Siret</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.situationProf.siret} /></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <div class="card-header">Logement souhaité</div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Categorie</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.categorie} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Etage</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.typologie} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Loyer max</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.LoyerMax} /></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localisation
+                                            souhaitée 1</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.localisation1} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localisation
+                                            souhaitée 2</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.localisation2} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localisation
+                                            souhaitée 3</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.localisation3} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localisation
+                                            souhaitée 4</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.localisation4} /></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localisation
+                                            souhaitée 5</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.localisation5} /></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localisation
+                                            souhaitée 6</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.localisation6} />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localisation
+                                            souhaitée 7</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.localisation7} /></div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Localisation
+                                            souhaitée 8</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${demande.logemenSouhait.localisation8} />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 card">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Infos importantes</h3>
+                    <h4>Gestion de la demande</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Civilité</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${demande.demandeur.civilite}>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Nom</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${demande.demandeur.nom}>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Prenom</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${demande.demandeur.prenom}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Date de
+                            naissance</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${demande.demandeur.dateNai}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Matricule</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${demande.demandeur.matricule}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Date</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${demande.demandeur.date}></div>
+                    </div>
+                </div>
+
+            </div>
+            <input type="button" value="Proposer au salarié d'être accompagné par l'entreprise" class="btn-primary" />
+        </div>
+        <div class="col-md-2">
+            <p> <input type="button" value="Donner un jeton" class="btn-primary" /></p>
+            <p><input type="button" value="Metttre en suspend" class="btn-primary" /></p>
+            <p><input type="button" value="Refuser/Valider" class="btn-primary" /></p>
+            <p><input type="button" value="Ne fait plus partie de l'entreprise" class="btn-primary" /></p>
+        </div>
+
+
+    </div>
+
+
 </template>

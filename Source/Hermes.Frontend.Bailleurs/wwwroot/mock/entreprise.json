@@ -1,0 +1,12 @@
+[
+    {
+        "id" : "1",
+        "siret" : "12364454",
+        "label" : "ORANGE GROUPE"
+    },
+    {
+        "id" : "2",
+        "siret" : "45621321",
+        "label" : "ORANGE FRANCE SAS"
+    }
+]
