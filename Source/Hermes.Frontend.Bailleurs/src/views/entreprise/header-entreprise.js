@@ -8,12 +8,16 @@ import { OpenIdConnect } from 'aurelia-open-id-connect';
 @customElement('header-entreprise')
 export class headerentreprise {
 
+    test;
+    loadingText = 'Chargement...';
+    noResultsText = 'Aucun résultat...';
     listDepartement;
     listFiltreEntreprise;
     listFiltreDepartementSelected = [];
     filtreEntrepriseSelected;
     _openIdConnect;
-    user;
+    departementSelected;
+
     constructor(service, parentRouter, openIdConnect) {
       this._service = service;
       this._parentRouter = parentRouter;
@@ -28,13 +32,26 @@ export class headerentreprise {
       this.listFiltreDepartementSelected = this.listFiltreDepartementSelected.filter(item => item.label !== filtre.label);
     }
 
-    activate(){
-      this._openIdConnect.getUser().then(user => {
-        this.user = user;
-      });
+    getListeDepartement(filter) {
+      return this._service.getFiltreDepartement(filter)
+        .then(result => this.listDepartement = result.filter(item => item.label.toLowerCase().includes(filter.toLowerCase())))
+        .then(result => result.filter(item => !this.listFiltreDepartementSelected.some(dep => dep.code === item.code)));
     }
-  
-    get isLoggedIn() {
-      return this.user !== null && this.user !== undefined;
+
+    _clearSelectdDepartement;
+    onSelectDepartement(item) {
+      if (item) {
+      this.listFiltreDepartementSelected.push(item);
+      }
+      let _this = this;
+      this._clearSelectdDepartement = setTimeout(function(){ 
+        _this.clearDepartement(); 
+      }, 10);
+    }
+
+    clearDepartement() {
+      this.departementSelected = null;
+      this.filter = null;
+      clearTimeout(this._clearSelectdDepartement);
     }
 }
