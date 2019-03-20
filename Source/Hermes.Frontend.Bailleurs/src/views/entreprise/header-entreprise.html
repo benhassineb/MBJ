@@ -17,9 +17,9 @@
         </div>
     </div>
     <div class="row bandeau-top">
-        <div class="col-md-2">
-            <img src="./images/logo-orange.jpg"></div>
-        <div class="col-md-10 pt-4 pb-4">
+        <div class="col-md-3">
+            <img src="${filtreEntrepriseSelected.logo.url}"></div>
+        <div class="col-md-7 pt-4 pb-4">
             <h1><span class="text-rose">Bienvenue</span><span class="text-blue"> sur votre espace Hermès</span></h1>
         </div>
     </div>
@@ -34,10 +34,13 @@
                     </nav>
                     <div class="filtre input-group">
                         <select class="text-blue mr-2" value.bind="filtreEntrepriseSelected">
-                            <option></option>
                             <option model.bind="item" repeat.for="item of listFiltreEntreprise" >${item.label}</option>
                         </select>
-                        <ul class="list-group list-group-horizontal mr-2">
+                        <select class="text-blue mr-2" value.bind="filtreFilialeSelected">
+                            <option>Toutes les entités</option>
+                            <option model.bind="item" repeat.for="item of filtreEntrepriseSelected.filiales" >${item.label}</option>
+                        </select>
+                        <ul class="list-group list-group-horizontal">
                             <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button></li>
@@ -46,7 +49,7 @@
                             <aubs-typeahead open-on-focus.bind="true" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" 
                             instant-clean-empty="true" data.call="getListeDepartement(filter)" debounce.bind="50" key="label" 
                             no-results-text="Aucun élément trouvé..." results-limit.bind="10" loading-text="Recherche en cours..." 
-                            placeholder="Filtre département"></aubs-typeahead>
+                            placeholder="localisation"></aubs-typeahead>
                         </span>
                         <button class="btn btn-primary ml-2"><span class="pl-3 pr-3">Filtrer</span></button>
                     </div>

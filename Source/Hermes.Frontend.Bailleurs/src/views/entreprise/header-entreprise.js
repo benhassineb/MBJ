@@ -15,6 +15,7 @@ export class headerentreprise {
     listFiltreEntreprise;
     listFiltreDepartementSelected = [];
     filtreEntrepriseSelected;
+    filtreFilialeSelected;
     _openIdConnect;
     departementSelected;
 
