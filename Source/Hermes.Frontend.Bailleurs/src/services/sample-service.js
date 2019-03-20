@@ -103,14 +103,14 @@ export class SampleService {
 
   getFiltreEntreprise() {
     return this._localClient
-      .fetch('/mock/filtreEntreprise.json')
+      .fetch('/mock/entreprise.json')
       .then(response => response.json())
       .catch(error => handleApiError(error));
   }
 
   getFiltreDepartement() {
     return this._localClient
-      .fetch('/mock/filtreDepartement.json')
+      .fetch('/mock/departement.json')
       .then(response => response.json())
       .catch(error => handleApiError(error));
   }
