@@ -18,6 +18,7 @@ export class DemandeAConsulterItem {
 
   static fromObject(...sources) {
     let result = Object.assign(new DemandeAConsulterItem(), ...sources);
+    if (result.dmdPrio === undefined) result.dmdPrio = null;
     return result;
   }
 

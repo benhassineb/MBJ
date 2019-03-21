@@ -14,7 +14,9 @@ export class DetailsDemandeAvecCERFA {
     this.infos;
   }
 
-  activate() {
+  activate(params) {
+    if (params && params.id) this.id = params.id;
+
     return this._service.getDetailsDemandeAvecCERFA()
       .then(result =>{
         this.data = result.data;

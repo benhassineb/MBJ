@@ -10,7 +10,9 @@ export class DetailsDemandeSansCERFA {
     this.demande;
   }
 
-  activate() {
+  activate(params) {
+    if (params && params.id) this.id = params.id;
+
     return this._service.getDetailsDemandeSansCERFA()
       .then(result => this.demande = result);
   }
