@@ -1,9 +1,9 @@
 <template>
     <require from="./app.css"></require>
 
-    <a href="/salarie">Site Salariés</a>
-    <a href="/entreprise">Site Entreprises</a>
-    <a href="/bailleur">Site Bailleurs</a>
+    <a href="/salarie" class="${router.currentInstruction.config.name == 'salarie' ? 'route-active' : ''}">Site Salariés</a> | 
+    <a href="/entreprise" class="${router.currentInstruction.config.name == 'entreprise' ? 'route-active' : ''}">Site Entreprises</a> | 
+    <a href="/bailleur" class="${router.currentInstruction.config.name == 'bailleur' ? 'route-active' : ''}">Site Bailleurs</a>
 
     <router-view></router-view>
 
