@@ -1,0 +1,262 @@
+<template>
+    <require from="./details-demande.css"></require>
+
+    <h3 class="card-header">Entreprise : ${infos.entreprise} </h3>
+
+    <div class="row" id="main">
+        <div class="col-md-6">
+            <div class="card">
+                <p class="card-header"><span>Détail de la demande du client </span>
+                    <input type="button" value="Modifier" class="btn-primary float-right"
+                        click.trigger="fieldsetDisabled()" />
+                </p>
+                <form>
+                    <fieldset disabled.bind="isDisabled">
+                        <div class="card-body">
+                            <div repeat.for="cardItem of data" class="card">
+                                <div class="card-header">${cardItem.cardName}</div>
+                                <div class="card-body">
+                                    <div repeat.for="prop of cardItem.properties" class="form-group row">
+                                        <label for="disabledTextInput"
+                                            class="col-sm-4 col-form-label">${prop.label}</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="disabledTextInput" class="form-control"
+                                                value=${prop.value} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <input type="button" value="Accès au compte du client" class="btn-primary" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">LES OFFRES DE LOGEMENT CHOISIES PAR LE SALARIE</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75001
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75002
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75003
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75004
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75005
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75006
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">LES OFFRES DE LOGEMENT PRIVILEGES CORRESPONDANT AU SALARIE</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75001
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75002
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75003
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75008
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75009
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-center">
+                                                    <img src="/images/apt123.jpg" />
+                                                    <h4>
+                                                        Paris-75010
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Infos importantes-Gestion de la demande
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Statut de la demande</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.statutDemande}>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Demande prioritaire</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.demandePrioritaire}>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Personne en mobilité</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.personneMobilite}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Salarié coaché</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.salarieCoache}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Date de
+                            dépôt</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.dateDepot}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Matricule</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.matricule}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Nombre de candidature</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.nbreCandidature}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Nombre de refus en
+                            CAL</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.nbreDeRefusEnCal}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Nombre de refus
+                            salarié</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.nbreDeRefusSalarie}></div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Scoring</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.scoring}>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="disabledTextInput" class="col-sm-4 col-form-label">Nombre de jetons</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="disabledTextInput" readonly class="form-control"
+                                value=${infos.nbreJeton}></div>
+                    </div>
+                </div>
+                <input type="button" value="Proposer l'accompagnement"
+                    class="btn-primary" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <p> <input type="button" value="Donner un jeton" class="btn-primary" /></p>
+            <p><input type="button" value="Metttre en suspend" class="btn-primary" /></p>
+            <p><input type="button" value="Refuser/Valider" class="btn-primary" /></p>
+            <p><input type="button" value="Ne fait plus partie de l'entreprise" class="btn-primary" /></p>
+        </div>
+    </div>
+</template>

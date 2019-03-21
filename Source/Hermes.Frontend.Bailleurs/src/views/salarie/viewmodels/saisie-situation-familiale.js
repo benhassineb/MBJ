@@ -20,10 +20,10 @@ export class SaisieSituationFamiliale {
           {label: 'Sexe', type: 'select', name: 'sexe', values: this.getSexe(), tailleBloc: '4'},
           {label: 'Lien de parenté', type: 'select', name: 'parente', values: this.getLien(), tailleBloc: '4'},
           {label: 'Garde Alternée', type: 'checkbox', name: 'garde', values: '', tailleBloc: '2'},
-          {label: 'Droit de visite', type: 'select', name: 'droit', values: '', tailleBloc: '2'},
+          {label: 'Droit de visite', type: 'checkbox', name: 'droit', values: '', tailleBloc: '2'},
           {label: 'Si une naissance est attendue, nombre d\'enfants à naitre', type: 'text', name: 'nbrEnfant', values: '', tailleBloc: '8'},
           {label: 'Date de naissance prévue', type: 'text', name: 'dateNaissance', values: '', tailleBloc: '4'},
-          {label: 'Nombre occupants', type: 'text', name: 'nbrocc', values: '', tailleBloc: '4'},
+          {label: 'Nombre occupants', type: 'text', name: 'nbrocc', value: '', tailleBloc: '4'},
           {label: 'Nombre personnes à charge', type: 'text', name: 'nbrCharge', values: '', tailleBloc: '4'},
           {label: 'Nombre personnes actives', type: 'text', name: 'nbrActive', values: '', tailleBloc: '4'}
         ]

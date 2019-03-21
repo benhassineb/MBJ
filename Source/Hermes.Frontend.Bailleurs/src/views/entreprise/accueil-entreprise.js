@@ -4,21 +4,17 @@ import { SampleService } from 'services/sample-service';
 @inject(SampleService)
 export class AcceuilEntreprise {
 
-
   constructor(service) {
     this._service = service;
-    this._service.getLogements()
-      .then(result => this.logements = result);
-    this._service.getCommunes()
-      .then(result => this.communes = result);
-    this._service.getReseauFerre()
-      .then(result => this.reseauferre = result);
+    this.names = [];
+    this.offres = [];
   }
 
-  effacerCacheAutorisations() {
-    return this._service.effacerCacheAutorisations('test')
-      .then(result => this.result = result);
+  activate(params, routeConfig, navigationInstruction) {
+    this._service.getAcceuilEntrepriseData().then((res) => {
+      this.names = res.names;
+      this.offres = res.offres;
+    });
   }
 
 }
-

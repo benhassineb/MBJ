@@ -18,8 +18,9 @@ export class GererPriorites {
   currentPage = 1;
   pageSize = 5;
 
-  constructor(service) {
+  constructor(service, router) {
     this._service = service;
+    this._router = router;
   }
 
   activate() {
@@ -82,6 +83,11 @@ export class GererPriorites {
       this.avecJetonsNon = (!this.avecJetonsOui);
     }
     return true; // only needed if you want to cancel preventDefault()
+  }
+
+  navigateToDetail(pIndex) {
+    let id = (this.currentPage - 1) * this.pageSize + pIndex + 1;
+    this._router.navigateToRoute('details-demande-avec-cerfa', { id: id });
   }
 
 }
