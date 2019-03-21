@@ -50,7 +50,7 @@
                     </div>
                     <div class="row pt-2">
                         <span class="col-md-4">
-                            <aubs-typeahead open-on-focus.bind="true" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" 
+                            <aubs-typeahead open-on-focus.bind="false" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" 
                             instant-clean-empty="true" data.call="getListeDepartement(filter)" debounce.bind="50" key="label" 
                             no-results-text="Aucun élément trouvé..." results-limit.bind="10" loading-text="Recherche en cours..." 
                             placeholder="localisation"></aubs-typeahead>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <contact-privilegie if.bind="filtreEntrepriseSelected" entreprise.bind="filtreEntrepriseSelected" filiale.bind="filtreFilialeSelected"></contact-privilegie>
+                <contact-privilegie if.bind="filtreEntrepriseSelected" entreprise.bind="filtreEntrepriseSelected" filiale.bind="filtreFilialeSelected" class="row mr-1 float-right"></contact-privilegie>
             </div>
         </div>
     </div>
