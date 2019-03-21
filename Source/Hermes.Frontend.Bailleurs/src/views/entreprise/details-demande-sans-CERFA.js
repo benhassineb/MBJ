@@ -2,7 +2,7 @@ import { inject } from 'aurelia-framework';
 import { SampleService } from '../../services/sample-service';
 
 @inject(SampleService)
-export class DetailsDemandeSansCERFA {
+export class DetailsDemandeSansCerfa {
 
 
   constructor(service) {
@@ -10,10 +10,8 @@ export class DetailsDemandeSansCERFA {
     this.demande;
   }
 
-  activate(params) {
-    if (params && params.id) this.id = params.id;
-
-    return this._service.getDetailsDemandeSansCERFA()
+  activate() {
+    return this._service.getDetailsDemandeSansCerfa()
       .then(result => this.demande = result);
   }
 
