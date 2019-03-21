@@ -5,7 +5,6 @@ import {Router} from 'aurelia-router';
 import { OpenIdConnect } from 'aurelia-open-id-connect';
 
 @inject(SampleService, Router, OpenIdConnect)
-@customElement('header-entreprise')
 export class headerentreprise {
 
     test;

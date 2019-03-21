@@ -1,3 +1,5 @@
+import {headerentreprise} from './header-entreprise';
+
 export class EntrepriseRouter {
 
   configureRouter(config, router) {
