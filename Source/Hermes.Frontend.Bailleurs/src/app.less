@@ -1,3 +1,5 @@
+@import "./theme.less";
+
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -15,41 +17,35 @@ h4,
 h5 {
     margin: 0;
 }
+
 .aurelia-crumbs a {
-    color: #003e7e !important;
+    color: @colorset-main0  !important;
 }
+
 .aurelia-crumbs a:nth-last-child {
-    color: #e41d4b !important;
+    color: @colorset-main1  !important;
     font-weight: bold;
 }
 
-.list-group .list-group-item{
-    background: #eee;
+.list-group .list-group-item {
+    background: @colorset-light1;
 }
 
-.bandeau-top{
-    background-image: url('/images/bandeau_Hermes.png');
-    background-repeat: no-repeat;
-    min-height:124px;
-}
-
-.rounded-1 {
-    border-radius: 1.25rem !important;
-}
-
-.breadcrumb{
-    background:#fff !important;
+.breadcrumb {
+    background: @colorset-light0 !important;
 
 }
-
-
 
 .btn-dropdown {
-    background: #fff;
-    border : #eee 1px solid !important;
-    color: #003e7e !important;
+    background: @colorset-light0;
+    border: @colorset-light1 1px solid !important;
+    color: @colorset-main0 !important;
 }
 
-.list-group-item{
-    color: #003e7e !important;
+.list-group-item {
+    color: @colorset-main0 !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
 }

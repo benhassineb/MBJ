@@ -1,6 +1,5 @@
 import { inject } from 'aurelia-framework';
 import { APPLICATIONTITLE, SITEMAP } from 'config/app-config';
-import { toRoutes } from 'core/common';
 import { ConfiguredHttpClient } from 'core/configured-http-client';
 import { OpenIdConnect } from 'aurelia-open-id-connect';
 
@@ -29,10 +28,9 @@ export class App {
     configuration.options.pushState = true;
     configuration.options.root = '/';
     configuration.map([
-      { route: ['', 'home'], name: 'home', moduleId: 'views/home', nav: false, title: 'Portail', breadcrumb : true },
-      { route: 'bailleur', name: 'bailleur', moduleId: 'views/bailleur/bailleur-router', nav: true, title: 'Bailleur', breadcrumb : true },
-      { route: 'entreprise', name: 'entreprise', moduleId: 'views/entreprise/entreprise-router', nav: true, title: 'Entreprise', breadcrumb : true },
-      { route: 'salarie', name: 'salarie', moduleId: 'views/salarie/salarie-router', nav: true, title: 'Salarie', breadcrumb : true }
+      { route: 'bailleur', name: 'bailleur', moduleId: 'views/bailleur/master', nav: true, title: 'Site Bailleurs', breadcrumb: true },
+      { route: 'entreprise', name: 'entreprise', moduleId: 'views/entreprise/master', nav: true, title: 'Site Entreprises', breadcrumb: true },
+      { route: ['', 'salarie'], name: 'salarie', moduleId: 'views/salarie/master', nav: true, title: 'Site Salariés', breadcrumb: true }
 
     ]);
     // configuration.fallbackRoute(SITEMAP.home.title);

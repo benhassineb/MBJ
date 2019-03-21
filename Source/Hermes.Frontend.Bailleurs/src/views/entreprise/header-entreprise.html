@@ -1,20 +1,17 @@
 <template>
     <require from="./header-entreprise.css"></require>
-    <div class="my-header center pt-2 pb-2">
-            <div class="col-md-6"></div>
-        <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
-            <i class="fab fa-discourse mr-2"></i>Besoin d'aide
-        </div>
-        <div class="col-md-2 text-right text-nowrap pr-3 pl-3 pt-1 pb-1">
-          <span show.bind="isLoggedIn">Bonjour ${user.profile.given_name} ${user.profile.family_name}</span>
-        </div>
-        <div class="col-md-2 text-center text-nowrap pr-3 pl-3">
-            <nav class="border pr-3 pl-3 pt-1 pb-1 rounded-1">
-                <i class="fas fa-user mr-2"></i>
-                <connect-button></connect-button>
-            </nav>
-        </div>
-    </div>
+
+    <nav class="my-header navbar navbar-expand-lg navbar-dark">
+        <ul class="navbar-nav mr-auto bg-inverse">
+            <li class="nav-item">
+                <span class="nav-link">Besoin d'aide</span>
+            </li>
+            <li class="nav-item" if.bind="!auth.isLoggedIn">
+                <span class="nav-link">Déconnectez-vous</span>
+            </li>
+        </ul>
+    </nav>
+
     <div class="row bandeau-top">
         <div class="col-md-3">
             <img src="${filtreEntrepriseSelected.logo.url}"></div>
@@ -31,28 +28,25 @@
                         <div class="row">
                             <div class="col-md-4" if.bind="listFiltreEntreprise.length > 1">
                                 <select class="text-blue form-control" value.bind="filtreEntrepriseSelected">
-                                    <option model.bind="item" repeat.for="item of listFiltreEntreprise" >${item.label}</option>
+                                    <option model.bind="item" repeat.for="item of listFiltreEntreprise">${item.label}</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
                                 <select class="text-blue form-control" value.bind="filtreFilialeSelected">
                                     <option>Toutes les entités</option>
-                                    <option model.bind="item" repeat.for="item of filtreEntrepriseSelected.filiales" >${item.label}</option>
+                                    <option model.bind="item" repeat.for="item of filtreEntrepriseSelected.filiales">${item.label}</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="row pt-2">
                         <span class="col-md-4">
-                            <aubs-typeahead open-on-focus.bind="false" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" 
-                            instant-clean-empty="true" data.call="getListeDepartement(filter)" debounce.bind="50" key="label" 
-                            no-results-text="Aucun élément trouvé..." results-limit.bind="10" loading-text="Recherche en cours..." 
-                            placeholder="localisation"></aubs-typeahead>
+                            <aubs-typeahead open-on-focus.bind="false" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" instant-clean-empty="true" data.call="getListeDepartement(filter)" debounce.bind="50" key="label" no-results-text="Aucun élément trouvé..." results-limit.bind="10" loading-text="Recherche en cours..." placeholder="localisation"></aubs-typeahead>
                         </span>
                         <div class="col-md-6 filtre">
                             <div class="flex">
                                 <ul class="list-group list-group-horizontal flex-wrap">
-                                        <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
+                                    <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button></li>
                                 </ul>

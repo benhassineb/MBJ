@@ -1,0 +1,9 @@
+<template>
+
+    <ul class="list-inline">
+        <li repeat.for="row of router.navigation" class="list-inline-item ${row.isActive ? 'active' : ''}">
+            <a href.bind="row.href">${row.title}</a>
+        </li>
+    </ul>
+
+</template>

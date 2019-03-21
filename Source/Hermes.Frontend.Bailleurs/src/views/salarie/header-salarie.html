@@ -1,0 +1,28 @@
+<template>
+    <require from="./header-salarie.css"></require>
+
+    <nav class="my-header navbar navbar-expand-lg navbar-dark">
+        <ul class="navbar-nav mr-auto bg-inverse">
+          
+            <!-- Debug -->
+            <li class="nav-item">
+                <span class="nav-link">Debug Cnx<input type="checkbox" checked.bind="auth.authIsLoggedIn"></span>
+            </li>
+            <!-- Fin -->
+
+            <li class="nav-item">
+                <a href="salarie/accueil" class="nav-link">Accueil</a>
+            </li>
+            <li class="nav-item" if.bind="!auth.isLoggedIn">
+                <a href="salarie/connexion" class="nav-link">Connectez-vous</a>
+            </li>
+            <li class="nav-item" if.bind="auth.isLoggedIn">
+                <a href="salarie/profil" class="nav-link">Profil</a>
+            </li>
+            <li class="nav-item" if.bind="auth.isLoggedIn">
+                <a href="salarie/deconnexion" class="nav-link">Déconnectez-vous</a>
+            </li>
+
+        </ul>
+    </nav>
+</template>

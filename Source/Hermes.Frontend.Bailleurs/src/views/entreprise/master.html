@@ -1,0 +1,16 @@
+<template>
+    <require from="./master.css"></require>
+
+    <!-- pour le debug -->
+    <compose view="./debug-bar.html"></compose>
+    <!-- fin -->
+
+    <compose view-model="./header-entreprise"></compose>
+
+    <div class="mb-50">
+        <router-view></router-view>
+    </div>
+
+    <compose view="./footer.html"></compose>
+
+</template>

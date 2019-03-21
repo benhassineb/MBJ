@@ -7,8 +7,7 @@
         <div class="col-md-6">
             <div class="card">
                 <p class="card-header"><span>Détail de la demande du client </span>
-                    <input type="button" value="Modifier" class="btn-primary float-right"
-                        click.trigger="fieldsetDisabled()" />
+                    <input type="button" value="Modifier" class="btn-primary float-right" click.trigger="fieldsetDisabled()" />
                 </p>
                 <form>
                     <fieldset disabled.bind="isDisabled">
@@ -17,11 +16,9 @@
                                 <div class="card-header">${cardItem.cardName}</div>
                                 <div class="card-body">
                                     <div repeat.for="prop of cardItem.properties" class="form-group row">
-                                        <label for="disabledTextInput"
-                                            class="col-sm-4 col-form-label">${prop.label}</label>
+                                        <label for="disabledTextInput" class="col-sm-4 col-form-label">${prop.label}</label>
                                         <div class="col-sm-4">
-                                            <input type="text" id="disabledTextInput" class="form-control"
-                                                value=${prop.value} />
+                                            <input type="text" id="disabledTextInput" class="form-control" value=${prop.value} />
                                         </div>
                                     </div>
                                 </div>
@@ -178,78 +175,66 @@
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Statut de la demande</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.statutDemande}>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.statutDemande}>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Demande prioritaire</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.demandePrioritaire}>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.demandePrioritaire}>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Personne en mobilité</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.personneMobilite}></div>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.personneMobilite}></div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Salarié coaché</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.salarieCoache}></div>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.salarieCoache}></div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Date de
                             dépôt</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.dateDepot}></div>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.dateDepot}></div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Matricule</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.matricule}></div>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.matricule}></div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Nombre de candidature</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.nbreCandidature}></div>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.nbreCandidature}></div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Nombre de refus en
                             CAL</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.nbreDeRefusEnCal}></div>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.nbreDeRefusEnCal}></div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Nombre de refus
                             salarié</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.nbreDeRefusSalarie}></div>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.nbreDeRefusSalarie}></div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Scoring</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.scoring}>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.scoring}>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="disabledTextInput" class="col-sm-4 col-form-label">Nombre de jetons</label>
                         <div class="col-sm-4">
-                            <input type="text" id="disabledTextInput" readonly class="form-control"
-                                value=${infos.nbreJeton}></div>
+                            <input type="text" id="disabledTextInput" readonly class="form-control" value=${infos.nbreJeton}></div>
                     </div>
                 </div>
-                <input type="button" value="Proposer l'accompagnement"
-                    class="btn-primary" />
+                <input type="button" value="Proposer l'accompagnement" class="btn-primary" />
             </div>
         </div>
         <div class="col-md-2">

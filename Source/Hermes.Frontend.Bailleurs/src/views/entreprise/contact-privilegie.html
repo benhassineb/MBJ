@@ -1,14 +1,14 @@
 <template class="row">
     <require from="./contact-privilegie.css"></require>
-    <div class="card mt-2 contact-privilegie" >
+    <div class="card mt-2 contact-privilegie">
         <div class="card-body">
             <h5 class="card-title text-left text-rose ml-0 font-weight-bold">Contacts privilégiés</h5>
             <div class="card-text row ml-0">
                 <div repeat.for="contact of listContacts" class="card-text text-blue text-left ml-2">
                     <div class="font-weight-bold">${contact.prenom} ${contact.nom} </div>
-                    <div >${contact.role}</div>
-                    <div >${contact.tel}</div>
-                    <div >${contact.email}</div>
+                    <div>${contact.role}</div>
+                    <div>${contact.tel}</div>
+                    <div>${contact.email}</div>
                 </div>
             </div>
         </div>
