@@ -62,6 +62,10 @@ export class SampleService {
   getDetailsDemandeAvecCERFA() {
     return this._localClient.fetch('/mock/details-demande-avec-CERFA.json')
       .then(response => response.json())
+      .then(res => {
+        console.log(res);
+        return res;
+      })
       .catch(error => handleApiError(error));
   }
 

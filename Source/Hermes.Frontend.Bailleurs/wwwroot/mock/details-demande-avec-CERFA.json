@@ -1,52 +1,207 @@
 {
-  "demandeur": {
-    "civilite": "Monsieur",
-    "nom": "Magenta",
-    "prenom": "Paul",
-    "dateNai": "05/07/1977",
-    "situFam": "célibataire",
-    "nationalite": "Français",
-    "numUnique": "0131216253063AL020",
-    "numSecu": "1 770 575 106 019",
-    "matricule":"502315",
-    "date":"20/03/2019"
+  "infosDemande": {
+    "entreprise": "Orange France SAS",
+    "statutDemande": "En cours",
+    "demandePrioritaire": "Oui",
+    "personneMobilite": "Oui",
+    "salarieCoache": "Oui",
+    "dateDepot": "05/02/2018",
+    "matricule": "5001263",
+    "nbreCandidature": "3",
+    "nbreDeRefusEnCal": "1",
+    "nbreDeRefusSalarie": "1",
+    "scoring": "90",
+    "nbreJeton": "3"    
   },
-  "adresseDemandeur": {
-    "batiment": "Alpha",
-    "etage": "6",
-    "appartement": "20",
-    "numRue": "48",
-    "voie": "rue de la paix",
-    "compAdresse": "",
-    "codePostal": "75009",
-    "localite": "Paris",
-    "pays": "France"
-  },
-  "revenu": {
-    "salaire": "1950 euros",
-    "revFiscalAMoins2": "24000 euros",
-    "revFiscalAMoins1": "24100 euros"
-  },
-  "situationProf": {
-    "profession": "maçon",
-    "typeContrat": "CDI",
-    "employeur": "Orange Groupe",
-    "communeTravail": "Paris",
-    "codePostal": "75001",
-    "pays": "France",
-    "siret": "‎70980209401148"
-  },
-  "logemenSouhait": {
-    "categorie": "Appartement",
-    "typologie": "F2",
-    "LoyerMax": "500 euros",
-    "localisation1": "Paris 1",
-    "localisation2": "Paris 2",
-    "localisation3": "Paris 3",
-    "localisation4": "Paris 4",
-    "localisation5": "Paris 5",
-    "localisation6": "Paris 6",
-    "localisation7": "Paris 7",
-    "localisation8": "Paris 8"
-  }
+  "data": [
+    {
+      "cardName": "Demandeur",
+      "properties": [
+        {
+          "label": "Civilite",
+          "value": "Monsieur"
+        },
+        {
+          "label": "Nom",
+          "value": "Magenta"
+        },
+        {
+          "label": "Prénom",
+          "value": "Paul"
+        },
+        {
+          "label": "Date de naissance",
+          "value": "05/07/1977"
+        },
+        {
+          "label": "Situation familiale",
+          "value": "Célibataire"
+        },
+        {
+          "label": "Nationalité",
+          "value": "Français"
+        },
+        {
+          "label": "Numéro unique",
+          "value": "0131216253063AL020"
+        },
+        {
+          "label": "Numéro de sécurité sociale",
+          "value": "1 770 575 106 019"
+        },
+        {
+          "label": "Matricule",
+          "value": "502315"
+        },
+        {
+          "label": "Date",
+          "value": "20/03/2019"
+        }
+      ]
+    },
+    {
+      "cardName": "Adresse du demandeur",
+      "properties": [
+        {
+          "label": "Batiment",
+          "value": "Alpha"
+        },
+        {
+          "label": "Etage",
+          "value": "6"
+        },
+        {
+          "label": "Appartement",
+          "value": "20"
+        },
+        {
+          "label": "Numéro de rue",
+          "value": "48"
+        },
+        {
+          "label": "Voie",
+          "value": "rue de la paix"
+        },
+        {
+          "label": "Complément de l'adresse",
+          "value": ""
+        },
+        {
+          "label": "Code postal",
+          "value": "75009"
+        },
+        {
+          "label": "Localité",
+          "value": "Paris"
+        },
+        {
+          "label": "Pays",
+          "value": "France"
+        },
+        {
+          "label": "Date",
+          "value": "20/03/2019"
+        }
+      ]
+    },
+    {
+      "cardName": "Revenus du demandeur",
+      "properties": [
+        {
+          "label": "Salaire",
+          "value": "1960 euros"
+        },
+        {
+          "label": "Revenu fiscal A-2",
+          "value": "24000 euros"
+        },
+        {
+          "label": "Revenu fiscal A-1",
+          "value": "24100 euros"
+        }
+      ]
+    },
+    {
+      "cardName": "Situation professionnelle du demandeur",
+      "properties": [
+        {
+          "label": "Profession",
+          "value": "Maçon"
+        },
+        {
+          "label": "Type de contrat",
+          "value": "CDI"
+        },
+        {
+          "label": "Employeur",
+          "value": "Orange Groupe"
+        },
+        {
+          "label": "Commune de travail",
+          "value": "Paris"
+        },
+        {
+          "label": "Code postal",
+          "value": "75008"
+        },
+        {
+          "label": "Pays",
+          "value": "France"
+        },
+        {
+          "label": "Numéro de Siret",
+          "value": "70980209401148"
+        }
+      ]
+    },
+    {
+      "cardName": "Logement souhaité",
+      "properties": [
+        {
+          "label": "catégorie",
+          "value": "Appartement"
+        },
+        {
+          "label": "Typologie",
+          "value": "F2"
+        },
+        {
+          "label": "Loyer max",
+          "value": "500 euros"
+        },
+        {
+          "label": "Localisation souhaité 1",
+          "value": "Paris 1"
+        },
+        {
+          "label": "Localisation souhaité 2",
+          "value": "Paris 2"
+        },
+        {
+          "label": "Localisation souhaité 3",
+          "value": "Paris 3"
+        },
+        {
+          "label": "Localisation souhaité 4",
+          "value": "Paris 4"
+        },
+        {
+          "label": "Localisation souhaité 5",
+          "value": "Paris 5"
+        },
+        {
+          "label": "Localisation souhaité 6",
+          "value": "Paris 6"
+        },
+        {
+          "label": "Localisation souhaité 7",
+          "value": "Paris 7"
+        },
+        {
+          "label": "Localisation souhaité 8",
+          "value": "Paris 8"
+        }
+      ]
+    }
+  ]
 }

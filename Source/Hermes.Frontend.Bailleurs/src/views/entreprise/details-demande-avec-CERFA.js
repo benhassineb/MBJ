@@ -10,14 +10,19 @@ export class DetailsDemandeAvecCERFA {
     this._service = service;
     this.demande;
     this.isDisabled = true;
+    this.data = [];
+    this.infos;
   }
 
   activate() {
     return this._service.getDetailsDemandeAvecCERFA()
-      .then(result => this.demande = result);
+      .then(result =>{
+        this.data = result.data;
+        this.infos = result.infosDemande;
+      } );
   }
 
-  fieldsetDisabled() {  
+  fieldsetDisabled() {
     this.isDisabled = false;
   }
 
