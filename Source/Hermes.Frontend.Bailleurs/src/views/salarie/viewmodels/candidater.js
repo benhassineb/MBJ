@@ -1,4 +1,4 @@
-export class Header {
+export class Candidater {     
   constructor() {
     this.message = 'Hello world';
   }

@@ -1,0 +1,11 @@
+<template>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" repeat.for="menu of listMenu" if.bind="menu.showItem">
+          <a class="nav-link" value.bind="menu.item" >${menu.item}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</template>
