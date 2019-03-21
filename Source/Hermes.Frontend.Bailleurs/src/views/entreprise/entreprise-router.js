@@ -8,7 +8,8 @@ export class EntrepriseRouter {
       { route: 'Entreprise', name: 'Entreprise', moduleId: 'entreprise-router', nav: true, title: 'entreprise Router', breadcrumb: false },
       { route: 'gestion-demandes/:filterType?', name: 'gestion-demandes', moduleId: './gestion-demandes', nav: true, title: 'Gestion des demandes', href: '#gestion-demandes', breadcrumb: true },
       { route: 'offres-privilege-consulte', name: 'offres-privilege-consulte', moduleId: './offres-privilege-consulte', nav: true, title: 'Offres Privilège', breadcrumb: true },
-      { route: 'offres-privilege-edite', name: 'offres-privilege-edite', moduleId: './offres-privilege-edite', nav: true, title: 'Offres Privilège', breadcrumb: true }
+      { route: 'offres-privilege-edite', name: 'offres-privilege-edite', moduleId: './offres-privilege-edite', nav: true, title: 'Offres Privilège', breadcrumb: true },
+      { route: 'scoring', name: 'scoring', moduleId: './scoring', nav: true, title: 'Scoring', breadcrumb: true }
 
     ]);
 
