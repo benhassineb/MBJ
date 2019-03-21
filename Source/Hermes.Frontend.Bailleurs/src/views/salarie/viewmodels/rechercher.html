@@ -20,20 +20,19 @@
                     <span class="icon ui__button__icon icon-settings"></span>
                 </a>
             </div>
-
         </div>
         <div class="row search-result">
 
             <div repeat.for="accommodation of accommodations" class="col-md-4 text-center">
-                <a href="salarie/logement">
+                <a route-href="logement">
                     <div data-bind="style: { backgroundImage: 'url(${accommodation.image})' }" class="result-bloc pointer ${getStyleColor(accommodation.points)}">
-                        <div class="pull-right glyphicon glyphicon-heart block-heart pointer"></div>
+                        <div class="float-right glyphicon glyphicon-heart block-heart pointer"></div>
                         <br />
                         <div>
-                            <div class="pull-left">${accommodation.commune}</div>
+                            <div class="float-left">${accommodation.commune}</div>
                             <br />
-                            <div class="pull-left">${accommodation.nbrPiece} pièces de ${accommodation.superficie}m²</div>
-                            <div class="pull-right">${accommodation.price}€ cc</div>
+                            <div class="float-left">${accommodation.nbrPiece} pièces de ${accommodation.superficie}m²</div>
+                            <div class="float-right">${accommodation.price}€ cc</div>
                         </div>
                     </div>
                 </a>

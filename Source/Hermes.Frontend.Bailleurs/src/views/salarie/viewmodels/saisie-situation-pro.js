@@ -41,7 +41,7 @@ export class SaisieSituationPro {
           {label: 'Nom', type: 'text', name: 'nom', value: '', tailleBloc: '4'},
           {label: 'Prénom', type: 'text', name: 'prenom', value: '', tailleBloc: '4'},
           {label: 'Date de naissance', type: 'text', name: 'dateNaissance', value: '', tailleBloc: '4'},
-          {label: 'Nationalité', type: 'select', name: 'nationalite', value: this.getNationalite(), tailleBloc: '4'},
+          {label: 'Nationalité', type: 'select', name: 'nationalite', values: this.getNationalite(), tailleBloc: '4'},
           {label: 'Téléphone portable', type: 'text', name: 'telPort', value: '', tailleBloc: '4'},
           {label: 'Téléphone domicile', type: 'text', name: 'telDom', value: '', tailleBloc: '4'},
           {label: 'Téléphone professionnel', type: 'text', name: 'telPro', value: '', tailleBloc: '4'},
@@ -49,11 +49,11 @@ export class SaisieSituationPro {
           {label: 'Courriel professionnel', type: 'text', name: 'courrielPro', value: '', tailleBloc: '4'},
           {label: 'Courriel personnel', type: 'text', name: 'courrielPerso', value: '', tailleBloc: '4'},
           {label: 'Autre courriel', type: 'text', name: 'courrielAutre', value: '', tailleBloc: '4'},
-          {label: 'Situation familiale', type: 'select', name: 'situation', value: this.getSituation(), tailleBloc: '4'},
+          {label: 'Situation familiale', type: 'select', name: 'situation', values: this.getSituation(), tailleBloc: '4'},
           {label: 'Depuis le', type: 'text', name: 'situationDepuis', value: '', tailleBloc: '4'},
           {label: 'Renouvellement numéro unique (SNE) par voir émectronique', type: 'text', name: 'renouvellement', value: '', tailleBloc: '12'},
           {label: 'Co-titulaire', type: 'checkbox', name: 'cotitulaire', value: '', tailleBloc: '4'},
-          {label: 'Lien avec le Co-titulaire', type: 'select', name: 'lienCotitulaire', value: this.getLienCotitulaire(), tailleBloc: '4'},
+          {label: 'Lien avec le Co-titulaire', type: 'select', name: 'lienCotitulaire', values: this.getLienCotitulaire(), tailleBloc: '4'},
           {label: 'Courriel d\'une personne ou structure vous aidant dans les démarches', type: 'text', name: 'courrielDemarche', value: '', tailleBloc: '4'},
           {label: 'Notification (SNE) par SMS', type: 'text', name: 'notif', value: '', tailleBloc: '4'}
         ]

@@ -56,12 +56,12 @@ export class SampleService {
     return this._localClient
       .fetch('/mock/contactprivilegie.json')
       .then(response => response.json())
-      .then(result => result.filter(item => {if(item.idEntreprise === entreprise) return item;}))
+      .then(result => result.filter(item => {if (item.idEntreprise === entreprise) return item;}))
       .catch(error => handleApiError(error));
   }
 
-  getDetailsDemandeAvecCERFA() {
-    return this._localClient.fetch('/mock/details-demande-avec-CERFA.json')
+  getDetailsDemandeAvecCerfa() {
+    return this._localClient.fetch('/mock/details-demande-avec-cerfa.json')
       .then(response => response.json())
       .then(res => {
         console.log(res);
@@ -70,8 +70,8 @@ export class SampleService {
       .catch(error => handleApiError(error));
   }
 
-  getDetailsDemandeSansCERFA() {
-    return this._localClient.fetch('/mock/details-demande-sans-CERFA.json')
+  getDetailsDemandeSansCerfa() {
+    return this._localClient.fetch('/mock/details-demande-sans-cerfa.json')
       .then(response => response.json())
       .catch(error => handleApiError(error));
   }
@@ -120,10 +120,25 @@ export class SampleService {
       .catch(error => handleApiError(error));
   }
 
-  getAcceuilEntrepriseData() {
+  getTypologie() {
     return this._localClient
-      .fetch('/mock/acceuilEntrepriseData.json')
+      .fetch('/mock/typologie.json')
       .then(response => response.json())
       .catch(error => handleApiError(error));
   }
+
+  getOffresPrivileges() {
+    return this._localClient
+      .fetch('/mock/offres-privileges.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getOffresReporting() {
+    return this._localClient
+      .fetch('/mock/offres-reporting.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
 }
