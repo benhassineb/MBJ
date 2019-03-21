@@ -56,11 +56,15 @@
                             placeholder="localisation"></aubs-typeahead>
                         </span>
                         <div class="col-md-6 filtre">
-                            <ul class="list-group list-group-horizontal">
-                                <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button></li>
-                            </ul>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="list-group list-group-horizontal">
+                                            <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-2 text-right">
                             <button class="btn btn-primary ml-2"><span class="pl-3 pr-3">Filtrer</span></button>
@@ -69,7 +73,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <contact-privilegie entreprise.bind="filtreEntrepriseSelected" filiale.bind="filtreFilialeSelected"></contact-privilegie>
+                <contact-privilegie if.bind="filtreEntrepriseSelected" entreprise.bind="filtreEntrepriseSelected" filiale.bind="filtreFilialeSelected"></contact-privilegie>
             </div>
         </div>
     </div>
