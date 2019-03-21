@@ -73,8 +73,8 @@ export class SaisieDomicileActuel {
         bloc: 'Logement actuel',
         content: [
           {label: 'Mode de logement', type: 'select', name: 'modeLogement', values: this.getModeLogement(), tailleBloc: '9'},
-          {label: 'Type de logement', type: 'select', name: 'typeLogement', value: this.getTypeLogement(), tailleBloc: '4'},
-          {label: 'Catégorie', type: 'select', name: 'categorie', value: this.getCategorie(), tailleBloc: '4'},
+          {label: 'Type de logement', type: 'select', name: 'typeLogement', values: this.getTypeLogement(), tailleBloc: '4'},
+          {label: 'Catégorie', type: 'select', name: 'categorie', values: this.getCategorie(), tailleBloc: '4'},
           {label: 'Surface', type: 'text', name: 'surface', value: '', tailleBloc: '4'},
           {label: 'Loyer mensuel avec charges', type: 'text', name: 'loyer', value: '', tailleBloc: '4'},
           {label: 'Date d\'entrée dans les lieux', type: 'text', name: 'dateEntre', value: '', tailleBloc: '4'},
