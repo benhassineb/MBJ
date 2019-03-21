@@ -15,6 +15,7 @@ export class headerentreprise {
     listFiltreEntreprise;
     listFiltreDepartementSelected = [];
     filtreEntrepriseSelected;
+    filtreFilialeSelected;
     _openIdConnect;
     departementSelected;
 
@@ -23,7 +24,7 @@ export class headerentreprise {
       this._parentRouter = parentRouter;
       this._openIdConnect = openIdConnect
       this._service.getFiltreEntreprise()
-        .then(result => { this.listFiltreEntreprise = result; this.filtreEntrepriseSelected = result[1];});
+        .then(result => { this.listFiltreEntreprise = result; this.filtreEntrepriseSelected = result[0];});
       this._service.getFiltreDepartement()
         .then(result => {this.listDepartement = result; this.listFiltreDepartementSelected.push(result[1]); this.listFiltreDepartementSelected.push(result[3]);});
       }

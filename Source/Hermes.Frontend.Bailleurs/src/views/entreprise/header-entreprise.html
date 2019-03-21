@@ -17,43 +17,60 @@
         </div>
     </div>
     <div class="row bandeau-top">
-        <div class="col-md-2">
-            <img src="./images/logo-orange.jpg"></div>
-        <div class="col-md-10 pt-4 pb-4">
+        <div class="col-md-3">
+            <img src="${filtreEntrepriseSelected.logo.url}"></div>
+        <div class="col-md-7 pt-4 pb-4">
             <h1><span class="text-rose">Bienvenue</span><span class="text-blue"> sur votre espace Hermès</span></h1>
         </div>
     </div>
-    <div class="container-fluid mt-1 mb-1">
-            <div class="row">
-                <div class="col-md-8">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Hermès</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Espace entreprise</li>
-                        </ol>
-                    </nav>
-                    <div class="filtre input-group">
-                        <select class="text-blue mr-2" value.bind="filtreEntrepriseSelected">
-                            <option></option>
-                            <option model.bind="item" repeat.for="item of listFiltreEntreprise" >${item.label}</option>
-                        </select>
-                        <ul class="list-group list-group-horizontal mr-2">
-                            <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button></li>
-                        </ul>
-                        <span>
+    <div class="container-fluid form-group">
+        <div class="row">
+            <div class="col-md-8 form-group">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Hermès</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Espace entreprise</li>
+                    </ol>
+                </nav>
+                <div class="">
+                    <div class="filtre">
+                        <div class="row">
+                            <div class="col-md-4" if.bind="listFiltreEntreprise.length > 1">
+                                <select class="text-blue form-control" value.bind="filtreEntrepriseSelected">
+                                    <option model.bind="item" repeat.for="item of listFiltreEntreprise" >${item.label}</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <select class="text-blue form-control" value.bind="filtreFilialeSelected">
+                                    <option>Toutes les entités</option>
+                                    <option model.bind="item" repeat.for="item of filtreEntrepriseSelected.filiales" >${item.label}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <span class="col-md-4">
                             <aubs-typeahead open-on-focus.bind="true" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" 
                             instant-clean-empty="true" data.call="getListeDepartement(filter)" debounce.bind="50" key="label" 
                             no-results-text="Aucun élément trouvé..." results-limit.bind="10" loading-text="Recherche en cours..." 
-                            placeholder="Filtre département"></aubs-typeahead>
+                            placeholder="localisation"></aubs-typeahead>
                         </span>
-                        <button class="btn btn-primary ml-2"><span class="pl-3 pr-3">Filtrer</span></button>
+                        <div class="col-md-6 filtre">
+                            <ul class="list-group list-group-horizontal">
+                                <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 text-right">
+                            <button class="btn btn-primary ml-2"><span class="pl-3 pr-3">Filtrer</span></button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <contact-privilegie ></contact-privilegie>
-                </div>
+            </div>
+            <div class="col-md-4">
+                <contact-privilegie entreprise.bind="filtreEntrepriseSelected" filiale.bind="filtreFilialeSelected"></contact-privilegie>
             </div>
         </div>
+    </div>
 </template>

@@ -39,7 +39,7 @@
             </p>
             <div class="row justify-content-between">
                 <div class="col-auto mr-auto"></div>
-                <div class="col-auto"><a href="#" class="btn btn-primary text-right">Editer mes résultats</a></div>
+                <div class="col-auto"><a href="#" class="btn btn-primary text-right" click.delegate="search()">Editer mes résultats</a></div>
             </div>
         </div>
     </div>
@@ -49,7 +49,8 @@
             Résultats
         </div>
         <div class="card-body table-responsive">
-            <table class="table table-sm table-hover table-striped">
+            <table class="table table-sm table-hover table-striped" aurelia-table="data.bind: resultats; display-data.bind: $displayData;
+            current-page.bind: currentPage; page-size.bind: pageSize; total-items.bind: totalItems;">
                 <thead class="thead-dark">
                     <tr>
                         <th>Nom</th>
@@ -57,18 +58,61 @@
                         <th>Date de naissance</th>
                         <th>Matricule</th>
                         <th>Date</th>
+                        <th>Validation</th>
+                        <th>Priorité</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr repeat.for="item of resultats">
+                    <tr repeat.for="item of $displayData">
                         <td>${item.nom}</td>
                         <td>${item.prenom}</td>
                         <td>${item.dateNaissance}</td>
                         <td>${item.matricule}</td>
                         <td>${item.dateDemande}</td>
+                        <td>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class-name.bind="item.dmdValideOui ? 'btn btn-secondary btn-sm active' : 'btn btn-secondary btn-sm'" click.delegate="item.handleClick(true)">
+                                  <!-- <input type="radio" name="validerDemande" autocomplete="off"> Oui -->Oui
+                                </label>
+                                <label class-name.bind="item.dmdValideNon ? 'btn btn-secondary btn-sm active' : 'btn btn-secondary btn-sm'" click.delegate="item.handleClick(false)">
+                                  <!-- <input type="radio" name="validerDemande" autocomplete="off"> Non -->Non
+                                </label>
+                            </div>
+                        </td>
+                        <td>
+                          <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="chb-prioritaire-${$index}" checked.bind="item.prioritaire">
+                              <label class="custom-control-label" for="chb-prioritaire-${$index}"></label>
+                          </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+            <div class="row-fluid">
+                <aut-pagination current-page.bind="currentPage" page-size.bind="pageSize" total-items.bind="totalItems" pagination-size.bind="5">
+                    <template replace-part="pagination">
+                        <ul class="pagination" hide.bind="hideSinglePage && totalPages === 1">
+                            <li class-name.bind="currentPage === 1 ? 'page-item disabled' : 'page-item'">
+                                <a class="page-link" aria-label="Previous" click.delegate="previousPage()">
+                                    <span aria-hidden="true">«</span>
+                                </a>
+                            </li>
+
+                            <li class-name.bind="currentPage === page.value ? 'page-item active' : 'page-item'" repeat.for="page of displayPages">
+                                <a class="page-link" click.delegate="selectPage(page.value)">
+                                    ${page.title}
+                                </a>
+                            </li>
+
+                            <li class-name.bind="currentPage === totalPages ? 'page-item disabled' : 'page-item'">
+                                <a class="page-link" aria-label="Next" click.delegate="nextPage()">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </template>
+                </aut-pagination>
+            </div>
         </div>
     </div>
 </template>

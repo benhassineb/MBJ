@@ -10,6 +10,7 @@ export function configure(aurelia) {
     .plugin('aurelia-configuration')
     .plugin('aurelia-bootstrap', config => config.options.version = 4)
     .plugin('aurelia-open-id-connect', () => configureAuth(aurelia))
+    .plugin('aurelia-table')
     .plugin('aurelia-i18n', (instance) => {
       let aliases = ['t', 'i18n'];
       TCustomAttribute.configureAliases(aliases);
