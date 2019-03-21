@@ -6,9 +6,17 @@ import { SampleService } from 'services/sample-service';
 @customElement('contact-privilegie')
 export class contactprivilegie {
     
+    @bindable({ defaultBindingMode: bindingMode.twoWay }) entreprise;
+    @bindable filiale;
+
     constructor(service) {
         this._service = service;
-        this._service.getContactPriviligies()
-        .then(result => this.listContacts = result)
+        
     }
+
+    entrepriseChanged(newEntreprise){
+        this._service.getContactPriviligies(newEntreprise.id)
+        .then(result => this.listContacts = result);
+    }
+
 }

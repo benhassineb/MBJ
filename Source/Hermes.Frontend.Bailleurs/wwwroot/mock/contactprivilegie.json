@@ -1,16 +1,51 @@
 [
     {
-        "nom" : "DUPONT",
+        "idEntreprise" : "1",
+        "nom" : "DUPONT 1",
         "prenom" : "Pierre",
         "role" : "Conseiller entreprise",
         "tel" : "01 12 12 12 12",
         "email" : "dupont.pierre@actionlogement.Fr"  
     },
     {
-        "nom" : "MAURA",
+        "idEntreprise" : "1",
+        "nom" : "MAURA 1",
+        "prenom" : "Elise",
+        "role" : "Conseiller entreprise",
+        "tel" : "01 13 13 13 13",
+        "email" : "maura.elise@actionlogement.Fr"  
+    },
+    {
+        "idEntreprise" : "2",
+        "nom" : "DUPONT 2",
+        "prenom" : "Pierre",
+        "role" : "Conseiller entreprise",
+        "tel" : "01 12 12 12 12",
+        "email" : "dupont.pierre@actionlogement.Fr"  
+    },
+    {
+        "idEntreprise" : "2",
+        "nom" : "MAURA 2",
+        "prenom" : "Elise",
+        "role" : "Conseiller entreprise",
+        "tel" : "01 13 13 13 13",
+        "email" : "maura.elise@actionlogement.Fr"  
+    },
+    {
+        "idEntreprise" : "3",
+        "nom" : "DUPONT 3",
+        "prenom" : "Pierre",
+        "role" : "Conseiller entreprise",
+        "tel" : "01 12 12 12 12",
+        "email" : "dupont.pierre@actionlogement.Fr"  
+    },
+    {
+        "idEntreprise" : "3",
+        "nom" : "MAURA 3",
         "prenom" : "Elise",
         "role" : "Conseiller entreprise",
         "tel" : "01 13 13 13 13",
         "email" : "maura.elise@actionlogement.Fr"  
     }
+
 ]

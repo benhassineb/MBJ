@@ -52,10 +52,11 @@ export class SampleService {
       .catch(error => handleApiError(error));
   }
 
-  getContactPriviligies() {
+  getContactPriviligies(entreprise) {
     return this._localClient
       .fetch('/mock/contactprivilegie.json')
       .then(response => response.json())
+      .then(result => result.filter(item => {if(item.idEntreprise === entreprise) return item;}))
       .catch(error => handleApiError(error));
   }
 
