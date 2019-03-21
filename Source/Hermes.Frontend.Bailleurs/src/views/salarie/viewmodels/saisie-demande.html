@@ -6,9 +6,9 @@
       </div>
       <div id="volet-saisie" class="col-md-10" >
         <ul class="nav nav-tabs nav-justified"> 
-          <li role="presentation" repeat.for="etape of etapes" class="${etape == selectedStep ? 'active' : ''}"><a class="pointer" click.trigger="goToStep(etape)">${etape.label}</a></li>
+          <li role="presentation" repeat.for="etape of etapes" class="nav-item "><a class="pointer nav-link ${etape == selectedStep ? 'active' : ''}" click.trigger="goToStep(etape)">${etape.label}</a></li>
         </ul>
-        <compose view-model.bind="selectedStep"></compose>
+        <compose view-model.bind="selectedStep" ></compose>
       </div>
     </div>
   </div>

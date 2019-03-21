@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 offset-md-4">
           <form role="form" submit.delegate="submit()">
             <h1 class="text-center">Connexion</h1>
             <div class="form-group">
@@ -14,14 +14,14 @@
             </div>
             <div class="form-group">
               <a href="#">Mot de passe oublié</a>
-              <div class="pull-right">
-                <button class="btn btn-default w-120" role="submit">Se connecter</button>
+              <div class="float-right">
+                <button class="btn btn-primary w-130" role="submit">Se connecter</button>
               </div>
             </div>
             <div class="form-group">
               <label >Vous n'avez pas de compte ?</label>
-              <div class="pull-right">
-                <a href="salarie/inscription"><button class="btn btn-default w-120">Inscription</button></a>
+              <div class="float-right">
+                <a route-href="route: inscription"><button class="btn btn-primary w-130">Inscription</button></a>
               </div>
             </div>
           </form>

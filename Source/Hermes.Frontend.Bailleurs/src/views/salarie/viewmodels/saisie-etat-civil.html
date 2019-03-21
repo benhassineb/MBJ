@@ -1,0 +1,37 @@
+<template >
+  <form role="form" model.bind="saisieDemande" submit.delegate="next()">
+  <div class="container card" repeat.for="bloc of getAttributes()">
+    <div class="row card-header">
+      <div class="col-md-12">
+          <h5 class="card-title">${bloc.bloc}</h5>
+        <!--h3 >${bloc.bloc}</h3-->
+      </div>
+    </div>
+    <div class="row card-body">
+      <div form-group repeat.for="content of bloc.content" class="col-md-${content.tailleBloc}" >
+        <div if.bind="content.type == 'radio'" repeat.for="option of content.values">
+          <input value.bind="option.key" type="radio" name.bind="content.name" >
+          <label for.bind="option.value">${option.value}</label>
+        </div>
+        <input type="checkbox" if.bind="content.type == 'checkbox'" value.bind="content.name" class="form-control" id="np" placeholder="">
+        <label if.bind="content.type != 'radio'" for.bind="content.name">${content.label}</label>
+        <input type="text" if.bind="content.type == 'text'" value.bind="content.value" class="form-control" id.bind="content.name" placeholder="">
+        <select value.bind="content.name" if.bind="content.type == 'select'" class="form-control" id="cp" >
+            <option repeat.for="option of content.values" value.bind="option.key">${option.value}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class "container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <div class="float-right">
+            <button class="btn btn-primary w-130 my-4" role="submit">Continuer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</template>
