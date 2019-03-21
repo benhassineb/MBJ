@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="card">
                   <div class="card-header">
-                        <h5 class="card-title"><b>Je consulte l'offre</b> ou <a href="#/entreprise/offres-privilege-edite">j'édite mon reporting</a></h5>
+                        <h5 class="card-title"><b>Je consulte l'offre</b> ou <a href="entreprise/offres-privilege-edite">j'édite mon reporting</a></h5>
                     </div>
                 </div>
               </div>
@@ -26,11 +26,7 @@
                                     <label>
                                             &nbsp;Typologie&nbsp;
                                             <select>
-                                                    <option>Tous types</option>
-                                                    <option>F1</option>
-                                                    <option>F2</option>
-                                                    <option>F3</option>
-                                                    <option>F4 ou +</option>
+                                                    <option repeat.for="typ of typologieList">${typ.label}</option>
                                             </select>
                                     </label>
                             </div>
@@ -58,90 +54,16 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-3" style="background: #eee;margin-right: 10px;">
-                                <div class="panel panel-primary">
-                                    <div class="panel-heading">Logement 1</div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <p>67 salariés éligibles à cette offre</p>   
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-7 bg-light">
-                                                <div class="text-left">
-                                                    <img src="/images/apt123.jpg" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
+                                <div class="col-md-3" style="background: #eee;margin-right: 10px;" repeat.for="offre of offres">
+                                        <div class="panel panel-primary">
+                                            <div class="panel-heading">${offre.titre}</div>
+                                            <div class="panel-body">
                                                 <div class="row">
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                        CTA Détails
-                                                    </button> 
-                                                </div>
-                                                <br>
-                                                <div class="row">
-                                                    <button type="button" class="btn btn-primary btn-sm">
-                                                        envoyer l'offre 6 ALERTES Logement
-                                                    </button>
-                                                </div>   
-                                            </div>                                            
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                    <p><i>Publié le 19/03/2019 - <b>23 jours restants</b></i></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3" style="background: #eee;margin-right: 10px;">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-heading">Logement 2</div>
-                                        <div class="panel-body">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <p>0 salariés éligibles à cette offre</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                    <div class="col-md-7 bg-light">
-                                                        <div class="text-left">
-                                                            <img src="/images/apt123.jpg" />
-                                                        </div>
+                                                    <div class="col-md-12">
+                                                        <p>${offre.nbSalaries} salariés éligibles à cette offre</p>   
                                                     </div>
-                                                    <div class="col-md-5">
-                                                        <div class="row">
-                                                            <button type="button" class="btn btn-primary btn-sm">
-                                                                CTA Détails
-                                                            </button>
-                                                        </div>
-                                                        <br>
-                                                        <div class="row">
-                                                            <button type="button" class="btn btn-primary btn-sm">
-                                                                Je n'ai pas de salarié éligible je rends ce logement
-                                                            </button>
-                                                        </div>   
-                                                    </div>                                            
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <p><i>Publié le 15/03/2019 - <b>10 jours restants</b></i></p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-3" style="background: #eee;margin-right: 10px;">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-heading">Logement 3</div>
-                                        <div class="panel-body">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                <p>10 salariés éligibles à cette offre</p>
-                                                </div>
-                                            </div>
-                                            <div class="row">
+                                                <div class="row">
                                                     <div class="col-md-7 bg-light">
                                                         <div class="text-left">
                                                             <img src="/images/apt123.jpg" />
@@ -155,26 +77,30 @@
                                                         </div>
                                                         <br>
                                                         <div class="row">
-                                                            <button type="button" class="btn btn-primary btn-sm">
+                                                            <button type="button" class="btn btn-primary btn-sm" if.bind="offre.nbSalaries > 0">
                                                                 envoyer l'offre 6 ALERTES Logement
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary btn-sm" if.bind="offre.nbSalaries == 0">
+                                                                Je n'ai pas de salarié éligible je rends ce logement
                                                             </button>
                                                         </div>   
                                                     </div>                                            
-                                            </div>
-                                            <div class="row">
+                                                </div>
+                                                <div class="row">
                                                     <div class="col-md-12">
-                                                        <p><i>Publié le 11/03/2019 - <b>4 jours restants</b></i></p>
+                                                            <p><i>Publié le ${offre.DatePublication} - <b>${offre.tempsRestant} jours restants</b></i></p>
                                                     </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                </div>
+                            
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <br>
     <br>
     <compose view="../footer.html" containerless></compose>

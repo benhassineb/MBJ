@@ -5,7 +5,7 @@
                     <div class="col-md-12">
                         <div class="card">
                           <div class="card-header">
-                                <h5 class="card-title"><a href="#/entreprise/offres-privilege-consulte">Je consulte l'offre</a> ou <b>j'édite mon reporting</b></h5>
+                                <h5 class="card-title"><a href="entreprise/offres-privilege-consulte">Je consulte l'offre</a> ou <b>j'édite mon reporting</b></h5>
                             </div>
                         </div>
                       </div>
@@ -30,11 +30,7 @@
                                             <label>
                                                     &nbsp;Typologie&nbsp;
                                                     <select>
-                                                            <option>Tous types</option>
-                                                            <option>F1</option>
-                                                            <option>F2</option>
-                                                            <option>F3</option>
-                                                            <option>F4 ou +</option>
+                                                            <option repeat.for="typ of typologieList">${typ.label}</option>
                                                     </select>
                                             </label>
                                     </div>
@@ -51,7 +47,7 @@
                                 </div>
                                 <br>
                                 <div class="col-md-12">
-                                    <div class="table-responsive">
+                                    <div class="table-responsive" aurelia-table="data.bind: offres; display-data.bind: $displayData">
                                         <table class="table">
                                                 <thead>
                                                         <tr>
@@ -68,38 +64,17 @@
                                                 </thead>
                                                 <tbody>
                                                         <tr>
-                                                            <td>
-                                                                <small class="text-info right small">XXXXXXXXXX</small>
-                                                            </td>
-                                                            <td>
-                                                                <small class="text-info right small">F1</small>
-                                                            </td>
-                                                            <td>
-                                                                <small class="text-info right small">XXXXXXXXXX</small>
-                                                            </td>                               
-                                                        </tr>
-                                                        <tr>
-                                                                <td>
-                                                                    <small class="text-info right small">XXXXXXXXXX</small>
-                                                                </td>
-                                                                <td>
-                                                                    <small class="text-info right small">F3</small>
-                                                                </td>
-                                                                <td>
-                                                                    <small class="text-info right small">XXXXXXXXXX</small>
-                                                                </td>                               
+                                                            <tr repeat.for="offre of $displayData">
+                                                                    <td>
+                                                                        <small class="text-info right small">${offre.place}</small>
+                                                                    </td>
+                                                                    <td>
+                                                                        <small class="text-info right small">${offre.typologie}</small>
+                                                                    </td>
+                                                                    <td>
+                                                                        <small class="text-info right small">${offre.xxxx}</small>
+                                                                    </td> 
                                                             </tr>
-                                                            <tr>
-                                                                    <td>
-                                                                        <small class="text-info right small">XXXXXXXXXX</small>
-                                                                    </td>
-                                                                    <td>
-                                                                        <small class="text-info right small">F4 ou plus</small>
-                                                                    </td>
-                                                                    <td>
-                                                                        <small class="text-info right small">XXXXXXXXXX</small>
-                                                                    </td>                               
-                                                                </tr>
                                                     </tbody>
                                         </table>
                                     </div>

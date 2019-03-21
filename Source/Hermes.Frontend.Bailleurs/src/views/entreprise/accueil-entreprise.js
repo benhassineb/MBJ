@@ -19,5 +19,6 @@ export class AcceuilEntreprise {
     return this._service.effacerCacheAutorisations('test')
       .then(result => this.result = result);
   }
+
 }
 
