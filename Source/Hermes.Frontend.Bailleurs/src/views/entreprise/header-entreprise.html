@@ -50,17 +50,21 @@
                     </div>
                     <div class="row pt-2">
                         <span class="col-md-4">
-                            <aubs-typeahead open-on-focus.bind="true" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" 
+                            <aubs-typeahead open-on-focus.bind="false" value.bind="departementSelected" on-select.call="onSelectDepartement(item)" 
                             instant-clean-empty="true" data.call="getListeDepartement(filter)" debounce.bind="50" key="label" 
                             no-results-text="Aucun élément trouvé..." results-limit.bind="10" loading-text="Recherche en cours..." 
                             placeholder="localisation"></aubs-typeahead>
                         </span>
                         <div class="col-md-6 filtre">
-                            <ul class="list-group list-group-horizontal">
-                                <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button></li>
-                            </ul>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="list-group list-group-horizontal">
+                                            <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-2 text-right">
                             <button class="btn btn-primary ml-2"><span class="pl-3 pr-3">Filtrer</span></button>
@@ -69,7 +73,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <contact-privilegie entreprise.bind="filtreEntrepriseSelected" filiale.bind="filtreFilialeSelected"></contact-privilegie>
+                <compose view-model="./contact-privilegie" model.bind="filtreEntrepriseSelected" containerless class="row mr-1 float-right"></compose>
             </div>
         </div>
     </div>
