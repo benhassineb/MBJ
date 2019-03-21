@@ -1,0 +1,23 @@
+[
+    {
+        "code": 1,
+        "titre": "LOGEMENT 1",
+        "nbSalaries": 67,
+        "DatePublication": "19/03/2019",
+        "tempsRestant": 23   
+    },
+    {
+        "code": 2,
+        "titre": "LOGEMENT 2",
+        "nbSalaries": 0,
+        "DatePublication": "15/02/2019",
+        "tempsRestant": 10 
+    },
+    {
+        "code": 3,
+        "titre": "LOGEMENT 3",
+        "nbSalaries": 10,
+        "DatePublication": "11/03/2019",
+        "tempsRestant": 4 
+    }
+]

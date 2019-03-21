@@ -56,7 +56,7 @@ export class SampleService {
     return this._localClient
       .fetch('/mock/contactprivilegie.json')
       .then(response => response.json())
-      .then(result => result.filter(item => {if(item.idEntreprise === entreprise) return item;}))
+      .then(result => result.filter(item => {if (item.idEntreprise === entreprise) return item;}))
       .catch(error => handleApiError(error));
   }
 
@@ -120,7 +120,28 @@ export class SampleService {
       .catch(error => handleApiError(error));
   }
 
-  getAcceuilEntrepriseData() {
+  getTypologie() {
+    return this._localClient
+      .fetch('/mock/typologie.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getOffresPrivileges() {
+    return this._localClient
+      .fetch('/mock/offres-privileges.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getOffresReporting() {
+    return this._localClient
+      .fetch('/mock/offres-reporting.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
+
+  getAccueilEntrepriseData() {
     return this._localClient
       .fetch('/mock/acceuilEntrepriseData.json')
       .then(response => response.json())

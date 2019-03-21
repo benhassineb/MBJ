@@ -1,0 +1,20 @@
+[
+    {
+        "code": 1,
+        "place": "XXXXXXXXXX",
+        "typologie": "F1",
+        "xxxx": "XXXXXXXXXX" 
+    },
+    {
+        "code": 1,
+        "place": "XXXXXXXXXX",
+        "typologie": "F3",
+        "xxxx": "XXXXXXXXXX"
+    },
+    {
+        "code": 1,
+        "place": "XXXXXXXXXX",
+        "typologie": "F4 ou plus",
+        "xxxx": "XXXXXXXXXX" 
+    }
+]
