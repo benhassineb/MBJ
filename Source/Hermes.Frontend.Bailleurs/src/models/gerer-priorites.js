@@ -87,7 +87,7 @@ export class GererPriorites {
 
   navigateToDetail(pIndex) {
     let id = (this.currentPage - 1) * this.pageSize + pIndex + 1;
-    this._router.navigateToRoute('details-demande-avec-CERFA', { id: id });
+    this._router.navigateToRoute('details-demande-avec-cerfa', { id: id });
   }
 
 }
