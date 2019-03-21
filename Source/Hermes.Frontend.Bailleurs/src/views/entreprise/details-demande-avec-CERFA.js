@@ -3,7 +3,7 @@ import { SampleService } from '../../services/sample-service';
 
 
 @inject(SampleService)
-export class DetailsDemandeAvecCERFA {
+export class DetailsDemandeAvecCerfa {
 
 
   constructor(service) {
@@ -15,7 +15,7 @@ export class DetailsDemandeAvecCERFA {
   }
 
   activate() {
-    return this._service.getDetailsDemandeAvecCERFA()
+    return this._service.getDetailsDemandeAvecCerfa()
       .then(result =>{
         this.data = result.data;
         this.infos = result.infosDemande;
