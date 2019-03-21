@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "au-table": "^0.1.14",
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrap": "^0.1.20",
     "aurelia-bootstrapper": "^2.3.0",
