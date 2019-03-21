@@ -13,7 +13,6 @@ export class EntrepriseRouter {
       { route: 'offres-privilege-edite', name: 'offres-privilege-edite', moduleId: './offres-privilege-edite', nav: true, title: 'Offres Privilège', breadcrumb: true }
 
     ]);
-
     this.router = router;
   }
 

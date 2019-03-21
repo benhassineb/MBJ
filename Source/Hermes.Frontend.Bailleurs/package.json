@@ -14,6 +14,7 @@
     "aurelia-bootstrap": "^0.1.20",
     "aurelia-bootstrapper": "^2.3.0",
     "aurelia-configuration": "^2.0.0",
+    "aurelia-crumbs": "^1.0.2",
     "aurelia-fetch-client": "^1.8.0",
     "aurelia-i18n": "^3.0.0-beta.5",
     "aurelia-open-id-connect": "github:rmja/aurelia-open-id-connect",
