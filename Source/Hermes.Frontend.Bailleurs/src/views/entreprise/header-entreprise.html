@@ -55,14 +55,12 @@
                             placeholder="localisation"></aubs-typeahead>
                         </span>
                         <div class="col-md-6 filtre">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <ul class="list-group list-group-horizontal">
-                                            <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button></li>
-                                    </ul>
-                                </div>
+                            <div class="flex">
+                                <ul class="list-group list-group-horizontal flex-wrap">
+                                        <li repeat.for="item of listFiltreDepartementSelected" class="list-group-item">${item.label}<button click.trigger="removeFiltreEntreprise(item)" type="button" class="close" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-md-2 text-right">
