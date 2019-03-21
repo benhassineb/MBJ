@@ -141,4 +141,10 @@ export class SampleService {
       .catch(error => handleApiError(error));
   }
 
+  getAccueilEntrepriseData() {
+    return this._localClient
+      .fetch('/mock/acceuilEntrepriseData.json')
+      .then(response => response.json())
+      .catch(error => handleApiError(error));
+  }
 }
