@@ -1,89 +1,89 @@
 ﻿<template>
-        <require from="./accueil-entreprise.css"></require>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                          <div class="card-header">
-                                <h5 class="card-title"><a href="entreprise/offres-privilege-consulte">Je consulte l'offre</a> ou <b>j'édite mon reporting</b></h5>
+    <require from="./accueil-entreprise.css"></require>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title"><a href="entreprise/offres-privilege-consulte">Je consulte l'offre</a> ou <b>j'édite mon reporting</b></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title"> Filtre de recherche : </h5>
+                        <div class="row">
+                            <div class="mx-auto">
+                                <label>
+                                    &nbsp;Statut du logement&nbsp;
+                                    <select>
+                                        <option>Placé</option>
+                                        <option>En cours de placement</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="mx-auto">
+                                <label>
+                                    &nbsp;Typologie&nbsp;
+                                    <select>
+                                        <option repeat.for="typ of typologieList">${typ.label}</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="mx-auto">
+                                <label>
+                                    &nbsp;XXXX&nbsp;<input type="Text" placeholder="XXXX">
+                                </label>
                             </div>
                         </div>
-                      </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title"> Filtre de recherche : </h5>
-                                <div class="row">
-                                    <div class="mx-auto">
-                                            <label>
-                                                    &nbsp;Statut du logement&nbsp;
-                                                    <select>
-                                                            <option>Placé</option>
-                                                            <option>En cours de placement</option>
-                                                    </select>
-                                            </label>
-                                    </div>
-                                    <div class="mx-auto">
-                                            <label>
-                                                    &nbsp;Typologie&nbsp;
-                                                    <select>
-                                                            <option repeat.for="typ of typologieList">${typ.label}</option>
-                                                    </select>
-                                            </label>
-                                    </div>
-                                    <div class="mx-auto">
-                                            <label>
-                                                    &nbsp;XXXX&nbsp;<input type="Text" placeholder="XXXX">
-                                            </label>
-                                    </div>            
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="col-md-12 text-right">
-                                    <button type="button" class="btn btn-primary">Editer mes résultats</button>
-                                </div>
-                                <br>
-                                <div class="col-md-12">
-                                    <div class="table-responsive" aurelia-table="data.bind: offres; display-data.bind: $displayData">
-                                        <table class="table">
-                                                <thead>
-                                                        <tr>
-                                                            <th>
-                                                                Placé
-                                                            </th>
-                                                            <th>
-                                                                Typologie
-                                                            </th>
-                                                            <th>
-                                                                XXXX
-                                                            </th>                                   
-                                                        </tr>
-                                                </thead>
-                                                <tbody>
-                                                        <tr>
-                                                            <tr repeat.for="offre of $displayData">
-                                                                    <td>
-                                                                        <small class="text-info right small">${offre.place}</small>
-                                                                    </td>
-                                                                    <td>
-                                                                        <small class="text-info right small">${offre.typologie}</small>
-                                                                    </td>
-                                                                    <td>
-                                                                        <small class="text-info right small">${offre.xxxx}</small>
-                                                                    </td> 
-                                                            </tr>
-                                                    </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="col-md-12 text-right">
+                            <button type="button" class="btn btn-primary">Editer mes résultats</button>
+                        </div>
+                        <br>
+                        <div class="col-md-12">
+                            <div class="table-responsive" aurelia-table="data.bind: offres; display-data.bind: $displayData">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Placé
+                                            </th>
+                                            <th>
+                                                Typologie
+                                            </th>
+                                            <th>
+                                                XXXX
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr repeat.for="offre of $displayData">
+                                            <td>
+                                                <small class="text-info right small">${offre.place}</small>
+                                            </td>
+                                            <td>
+                                                <small class="text-info right small">${offre.typologie}</small>
+                                            </td>
+                                            <td>
+                                                <small class="text-info right small">${offre.xxxx}</small>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
+        </div>
+    </div>
+    <br>
+    <br>
 </template>
