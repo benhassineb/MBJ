@@ -1,5 +1,5 @@
-export class SaisieLogement {
-  label = 'Logement recherché';
+export class SaisieSituationFinanciere {     
+  label = 'Situation financière';
   constructor() {
     this.entreprise = 'Orange';
   }
@@ -27,7 +27,7 @@ export class SaisieLogement {
   getAttributes() {
     return [
       {
-        bloc: 'Motif de votre demande',
+        bloc: 'Ressources mensuelles',
         content: [
           {label: 'Nom de l\'entreprise', type: 'text', name: 'entreprise', value: '', tailleBloc: '4'},
           {label: 'Priorite entreprise', type: 'checkbox', name: 'priorite', value: '', tailleBloc: '4'},
@@ -35,23 +35,7 @@ export class SaisieLogement {
           {label: 'Correspondant Action Logement', type: 'select', name: 'cp', values: this.getCP(this.entreprise), tailleBloc: '4'}
         ]
       }, {
-        bloc: 'Logement recherché',
-        content: [
-          {label: 'Nom de l\'entreprise', type: 'text', name: 'entreprise', value: '', tailleBloc: '4'},
-          {label: 'Priorite entreprise', type: 'checkbox', name: 'priorite', value: '', tailleBloc: '4'},
-          {label: 'N unique dept', type: 'text', name: 'nud', value: '', tailleBloc: '4'},
-          {label: 'Correspondant Action Logement', type: 'select', name: 'cp', values: this.getCP(this.entreprise), tailleBloc: '4'}
-        ]
-      },{
-        bloc: 'localisations souhaitées actives',
-        content: [
-          {label: 'Nom de l\'entreprise', type: 'text', name: 'entreprise', value: '', tailleBloc: '4'},
-          {label: 'Priorite entreprise', type: 'checkbox', name: 'priorite', value: '', tailleBloc: '4'},
-          {label: 'N unique dept', type: 'text', name: 'nud', value: '', tailleBloc: '4'},
-          {label: 'Correspondant Action Logement', type: 'select', name: 'cp', values: this.getCP(this.entreprise), tailleBloc: '4'}
-        ]
-      },{
-        bloc: 'Localisations souhaitées inactives',
+        bloc: 'Revenu fiscal de référence',
         content: [
           {label: 'Civilité', type: 'select', name: 'civilite', values: this.getCiv(), tailleBloc: '2'},
           {label: 'Nom', type: 'text', name: 'nom', value: '', tailleBloc: '4'},
@@ -77,4 +61,3 @@ export class SaisieLogement {
     ];
   }
 }
-  
