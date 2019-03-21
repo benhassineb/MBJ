@@ -11,7 +11,7 @@ export class AcceuilEntreprise {
   }
 
   activate(params, routeConfig, navigationInstruction) {
-    this._service.getAcceuilEntrepriseData().then((res) => {
+    this._service.getAccueilEntrepriseData().then((res) => {
       this.names = res.names;
       this.offres = res.offres;
     });
