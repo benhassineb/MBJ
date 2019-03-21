@@ -14,5 +14,21 @@
     {
         "code" : "4",
         "label" : "Haut de France"
+    },
+    {
+        "code" : "5",
+        "label" : "Val d'Oise"
+    },
+    {
+        "code" : "6",
+        "label" : "Bretagne"
+    },
+    {
+        "code" : "7",
+        "label" : "Loire Atlantique"
+    },
+    {
+        "code" : "8",
+        "label" : "Le Var"
     }
 ]
