@@ -18,11 +18,12 @@ let serve = gulp.series(
       open: 'external',
       browser: ['chrome'],
       host: project.run.host,
-      port: 443,
-      https: {
-        key: path.join(sslPath, 'lvh.me.key'),
-        cert: path.join(sslPath, 'lvh.me.crt')
-      },
+      port: 80,
+      // port: 443,
+      // https: {
+      //   key: path.join(sslPath, 'lvh.me.key'),
+      //   cert: path.join(sslPath, 'lvh.me.crt')
+      // },
       logLevel: 'silent',
       server: {
         baseDir: [project.platform.baseDir],
