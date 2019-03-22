@@ -20,13 +20,15 @@ export class Header {
   constructor(service, parentRouter, openIdConnect) {
     this._service = service;
     this._parentRouter = parentRouter;
-    this._openIdConnect = openIdConnect
+    this._openIdConnect = openIdConnect;
     this._service.getFiltreEntreprise()
-      .then(result => { this.listFiltreEntreprise = result });
+      .then(result => { this.listFiltreEntreprise = result; });
     this._service.getFiltreDepartement()
-      .then(result => { this.listDepartement = result;
+      .then(result => {
+        this.listDepartement = result;
         this.listFiltreDepartementSelected.push(result[1]);
-        this.listFiltreDepartementSelected.push(result[3]); });
+        this.listFiltreDepartementSelected.push(result[3]);
+      });
   }
 
   removeFiltreEntreprise(filtre) {
@@ -45,7 +47,7 @@ export class Header {
       this.listFiltreDepartementSelected.push(item);
     }
     let _this = this;
-    this._clearSelectdDepartement = setTimeout(function () {
+    this._clearSelectdDepartement = setTimeout(() => {
       _this.clearDepartement();
     }, 10);
   }
@@ -55,4 +57,5 @@ export class Header {
     this.filter = null;
     clearTimeout(this._clearSelectdDepartement);
   }
+
 }

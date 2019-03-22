@@ -1,4 +1,7 @@
 <template>
-  <br>
-  <a repeat.for="row of router.navigation" href.bind="row.href" class="${row.isActive ? 'route-active' : ''}">&lt;${row.title}&gt; </a>
+    <div>
+        <span repeat.for="row of router.navigation">
+            &nbsp;<a href="${row.href}" class="debug-route ${row.isActive ? 'debug-route-active' : ''}">${row.title}</a>&nbsp;⋄
+        </span>
+    </div>
 </template>

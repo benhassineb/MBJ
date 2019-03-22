@@ -1,15 +1,21 @@
 @import "./theme.less";
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 
-.route-active {
-  font-weight: bold;
-  color: black;
+.debug-route {
+    font-size: 12px;
+    color: gray;
+}
+
+.debug-route-active {
+    font-weight: bold;
+    color: black;
 }
 
 
 * {
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -39,20 +45,20 @@ h5 {
 }
 
 .breadcrumb {
-    background: @colorset-light0 !important;
+    background: @colorset-light0  !important;
 
 }
 
 .btn-dropdown {
     background: @colorset-light0;
     border: @colorset-light1 1px solid !important;
-    color: @colorset-main0 !important;
+    color: @colorset-main0  !important;
 }
 
 .list-group-item {
-    color: @colorset-main0 !important;
+    color: @colorset-main0  !important;
 }
 
 .mb-50 {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
