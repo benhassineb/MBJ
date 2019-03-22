@@ -4,7 +4,7 @@ import { Router } from 'aurelia-router';
 import { Auth } from './auth';
 
 @inject(Auth, Router)
-export class AccueilSalarie {
+export class Accueil {
 
   heading = 'Où voulez vous habiter ?';
   locateWhere = '';

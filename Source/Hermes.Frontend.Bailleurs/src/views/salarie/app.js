@@ -1,8 +1,8 @@
-export class Master {
+export class App {
 
   configureRouter(config, router) {
     config.map([
-      { route: ['', 'accueil'], name: 'accueil', moduleId: './accueil-salarie', nav: true, title: 'Accueil' },
+      { route: ['', 'accueil'], name: 'accueil', moduleId: './accueil', nav: true, title: 'Accueil' },
       { route: 'connexion', name: 'connexion', moduleId: './connexion', nav: true, title: 'Connexion' },
       { route: 'deconnexion', name: 'deconnexion', moduleId: './deconnexion', nav: true, title: 'Déconnexion' },
       { route: 'profil', name: 'profil', moduleId: './profil', nav: true, title: 'Profil' },

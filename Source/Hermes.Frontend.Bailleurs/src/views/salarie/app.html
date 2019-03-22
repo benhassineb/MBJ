@@ -1,0 +1,16 @@
+<template>
+    <require from="./app.css"></require>
+
+    <!-- pour le debug -->
+    <compose view="../../debug-bar.html" containerless></compose>
+    <!-- fin -->
+
+    <compose view-model="./header" containerless></compose>
+
+    <div class="mb-50">
+        <router-view></router-view>
+    </div>
+
+    <compose view="./footer.html" containerless></compose>
+
+</template>

@@ -28,9 +28,9 @@ export class App {
     configuration.options.pushState = true;
     configuration.options.root = '/';
     configuration.map([
-      { route: 'bailleur', name: 'bailleur', moduleId: 'views/bailleur/master', nav: true, title: 'Site Bailleurs', breadcrumb: true },
-      { route: 'entreprise', name: 'entreprise', moduleId: 'views/entreprise/master', nav: true, title: 'Site Entreprises', breadcrumb: true },
-      { route: ['', 'salarie'], name: 'salarie', moduleId: 'views/salarie/master', nav: true, title: 'Site Salariés', breadcrumb: true }
+      { route: 'bailleur', name: 'bailleur', moduleId: 'views/bailleur/app', nav: true, title: 'Site Bailleurs', breadcrumb: true },
+      { route: 'entreprise', name: 'entreprise', moduleId: 'views/entreprise/app', nav: true, title: 'Site Entreprises', breadcrumb: true },
+      { route: ['', 'salarie'], name: 'salarie', moduleId: 'views/salarie/app', nav: true, title: 'Site Salariés', breadcrumb: true }
 
     ]);
     // configuration.fallbackRoute(SITEMAP.home.title);

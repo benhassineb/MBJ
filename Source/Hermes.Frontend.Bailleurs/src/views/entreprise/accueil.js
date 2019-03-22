@@ -2,7 +2,7 @@ import { inject } from 'aurelia-framework';
 import { SampleService } from 'services/sample-service';
 
 @inject(SampleService)
-export class AcceuilEntreprise {
+export class Acceuil {
 
   constructor(service) {
     this._service = service;
