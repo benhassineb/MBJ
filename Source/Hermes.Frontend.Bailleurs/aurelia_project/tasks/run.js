@@ -8,12 +8,12 @@ import watch from './watch';
 
 const sslPath = path.join(project.platform.baseDir, '../aurelia_project/tasks/ssl');
 
-const bs = browserSync.create();
+// const bs = browserSync.create();
 
 let serve = gulp.series(
   build,
   done => {
-    bs.init({
+    browserSync({
       online: true,
       open: 'external',
       browser: ['chrome'],
