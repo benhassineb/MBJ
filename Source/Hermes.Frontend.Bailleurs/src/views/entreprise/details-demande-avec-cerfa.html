@@ -7,7 +7,7 @@
         <div class="col-md-6">
             <div class="card">
                 <p class="card-header"><span>Détail de la demande du client </span>
-                    <input type="button" value="Modifier" class="btn-primary float-right" click.trigger="fieldsetDisabled()" />
+                    <a href="#" class="btn btn-primary float-right" click.delegate="fieldsetDisabled()">Modifier</a>
                 </p>
                 <form>
                     <fieldset disabled.bind="isDisabled">
@@ -26,7 +26,7 @@
                         </div>
                     </fieldset>
                 </form>
-                <input type="button" value="Accès au compte du client" class="btn-primary" />
+                <div class="col-auto"><a href="#" class="btn btn-primary">Accès au compte du client</a></div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
@@ -234,14 +234,14 @@
                             <input type="text" readonly class="form-control" value="${infos.nbreJeton}"></div>
                     </div>
                 </div>
-                <input type="button" value="Proposer l'accompagnement" class="btn-primary" />
+                <p><div class="col-auto"><a href="#" class="btn btn-primary">Proposer l'accompagnement</a></div></p>
             </div>
         </div>
         <div class="col-md-2">
-            <p> <input type="button" value="Donner un jeton" class="btn-primary" /></p>
-            <p><input type="button" value="Metttre en suspend" class="btn-primary" /></p>
-            <p><input type="button" value="Refuser/Valider" class="btn-primary" /></p>
-            <p><input type="button" value="Ne fait plus partie de l'entreprise" class="btn-primary" /></p>
+            <p><a href="#" class="btn btn-primary">Donner un jeton</a></p>
+            <p><a href="#" class="btn btn-primary">Metttre en suspend</a></p>
+            <p><a href="#" class="btn btn-primary">Refuser/Valider</a></p>
+            <p><a href="#" class="btn btn-primary">Ne fait plus partie de l'entreprise</a></p>
         </div>
     </div>
 </template>
