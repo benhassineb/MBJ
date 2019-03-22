@@ -27,7 +27,7 @@
 
             <div repeat.for="accommodation of accommodations" class="col-md-4 text-center">
                 <a route-href="logement">
-                    <div data-bind="style: { backgroundImage: 'url(${accommodation.image})' }"  class="result-bloc pointer ${auth.isLoggedIn ? getStyleColor(accommodation.points) : ''}">
+                    <div style="background-image: url(${accommodation.image})" class="result-bloc pointer ${auth.isLoggedIn ? getStyleColor(accommodation.points) : ''}">
                         <div class="float-right glyphicon glyphicon-heart block-heart pointer"></div>
                         <br />
                         <div class="mt-5">
