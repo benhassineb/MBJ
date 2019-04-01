@@ -1,0 +1,76 @@
+<template>
+    <require from="./accueil.css"></require>
+
+    <compose view-model="./header" containerless></compose>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="card">
+                <div class="card-header">
+                    Candidats
+                </div>
+                <div class="card-body table-responsive">
+                    <table class="table table-sm table-hover table-striped" aurelia-table="data.bind: resultats; display-data.bind: $displayData;
+                    current-page.bind: currentPage; page-size.bind: pageSize; total-items.bind: totalItems;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Date de naissance</th>
+                                <th>Nbr. candidature</th>
+                                <th>Refus en CAL</th>
+                                <th>Refus salarié</th>
+                                <!-- <th>Jeton</th> -->
+                                <th>Dmd Prio</th>
+                                <th>Matricule</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr repeat.for="item of $displayData" click.trigger="navigateToDetail($index)">
+                                <td>${item.nom}</td>
+                                <td>${item.prenom}</td>
+                                <td>${item.dateNaissance}</td>
+                                <td>${item.nbrCandidature}</td>
+                                <td>${item.refusCal}</td>
+                                <td>${item.refusSalarie}</td>
+                                <!-- <td>${item.jeton}</td> -->
+                                <td>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="chb-dmdPrio-${$index}" checked.bind="item.dmdPrio" disabled>
+                                        <label class="custom-control-label" for="chb-dmdPrio-${$index}"></label>
+                                    </div>
+                                </td>
+                                <td>${item.matricule}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row-fluid">
+                        <aut-pagination current-page.bind="currentPage" page-size.bind="pageSize" total-items.bind="totalItems" pagination-size.bind="5">
+                            <template replace-part="pagination">
+                                <ul class="pagination" hide.bind="hideSinglePage && totalPages === 1">
+                                    <li class-name.bind="currentPage === 1 ? 'page-item disabled' : 'page-item'">
+                                        <a class="page-link" aria-label="Previous" click.delegate="previousPage()">
+                                            <span aria-hidden="true">«</span>
+                                        </a>
+                                    </li>
+        
+                                    <li class-name.bind="currentPage === page.value ? 'page-item active' : 'page-item'" repeat.for="page of displayPages">
+                                        <a class="page-link" click.delegate="selectPage(page.value)">
+                                            ${page.title}
+                                        </a>
+                                    </li>
+        
+                                    <li class-name.bind="currentPage === totalPages ? 'page-item disabled' : 'page-item'">
+                                        <a class="page-link" aria-label="Next" click.delegate="nextPage()">
+                                            <span aria-hidden="true">»</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </template>
+                        </aut-pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

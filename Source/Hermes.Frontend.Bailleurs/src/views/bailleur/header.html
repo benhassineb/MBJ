@@ -1,21 +1,49 @@
-<template>
+<template >
     <require from="./header.css"></require>
-    <div class="bg-dark collapse show">
-            <div class="row">
-                <div class="col-sm-8 col-md-7 py-4">
-                    <h4 class="text-white">Logo bailleur</h4>
-                </div>
-                <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Etat connection</h4>
-                </div>
 
-            </div>
-            <div class="row">
-                <div class="col-sm-8 col-md-7 py-4">
-                </div>
-                <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Contact</h4>
+    <nav class="my-header navbar navbar-expand-lg navbar-dark">
+        <ul class="navbar-nav mr-auto bg-inverse">
+          
+            <!-- Debug -->
+            <li class="nav-item">
+                <span class="nav-link">Debug Cnx<input type="checkbox" checked.bind="auth.authIsLoggedIn"></span>
+            </li>
+            <!-- Fin -->
+
+            <li class="nav-item">
+                <a href="bailleur/accueil" class="nav-link">Accueil</a>
+            </li>
+            <li class="nav-item" if.bind="!auth.isLoggedIn">
+                <a href="bailleur/connexion" class="nav-link">Connectez-vous</a>
+            </li>
+            <li class="nav-item" if.bind="auth.isLoggedIn">
+                <a href="bailleur/mon-compte" class="nav-link">Mon compte</a>
+            </li>
+            <li class="nav-item" if.bind="auth.isLoggedIn">
+                <a href="bailleur/deconnexion" class="nav-link">Déconnectez-vous</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <div class="row bandeau-top">
+        <div class="col-md-3">
+            <img src=""></div>
+        <div class="col-md-5 pt-4 pb-4">
+            <h1><span class="text-rose">Bienvenue</span><span class="text-blue"> sur votre espace Hermès</span></h1>
+        </div>
+        <div class="col-md-4">
+            <compose view-model="./contact-privilegie" model.bind="filtreEntrepriseSelected" containerless class="row mr-1 float-right"></compose>
+        </div>
+    </div>
+    <div class="container-fluid form-group">
+        <div class="row">
+            <div class="col-md-8 form-group">
+                <aurelia-crumbs config.bind="config"></aurelia-crumbs>
+                <div class="mt-5">
+                    
                 </div>
             </div>
         </div>
+    </div>
 </template>

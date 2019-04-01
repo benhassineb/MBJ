@@ -1,0 +1,56 @@
+<template>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form role="form" submit.delegate="submit()">
+              <h1 class="text-center">Inscription</h1>
+              <div class="form-group">
+                <label for="am">Adresse Mail</label>
+                <input type="email" value.bind="mail" class="form-control" id="am" placeholder="adresse@mail.com">
+              </div>
+              <div class="form-group">
+                <label for="mp">Raison sociale</label>
+                <input type="text" value.bind="raisonsociale" class="form-control" id="mp" placeholder="Raison sociale">
+              </div>
+              <div class="form-group">
+                <label for="cp">SIRET</label>
+                <input type="text" value.bind="siret" class="form-control" id="mp" placeholder="SIRET">
+              </div>
+              <div class="form-group">
+                <label for="np">IF</label>
+                <input type="text" value.bind="if" class="form-control" id="np" placeholder="IF">
+              </div>
+              <div class="form-group">
+                <label for="pp">Adresse</label>
+                <input type="text" value.bind="adresse" class="form-control" id="pp" placeholder="Siège social">
+              </div>
+              <div class="form-group">
+                <label for="tp">Nom contact</label>
+                <input type="text" value.bind="nom" class="form-control" id="tp" placeholder="Nom contact">
+              </div>
+              <div class="form-group">
+                <label for="tp">Prenom contact</label>
+                <input type="text" value.bind="prenom" class="form-control" id="tp" placeholder="Prenom contact">
+              </div>
+              <div class="form-group">
+                <label for="tp">Telephone contact</label>
+                <input type="text" value.bind="tel" class="form-control" id="tp" placeholder="Telephone contact">
+              </div>
+              <div class="form-group">
+                <input type="checkbox" value.bind="politique" class="" id="pt" >
+                <label for="pt">Politique ...</label>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" value.bind="contrat" class="" id="ct" >
+                <label for="ct">J'accepte ...</label>
+              </div>
+              <div class="form-group">
+                <div class="float-right">
+                  <button class="btn btn-primary w-130" role="submit">Inscription</button>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+</template>

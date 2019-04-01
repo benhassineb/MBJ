@@ -1,0 +1,60 @@
+<template>
+    <require from="./accueil.css"></require>
+
+    <compose view-model="./header" containerless></compose>
+
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-md-3 py-3 my-2 mx-5 border" ><a route-href="suivi-placement"> Suivi Placement</a></div>
+            <div class="col-md-3 py-3 my-2 mx-5 border" ><a route-href="depot-logements">Depot Logements</a></div>
+            <div class="col-md-3 py-3 my-2 mx-5 border" ><a route-href="convention-flux">Conventions Flux</a></div>
+          </div>
+          <div class="row-fluid">
+              <div class="card">
+                  <div class="card-header">
+                      Filtre convention
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">
+                          <div class="form-row">
+                              <div class="form-group col-md-3">
+                                  <label for="dateDebut">Date entre : </label>
+                                  <input type="text" class="form-control" placeholder="10/03/2018" value.bind="dateDebut">
+                              </div>
+                              <div class="form-group col-md-3">
+                                  <label for="dateFin">Et entre : </label>
+                                  <input type="text" class="form-control" placeholder="10/03/2019" value.bind="DateFin">
+                              </div>
+                              <div class="form-group col-md-3">
+                                  <label for="codeConvention">Code Convention</label>
+                                  <input type="text" class="form-control" placeholder="Code Convention" value.bind="codeConvention">
+                              </div>
+                              <div class="form-group col-md-3">
+                                  <label for="filtreGeo">Filtre géolocalisation</label>
+                                  <input type="text" class="form-control" placeholder="Code postal" value.bind="filtreGeo">
+                              </div>
+                          </div>
+                      </p>
+                      <div class="row justify-content-between">
+                          <div class="col-auto mr-auto"></div>
+                          <div class="col-auto"><a href="#" class="btn btn-primary text-right" click.delegate="search()">Editer mes résultats</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card my-3">
+                  <div class="card-header">
+                      Information sur la convention
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">
+                          <label class="w-25 p-3 text-right">Objectif Cible</label><input class="w-50 p-3 text-center" type="text" disabled value.bind="objectifCible">
+                          <label class="w-25 p-3 text-right">Objectif instant T</label><input class="w-50 p-3 text-center" type="text" disabled value.bind="objectifT">
+                          <label class="w-25 p-3 text-right">Tendance réel / cible</label><input class="w-50 p-3 text-center" type="text" disabled value.bind="tendance">
+                          <label class="w-25 p-3 text-right">Nbre de logements</label><input class="w-50 p-3 text-center" type="text" disabled value.bind="nbrLogement">
+                          <label class="w-25 p-3 text-right">Dont neuf</label><input class="w-50 p-3 text-center" type="text" disabled value.bind="nbrLogementNeuf">
+                      </p>
+                  </div>
+              </div>
+            </div>
+    </div>
+</template>

@@ -1,0 +1,95 @@
+<template>
+    <div class="card">
+        <div class="card-header">
+            Filtre de logements
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputState">Status du logement</label>
+                        <select id="inputState" class="form-control" value.bind="selectedStatut">
+                            <option selected>Sélectionner...</option>
+                            <option repeat.for="s of statuts" model.bind="s">
+                                ${s}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputNbreRefusParClientEnCal">Typologie</label>
+                        <input type="text" class="form-control" placeholder="Typologie" value.bind="typologie">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputNbrCandidature">Departement</label>
+                        <input type="text" class="form-control" placeholder="Departement" value.bind="departement">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputNbreRefusEnCal">Commune</label>
+                        <input type="text" class="form-control" placeholder="Commune" value.bind="commune">
+                    </div>
+                </div>
+                
+            </p>
+            <div class="row justify-content-between">
+                <div class="col-auto mr-auto"></div>
+                <div class="col-auto"><a href="#" class="btn btn-primary text-right" click.delegate="search()">Editer mes résultats</a></div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">
+            Résultats
+        </div>
+        <div class="card-body table-responsive">
+            <table class="table table-sm table-hover table-striped" aurelia-table="data.bind: resultats; display-data.bind: $displayData;
+            current-page.bind: currentPage; page-size.bind: pageSize; total-items.bind: totalItems;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Statut</th>
+                        <th>Typologie</th>
+                        <th>Loyer</th>
+                        <th>Departement</th>
+                        <th>Commune</th>
+                        <th>Matricule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr repeat.for="item of $displayData" click.trigger="navigateToDetail($index)">
+                        <td>${item.statuts}</td>
+                        <td>${item.typologie}</td>
+                        <td>${item.loyer}</td>
+                        <td>${item.departement}</td>
+                        <td>${item.commune}</td>
+                        <td>${item.matricule}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row-fluid">
+                <aut-pagination current-page.bind="currentPage" page-size.bind="pageSize" total-items.bind="totalItems" pagination-size.bind="5">
+                    <template replace-part="pagination">
+                        <ul class="pagination" hide.bind="hideSinglePage && totalPages === 1">
+                            <li class-name.bind="currentPage === 1 ? 'page-item disabled' : 'page-item'">
+                                <a class="page-link" aria-label="Previous" click.delegate="previousPage()">
+                                    <span aria-hidden="true">«</span>
+                                </a>
+                            </li>
+
+                            <li class-name.bind="currentPage === page.value ? 'page-item active' : 'page-item'" repeat.for="page of displayPages">
+                                <a class="page-link" click.delegate="selectPage(page.value)">
+                                    ${page.title}
+                                </a>
+                            </li>
+
+                            <li class-name.bind="currentPage === totalPages ? 'page-item disabled' : 'page-item'">
+                                <a class="page-link" aria-label="Next" click.delegate="nextPage()">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </template>
+                </aut-pagination>
+            </div>
+        </div>
+    </div>
+</template>

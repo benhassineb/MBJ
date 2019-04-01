@@ -1,6 +1,8 @@
 <template>
     <require from="./accueil.css"></require>
 
+    <compose view-model="./header" containerless></compose>
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Fil d'ariane</a></li>
@@ -67,7 +69,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary float-right" href="#" role="button">Bouton accès</a>
+                        <a class="btn btn-primary float-right" route-href="suivi-placement" role="button">Bouton accès</a>
                     </div>
                 </div>
             </div>
@@ -87,7 +89,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary float-right" href="#" role="button">Bouton accès <br> page transfet</a>
+                        <a class="btn btn-primary float-right" route-href="logement" role="button">Bouton accès <br> page transfet</a>
                     </div>
                 </div>
             </div>
@@ -108,7 +110,7 @@
                                         40
                                     </h3>
                                     <p>
-                                        Condidats à passer en CAL
+                                        Candidats à passer en CAL
                                     </p>
                                 </div>
                             </div>
@@ -118,14 +120,14 @@
                                         60
                                     </h3>
                                     <p>
-                                        Condidats retenus
+                                        Candidats retenus
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary float-right" href="#" role="button">Bouton accès</a>
+                        <a class="btn btn-primary float-right" route-href="list-candidat" role="button">Bouton accès</a>
                     </div>
                 </div>
             </div>
@@ -150,7 +152,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary float-right" href="#" role="button">Bouton accès</a>
+                        <a class="btn btn-primary float-right" route-href="conventions-financement" role="button">Bouton accès</a>
                     </div>
                 </div>
             </div>

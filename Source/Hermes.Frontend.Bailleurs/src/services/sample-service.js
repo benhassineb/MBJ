@@ -86,6 +86,26 @@ export class SampleService {
       .catch(error => handleApiError(error));
   }
 
+  getLogementAConsulter() {
+    return this._localClient
+      .fetch('/mock/logements-a-consulter.json')
+      .then(response => response.json())
+      .then(results => {
+        return results.map(v => DemandeAConsulterItem.fromObject(v));
+      })
+      .catch(error => handleApiError(error));
+  }
+
+  getConventionFinancementAConsulter() {
+    return this._localClient
+      .fetch('/mock/convention-financement-a-consulter.json')
+      .then(response => response.json())
+      .then(results => {
+        return results.map(v => DemandeAConsulterItem.fromObject(v));
+      })
+      .catch(error => handleApiError(error));
+  }
+
   getDemandesAValider() {
     return this._localClient
       .fetch('/mock/demandes-a-valider.json')

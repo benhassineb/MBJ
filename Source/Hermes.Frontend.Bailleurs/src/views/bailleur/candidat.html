@@ -1,0 +1,84 @@
+<template>
+    <require from="./accueil.css"></require>
+
+    <compose view-model="./header" containerless></compose>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="card">
+                <div class="card-header">
+                    Information logement
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        LOGEMENT CONCERNE (adresse – typo – loyer « info vignette » + la norme <br>
+                        12, boulevard la Rue. <br>
+                        Typologie : T2 - Loyer: 700 € <br>
+                        Departement - Commune 
+                    </p>
+                </div>
+            </div>
+          </div>
+          <div class="row-fluid">
+              <div class="card my-3">
+                  <div class="card-header">
+                      Information candidat
+                  </div>
+                  <div class="card-body">
+                      <p class="card-text">
+                          Nom Prénom <br>
+                          NUR – NUD ou identifiant Hermès (V2 N° identifiant bailleur) <br>
+                              Scoring du candidat <br>
+                              220 pts.  
+                          <a class="btn btn-primary float-right mx-2" role="button">Prendre contact ALS</a>     
+                          <a class="btn btn-primary float-right mx-2" role="button">Demander homolo ALS</a>  
+                          <a class="btn btn-primary float-right mx-2" role="button">Signaler entrée dans les lieux</a>
+                      </p>
+                  </div>
+              </div>
+            </div>
+            <div class="row-fluid">
+                <div class="card my-3">
+                    <div class="card-header">
+                        LISTES DES CANDIDATS mieux scorés par rapport au logement
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover table-striped" aurelia-table="data.bind: resultats; display-data.bind: $displayData;
+            current-page.bind: currentPage; page-size.bind: pageSize; total-items.bind: totalItems;">
+                          <thead class="thead-dark">
+                              <tr>
+                                  <th>Nom</th>
+                                  <th>Prénom</th>
+                                  <th>Date de naissance</th>
+                                  <th>Nbr. candidature</th>
+                                  <th>Refus en CAL</th>
+                                  <th>Refus salarié</th>
+                                  <!-- <th>Jeton</th> -->
+                                  <th>Dmd Prio</th>
+                                  <th>Matricule</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr repeat.for="item of $displayData" click.trigger="navigateToDetail($index)">
+                                  <td>${item.nom}</td>
+                                  <td>${item.prenom}</td>
+                                  <td>${item.dateNaissance}</td>
+                                  <td>${item.nbrCandidature}</td>
+                                  <td>${item.refusCal}</td>
+                                  <td>${item.refusSalarie}</td>
+                                  <!-- <td>${item.jeton}</td> -->
+                                  <td>
+                                      <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="chb-dmdPrio-${$index}" checked.bind="item.dmdPrio" disabled>
+                                          <label class="custom-control-label" for="chb-dmdPrio-${$index}"></label>
+                                      </div>
+                                  </td>
+                                  <td>${item.matricule}</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </div>
+                </div>
+              </div>
+    </div>
+</template>

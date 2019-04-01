@@ -1,0 +1,57 @@
+<template>
+    <require from="./accueil.css"></require>
+
+    <compose view-model="./header" containerless></compose>
+
+    <div class="container">
+        <div class="row card">
+                <div class="card-header">
+                  Information sur le compte
+                </div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="dateDebut">Nom </label>
+                            <input type="text" class="form-control" placeholder="Nom" value.bind="nom">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="dateFin">Prénom: </label>
+                            <input type="text" class="form-control" placeholder="Prenom" value.bind="prenom">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="codeConvention">Téléphone</label>
+                            <input type="text" class="form-control" placeholder="Téléphone" value.bind="telephone">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="filtreGeo">Email de contact</label>
+                            <input type="text" class="form-control" placeholder="Email de contact" value.bind="emailContact">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="filtreGeo">Email de connexion</label>
+                            <input type="text" class="form-control" placeholder="Email de connexion" value.bind="emailConnexion">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="filtreGeo">Dernière connexion</label>
+                            <input type="text" class="form-control" placeholder="Dernière connexion" value.bind="derniereConnexion">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="filtreGeo">Mot de passe</label>
+                            <input type="text" class="form-control" placeholder="Mot de passe" value.bind="password">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="row card">
+            <div class="card-header">
+              Accès
+            </div>
+            <div class="card-body">
+              <p>Direction régionale ?  Filiales ?<br>
+                  Quelles habilitations ?  <br>
+                  Délégation de profit ?<br>
+                  Transmission / Modification Logo bailleur
+                  </p>
+            </div>
+        </div>
+    </div>
+</template>
